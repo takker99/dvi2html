@@ -4,29 +4,22 @@ import { Writable } from 'stream';
 import * as glyphs from './tfm/encodings.json';
 import * as fontlist from '../tools/fontlist.json';
 
-/*
-let glyphs = {};
-Object.keys(encodings).map( (encoding) => {
-  glyphs[encoding] = new Uint16Array( Buffer.from(encodings[encoding], 'base64') );
-});
-*/
-
 export default class HTMLMachine extends Machine {
   output : Writable;
-  pointsPerDviUnit : number;
+  pointsPerDviUnit : number = 0;
 
-  svgDepth : number;
-  color : string;
-  colorStack : string[];
+  svgDepth : number = 0;
+  color : string = '';
+  colorStack : string[] = [];
 
-  paperwidth : number;
-  paperheight : number;
+  paperwidth : number = 0;
+  paperheight : number = 0;
 
-  pageContent : string[];
-  lastOutputHeight : number;
+  pageContent : string[] = [];
+  lastOutputHeight : number = 0;
 
-  lastTextV : number;
-  lastTextRight : number;  
+  lastTextV : number = 0;
+  lastTextRight : number = 0;  
   
   writeToPage( content : string ) {
     this.pageContent.push( content );
@@ -39,7 +32,11 @@ export default class HTMLMachine extends Machine {
   }
 
   popColor( ) {
-    this.color = this.colorStack.pop();
+    const result = this.colorStack.pop();
+    if (result)
+      this.color = result;
+    else
+      throw new Error('Popped from empty color stack');
   }
 
   setPapersize( width : number, height : number ) {
@@ -172,27 +169,6 @@ export default class HTMLMachine extends Machine {
       }
       let codepoint = glyphs[encoding][c];
       htmlText += `&#${codepoint};`;
-      
-      // This is ridiculous.
-      /*
-      if (this.font.name === 'esint10') {
-        htmlText += `&#${c + 65 - 1};`;
-      }
-      else {
-        if ((c >= 0) && (c <= 9)) {
-          htmlText += `&#${161 + c};`;
-        } else if ((c >= 10) && (c <= 19)) {
-	  htmlText += `&#${173 + c - 10};`;
-        } else if (c == 20) {
-	  htmlText += `&#${8729};`; // O RLLY?!
-        } else if ((c >= 21) && (c <= 32)) {
-	  htmlText += `&#${184 + c - 21};`;
-        } else if (c == 127) {
-	  htmlText += `&#${196};`;
-        } else {
-	  htmlText += String.fromCharCode(c);
-        }
-      }*/
     }
     
     // tfm is based on 1/2^16 pt units, rather than dviunit which is 10^−7 meters

@@ -9,12 +9,12 @@ export interface Rule {
 }
 
 class Position {
-  h: number;
-  v: number;
-  w: number;
-  x: number;
-  y: number;
-  z: number;
+  h: number = 0;
+  v: number = 0;
+  w: number = 0;
+  x: number = 0;
+  y: number = 0;
+  z: number = 0;
   
   constructor(properties? : Position) {
     if (properties) {
@@ -31,11 +31,11 @@ class Position {
 }
 
 export class DviFont {
-  name: string;
-  checksum: number;
-  scaleFactor: number;
-  designSize: number;
-  metrics: Tfm;
+  name !: string;
+  checksum: number = 0;
+  scaleFactor: number = 0;
+  designSize: number = 0;
+  metrics !: Tfm;
   
   constructor(properties : DviFont) {
     this.name = properties.name;
@@ -46,16 +46,16 @@ export class DviFont {
 }
 
 export class Machine {
-  fonts : DviFont[];
-  font : DviFont;
-  stack : Position[];
-  position : Position;
-  title : string;
+  fonts : DviFont[] = [];
+  font !: DviFont;
+  stack : Position[] = [];
+  position : Position = new Position();
+  title : string = '';
 
-  savedPosition : Position; // for the ximera:save and ximera:restore specials
+  savedPosition : Position = new Position(); // for the ximera:save and ximera:restore specials
   
   constructor () {
-    this.fonts = [];
+    // this.fonts = [];
   }
   
   preamble ( numerator : number, denominator : number, magnification : number, comment : string ) {
@@ -84,7 +84,12 @@ export class Machine {
   }
 
   pop() {
-    this.position = this.stack.pop();
+    const result = this.stack.pop();
+    
+    if (result) 
+      this.position = result;
+    else
+      throw new Error('Popped from empty position stack');
   }
 
   beginPage( page : any ) {

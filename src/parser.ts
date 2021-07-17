@@ -60,11 +60,12 @@ enum Opcode {
   fnt_def4 = 246,    
   pre = 247,
   post = 248,
-  post_post = 249
+  post_post = 249,
+  post_post_repeats = 223
 }
 
 export class DviCommand {
-  length: number;
+  length: number = 0;
   special: boolean;
   
   constructor(properties) {
@@ -86,7 +87,7 @@ export class DviCommand {
 
 class PutChar extends DviCommand {
   opcode: Opcode.put_char;
-  c: number;
+  c: number = 0;
   constructor(properties) {
     super(properties);
     this.opcode = Opcode.put_char;
@@ -110,7 +111,7 @@ class PutChar extends DviCommand {
 class SetChar extends DviCommand {
   opcode: Opcode.set_char;
 
-  c: number;
+  c: number = 0;
   
   constructor(properties) {
     super(properties);
@@ -129,7 +130,7 @@ class SetChar extends DviCommand {
 }
 
 class SetText extends DviCommand {
-  t: Buffer;
+  t: Buffer = Buffer.alloc(0);
   
   constructor(properties) {
     super(properties);
@@ -150,8 +151,8 @@ class SetText extends DviCommand {
 class PutRule extends DviCommand {
   opcode: Opcode.put_rule;
   
-  a: number;
-  b: number;
+  a: number = 0;
+  b: number = 0;
 
   constructor(properties) {
     super(properties);
@@ -172,8 +173,8 @@ class PutRule extends DviCommand {
 class SetRule extends DviCommand {
   opcode: Opcode.set_rule;
   
-  a: number;
-  b: number;
+  a: number = 0;
+  b: number = 0;
   
   constructor(properties) {
     super(properties);
@@ -208,17 +209,17 @@ class Nop extends DviCommand {
 
 class Bop extends DviCommand {
   opcode: Opcode.bop;
-  c_0: number;
-  c_1: number;
-  c_2: number;
-  c_3: number;
-  c_4: number;
-  c_5: number;
-  c_6: number;
-  c_7: number;
-  c_8: number;
-  c_9: number;  
-  p: number;
+  c_0: number = 0;
+  c_1: number = 0;
+  c_2: number = 0;
+  c_3: number = 0;
+  c_4: number = 0;
+  c_5: number = 0;
+  c_6: number = 0;
+  c_7: number = 0;
+  c_8: number = 0;
+  c_9: number = 0;  
+  p: number = 0;
   constructor(properties) {
     super(properties);
     this.opcode = Opcode.bop;
@@ -298,7 +299,7 @@ class Pop extends DviCommand {
 
 class MoveRight extends DviCommand {
   opcode: Opcode.right;
-  b: number;
+  b: number = 0;
   constructor(properties) {
     super(properties);
     this.opcode = Opcode.right;
@@ -321,7 +322,7 @@ class MoveRight extends DviCommand {
 
 class MoveW extends DviCommand {
   opcode: Opcode.w;
-  b: number;
+  b: number = 0;
   constructor(properties) {
     super(properties);
     this.opcode = Opcode.w;
@@ -348,7 +349,7 @@ class MoveW extends DviCommand {
 
 class MoveX extends DviCommand {
   opcode: Opcode.x;
-  b: number;
+  b: number = 0;
   constructor(properties) {
     super(properties);
     this.opcode = Opcode.x;
@@ -374,7 +375,7 @@ class MoveX extends DviCommand {
 
 class MoveDown extends DviCommand {
   opcode: Opcode.down;
-  a: number;
+  a: number = 0;
   constructor(properties) {
     super(properties);
     this.opcode = Opcode.down;
@@ -397,7 +398,7 @@ class MoveDown extends DviCommand {
 
 class MoveY extends DviCommand {
   opcode: Opcode.y;
-  a: number;
+  a: number = 0;
   constructor(properties) {
     super(properties);
     this.opcode = Opcode.y;
@@ -424,7 +425,7 @@ class MoveY extends DviCommand {
 
 class MoveZ extends DviCommand {
   opcode: Opcode.z;
-  a: number;
+  a: number = 0;
   
   constructor(properties) {
     super(properties);
@@ -452,7 +453,7 @@ class MoveZ extends DviCommand {
 
 class SetFont extends DviCommand {
   opcode: Opcode.fnt;
-  k: number;
+  k: number = 0;
   constructor(properties) {
     super(properties);
     this.opcode = Opcode.fnt;
@@ -478,7 +479,7 @@ class SetFont extends DviCommand {
 class Special extends DviCommand {
   opcode: Opcode.xxx;
 
-  x: string;
+  x: string = '';
   
   constructor(properties) {
     super(properties);
@@ -503,13 +504,13 @@ class Special extends DviCommand {
 
 class FontDefinition extends DviCommand {
   opcode: Opcode.fnt_def;
-  k: number; // font id
-  c: number; // checksum
-  s: number; // fixed-point scale factor (applied to char widths of font)
-  d: number; // design-size factors with the magnification (`s/1000`)
-  a: number; // length of directory path of font (`./` if a = 0)
-  l: number; // length of font name
-  n: string; // font name (first `a` bytes is dir, remaining `l` = name)
+  k: number = 0; // font id
+  c: number = 0; // checksum
+  s: number = 0; // fixed-point scale factor (applied to char widths of font)
+  d: number = 0; // design-size factors with the magnification (`s/1000`)
+  a: number = 0; // length of directory path of font (`./` if a = 0)
+  l: number = 0; // length of font name
+  n: string = ''; // font name (first `a` bytes is dir, remaining `l` = name)
 
   constructor(properties) {
     super(properties);
@@ -534,11 +535,11 @@ class FontDefinition extends DviCommand {
 
 class Preamble extends DviCommand {
   opcode: Opcode.pre;
-  i: number;
-  num: number;
-  den: number;
-  mag: number;
-  x: string;
+  i: number = 0;
+  num: number = 0;
+  den: number = 0;
+  mag: number = 0;
+  x: string = '';
   constructor(properties) {
     super(properties);
     this.opcode = Opcode.pre;
@@ -569,14 +570,14 @@ class Preamble extends DviCommand {
 class Post extends DviCommand {
   opcode: Opcode.post;
 
-  p : number;
-  num : number;
-  den : number;
-  mag : number;
-  l : number;
-  u : number;
-  s : number;
-  t : number;
+  p : number = 0;
+  num : number = 0;
+  den : number = 0;
+  mag : number = 0;
+  l : number = 0;
+  u : number = 0;
+  s : number = 0;
+  t : number = 0;
   
   constructor(properties) {
     super(properties);
@@ -597,8 +598,8 @@ class Post extends DviCommand {
 class PostPost extends DviCommand {
   opcode: Opcode.post_post;
 
-  q : number;
-  i : number;
+  q : number = 0;
+  i : number = 0;
   
   constructor(properties) {
     super(properties);
@@ -908,7 +909,7 @@ export function execute(commands, machine) {
 }
 
 export function* merge(commands, filter, merge) {
-  let queue = [];
+  let queue : any[] = [];
 
   for (const command of commands) {
     if (filter(command)) {

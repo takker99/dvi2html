@@ -116,10 +116,10 @@ export class TfmChar {
 
 /*  This class encapsulates a TeX Font Metric for an extensible Glyph. */
 export class TfmExtensibleChar extends TfmChar {
-  top : number;
-  mid : number;
-  bot : number;
-  rep : number;
+  top : number = 0;
+  mid : number = 0;
+  bot : number = 0;
+  rep : number = 0;
   
   constructor(
     tfm,
@@ -147,16 +147,16 @@ export class TfmExtensibleChar extends TfmChar {
 }
 
 export class TfmLigKern {
-  tfm : Tfm;
-  stop : number;
-  index : number;
-  next_char: TfmChar;
+  /*tfm : Tfm;
+  stop : number = 0;
+  index : number = 0;
+  next_char: TfmChar;*/
   
-  constructor(tfm, index, stop, next_char) {
-    this.tfm = tfm;
+  constructor(public tfm : Tfm, public index : number, public stop : number, public next_char : TfmChar) {
+    /*this.tfm = tfm;
     this.stop = stop;
     this.index = index;
-    this.next_char = next_char;
+    this.next_char = next_char;*/
     this.tfm.add_lig_kern(this);
   }
 }
@@ -198,40 +198,40 @@ export class TfmLigature extends TfmLigKern {
 
 /*  This class encapsulates a TeX Font Metric for a font. */
 export class Tfm {
-  smallest_character_code : number;
-  largest_character_code : number;
-  checksum : number;
-  designSize : number;
-  character_coding_scheme : string;
-  family : string;
+  smallest_character_code : number = 0;
+  largest_character_code : number = 0;
+  checksum : number = 0;
+  designSize : number = 0;
+  character_coding_scheme : string = '';
+  family : string = '';
 
-  slant: number;
-  spacing: number;
-  space_stretch: number;
-  space_shrink: number;
-  x_height: number;
-  quad: number;
-  extra_space: number;
-  num1: number;
-  num2: number;
-  num3: number;
-  denom1: number;
-  denom2: number;
-  sup1: number;
-  sup2: number;
-  sup3: number;
-  sub1: number;
-  sub2: number;
-  supdrop: number;
-  subdrop: number;
-  delim1: number;
-  delim2: number;
-  axis_height: number;
-  default_rule_thickness: number;
-  big_op_spacing: number;
+  slant: number = 0;
+  spacing: number = 0;
+  space_stretch: number = 0;
+  space_shrink: number = 0;
+  x_height: number = 0;
+  quad: number = 0;
+  extra_space: number = 0;
+  num1: number = 0;
+  num2: number = 0;
+  num3: number = 0;
+  denom1: number = 0;
+  denom2: number = 0;
+  sup1: number = 0;
+  sup2: number = 0;
+  sup3: number = 0;
+  sub1: number = 0;
+  sub2: number = 0;
+  supdrop: number = 0;
+  subdrop: number = 0;
+  delim1: number = 0;
+  delim2: number = 0;
+  axis_height: number = 0;
+  default_rule_thickness: number = 0;
+  big_op_spacing: number = 0;
 
-  _lig_kerns: TfmLigKern[];
-  characters: any;
+  _lig_kerns: TfmLigKern[] = [];
+  characters: any = {};
   
   constructor(  
                  smallest_character_code,

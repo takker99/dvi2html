@@ -159,7 +159,7 @@ function execute( token, stack, state, table, glyphs ) {
 }
 
 async function loadEncoding(s, glyphs) {
-  let filename = await kpsewhich(s);  
+  let filename = await kpsewhich(s);
   let encoding = (await readFile(filename)).toString();
   let tokens = [...tokenize(encoding)];
   let stack = [];

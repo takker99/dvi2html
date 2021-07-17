@@ -48,20 +48,20 @@ function word_ptr(base, index) {
 }
 
 class TFMParser {
-  position : number;
-  stream : Buffer;
-  length : number;
-  table_lengths : number[];
-  table_pointers : number[];
-  entire_file_length : number;
-  smallest_character_code : number;
-  largest_character_code : number;  
-  number_of_chars : number;  
-  tfm : Tfm.Tfm;
+  position : number = 0;
+  //stream : Buffer;
+  length : number = 0;
+  table_lengths : number[] = [];
+  table_pointers : number[] = [];
+  entire_file_length : number = 0;
+  smallest_character_code : number = 0;
+  largest_character_code : number = 0; 
+  number_of_chars : number = 0;
+  tfm !: Tfm.Tfm;
   
-  constructor(buffer) {
-    this.position = 0;
-    this.stream = buffer;
+  constructor(public stream : Buffer) {
+    //this.position = 0;
+    //this.stream = buffer;
     
     this.read_lengths();
     this.read_header();
@@ -613,7 +613,7 @@ class TFMParser {
     /*** Read the character code *c* data in the character information table.
      ***/        
     var index = c - this.smallest_character_code;
-    var bytes = [];
+    var bytes : number[] = [];
     this.seek_to_table( tables.character_info, index);
     bytes[0] = this.read_unsigned_byte1();
     bytes[1] = this.read_unsigned_byte1();

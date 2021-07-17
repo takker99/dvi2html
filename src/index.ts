@@ -16,6 +16,8 @@ export var Machines = { HTML: HTMLMachine,
 import { dviParser, execute, mergeText } from "./parser";
 export { dviParser, execute, mergeText };
 
+console.log('DVI2HTML');
+
 export var specials = {
   color: color,
   svg: svg,
