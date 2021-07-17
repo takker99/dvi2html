@@ -14,9 +14,6 @@ export var Machines = { HTML: HTMLMachine,
 			text: TextMachine };
 
 import { dviParser, execute, mergeText } from "./parser";
-export { dviParser, execute, mergeText };
-
-console.log('DVI2HTML');
 
 export var specials = {
   color: color,
@@ -25,7 +22,7 @@ export var specials = {
   papersize: papersize
 };
 
-function dvi2html( dviStream, htmlStream ) {
+export function dvi2html( dviStream, htmlStream ) {
   let parser = ximera(title(papersize(html(svg(color(mergeText(dviParser(dviStream))))))));
 
   let machine = new HTMLMachine( htmlStream );
@@ -35,7 +32,7 @@ function dvi2html( dviStream, htmlStream ) {
   return machine;
 }
 
-function dvi2vdom( dviStream, h, callback ) {
+export function dvi2vdom( dviStream, h, callback ) {
   let parser = ximera(title(papersize(html(svg(color(mergeText(dviParser(dviStream))))))));
 
   let machine = new VDomMachine( h, callback );
@@ -46,4 +43,6 @@ function dvi2vdom( dviStream, h, callback ) {
 }
 
 import { tfmData } from "./tfm/index";
-export { tfmData, dvi2html, dvi2vdom };
+
+
+export { tfmData, dviParser, execute, mergeText };

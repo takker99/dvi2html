@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer';
 import { Machine, Rule } from "./machine";
 import { Writable } from 'stream';
 

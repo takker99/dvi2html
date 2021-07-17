@@ -17,6 +17,7 @@
 
 import * as Tfm from "./tfm";
 import * as fontdata from "./fonts.json";
+import { Buffer } from 'buffer';
 
 const NO_TAG = 0;
 const LIG_TAG = 1;

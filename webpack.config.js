@@ -11,9 +11,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js', '.json'],
-    fallback: {
-      "buffer": require.resolve("buffer")
-    }
+    //fallback: {
+      //"buffer": require.resolve("buffer")
+    //}
   },
   module: {
     rules: [
@@ -25,7 +25,7 @@ module.exports = {
       {
         test: /\.(ts)$/,
         exclude: /node_modules/,
-        use: "awesome-typescript-loader",
+        use: "ts-loader",
       },      
     ],
   },

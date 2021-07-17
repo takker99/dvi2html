@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer';
 import { Machine } from "./machine";
 
 enum Opcode {
@@ -64,13 +65,21 @@ enum Opcode {
   post_post_repeats = 223
 }
 
+interface IDviCommand {
+  length ?: number;
+}
+
 export class DviCommand {
-  length: number = 0;
+  length : number;
   special: boolean;
   
-  constructor(properties) {
+  constructor(properties : IDviCommand) {
+    if (properties.length !== undefined)
+      this.length = properties.length;
+    else
+      this.length = 0;
+    
     this.special = false;
-    Object.assign(this, properties);
   }
   
   execute(machine : Machine) { }
@@ -85,12 +94,16 @@ export class DviCommand {
 // 135	put3	c[3]
 // 136	put4	c[4]
 
+interface IPutChar extends IDviCommand {
+  c: number;
+}
+
 class PutChar extends DviCommand {
-  opcode: Opcode.put_char;
+  opcode: Opcode.put_char = Opcode.put_char;
   c: number = 0;
-  constructor(properties) {
+  constructor(properties : IPutChar) {
     super(properties);
-    this.opcode = Opcode.put_char;
+    this.c = properties.c;
   }
 
   execute(machine : Machine) {
@@ -108,14 +121,17 @@ class PutChar extends DviCommand {
 // 130	set3	c[3]
 // 131	set4	c[4]
 
-class SetChar extends DviCommand {
-  opcode: Opcode.set_char;
+interface ISetChar extends IDviCommand {
+  c: number;
+}
 
-  c: number = 0;
+class SetChar extends DviCommand {
+  opcode: Opcode.set_char = Opcode.set_char;
+  c: number;
   
-  constructor(properties) {
+  constructor(properties: ISetChar) {
     super(properties);
-    this.opcode = Opcode.set_char;
+    this.c = properties.c;
   }
 
   execute(machine : Machine) {
@@ -129,11 +145,18 @@ class SetChar extends DviCommand {
   }    
 }
 
+// This isn't a "real" command but rather a synthetic one
+
+interface ISetText extends IDviCommand {
+  t : Buffer;
+}
+
 class SetText extends DviCommand {
-  t: Buffer = Buffer.alloc(0);
+  t: Buffer;
   
-  constructor(properties) {
+  constructor(properties : ISetText) {
     super(properties);
+    this.t = properties.t;
   }
 
   execute(machine : Machine) {
@@ -148,15 +171,21 @@ class SetText extends DviCommand {
 
 // 137	put_rule	a[4], b[4]	typeset a rule
 
-class PutRule extends DviCommand {
-  opcode: Opcode.put_rule;
-  
-  a: number = 0;
-  b: number = 0;
+interface IPutRule extends IDviCommand {
+  a : number;
+  b : number;
+}
 
-  constructor(properties) {
+class PutRule extends DviCommand {
+  opcode: Opcode.put_rule = Opcode.put_rule;
+  
+  a: number;
+  b: number;
+
+  constructor(properties : IPutRule) {
     super(properties);
-    this.opcode = Opcode.put_rule;
+    this.a = properties.a;
+    this.b = properties.b;
   }
 
   execute(machine : Machine) {
@@ -170,15 +199,21 @@ class PutRule extends DviCommand {
 
 // 132	set_rule	a[4], b[4]	typeset a rule and move right
 
+interface ISetRule extends IDviCommand {
+  a : number;
+  b : number;
+}
+
 class SetRule extends DviCommand {
-  opcode: Opcode.set_rule;
+  opcode: Opcode.set_rule = Opcode.set_rule;
   
-  a: number = 0;
-  b: number = 0;
+  a: number;
+  b: number;
   
   constructor(properties) {
     super(properties);
-    this.opcode = Opcode.set_rule;
+    this.a = properties.a;
+    this.b = properties.b;
   }
 
   execute(machine : Machine) {
@@ -193,11 +228,14 @@ class SetRule extends DviCommand {
 
 // 138	nop		no operation
 
+interface INop extends IDviCommand {
+}
+
 class Nop extends DviCommand {
-  opcode: Opcode.nop;
-  constructor(properties) {
+  opcode: Opcode.nop = Opcode.nop;
+  
+  constructor(properties: INop) {
     super(properties);
-    this.opcode = Opcode.nop;
   }
 
   toString() : string {
@@ -206,23 +244,47 @@ class Nop extends DviCommand {
 }
 
 // 139	bop	c_0[4]..c_9[4], p[4]	beginning of page
+interface IBop extends IDviCommand {
+  c_0: number ;
+  c_1: number ;
+  c_2: number ;
+  c_3: number ;
+  c_4: number ;
+  c_5: number ;
+  c_6: number ;
+  c_7: number ;
+  c_8: number ;
+  c_9: number ;  
+  p: number ;
+}
 
 class Bop extends DviCommand {
-  opcode: Opcode.bop;
-  c_0: number = 0;
-  c_1: number = 0;
-  c_2: number = 0;
-  c_3: number = 0;
-  c_4: number = 0;
-  c_5: number = 0;
-  c_6: number = 0;
-  c_7: number = 0;
-  c_8: number = 0;
-  c_9: number = 0;  
-  p: number = 0;
-  constructor(properties) {
+  opcode: Opcode.bop= Opcode.bop;
+  c_0: number ;
+  c_1: number ;
+  c_2: number ;
+  c_3: number ;
+  c_4: number ;
+  c_5: number ;
+  c_6: number ;
+  c_7: number ;
+  c_8: number ;
+  c_9: number ;  
+  p: number ;
+  
+  constructor(properties : IBop) {
     super(properties);
-    this.opcode = Opcode.bop;
+    this.c_0 = properties.c_0;
+    this.c_1 = properties.c_1;
+    this.c_2 = properties.c_2;
+    this.c_3 = properties.c_3;
+    this.c_4 = properties.c_4;
+    this.c_5 = properties.c_5;
+    this.c_6 = properties.c_6;
+    this.c_7 = properties.c_7;
+    this.c_8 = properties.c_8;
+    this.c_9 = properties.c_9;
+    this.p = properties.p;
   }
 
   execute(machine : Machine) {
@@ -235,13 +297,14 @@ class Bop extends DviCommand {
 }
 
 // 140	eop		ending of page
+interface IEop extends IDviCommand {
+}
 
 class Eop extends DviCommand {
-  opcode: Opcode.eop;
+  opcode: Opcode.eop = Opcode.eop;
   
-  constructor(properties) {
+  constructor(properties : IEop) {
     super(properties);
-    this.opcode = Opcode.eop;
   }
 
   execute(machine : Machine) {
@@ -257,12 +320,13 @@ class Eop extends DviCommand {
 }
 
 // 141	push		save the current positions
-
+interface IPush extends IDviCommand {
+}
 class Push extends DviCommand {
-  opcode: Opcode.push;
-  constructor(properties) {
+  opcode: Opcode.push = Opcode.push;
+  
+  constructor(properties : IPush) {
     super(properties);
-    this.opcode = Opcode.push;
   }
 
   execute(machine : Machine) {
@@ -275,12 +339,13 @@ class Push extends DviCommand {
 }
 
 // 142	pop		restore previous positions
+interface IPop extends IDviCommand {
+}
 
 class Pop extends DviCommand {
-  opcode: Opcode.pop;
-  constructor(properties) {
+  opcode: Opcode.pop = Opcode.pop;
+  constructor(properties : IPop) {
     super(properties);
-    this.opcode = Opcode.pop;
   }
 
   execute(machine : Machine) {
@@ -296,13 +361,16 @@ class Pop extends DviCommand {
 // 144	right2	b[2]
 // 145	right3	b[3]
 // 146	right4	b[4]
+interface IMoveRight extends IDviCommand {
+  b: number;
+}
 
 class MoveRight extends DviCommand {
-  opcode: Opcode.right;
-  b: number = 0;
-  constructor(properties) {
+  opcode: Opcode.right =  Opcode.right;
+  b: number ;
+  constructor(properties : IMoveRight) {
     super(properties);
-    this.opcode = Opcode.right;
+    this.b = properties.b;
   }
   
   execute(machine : Machine) {
@@ -319,13 +387,16 @@ class MoveRight extends DviCommand {
 // 149	w2	b[2]
 // 150	w3	b[3]
 // 151	w4	b[4]
+interface IMoveW extends IDviCommand {
+  b: number;
+}
 
 class MoveW extends DviCommand {
-  opcode: Opcode.w;
-  b: number = 0;
-  constructor(properties) {
+  opcode: Opcode.w = Opcode.w;;
+  b: number ;
+  constructor(properties : IMoveW) {
     super(properties);
-    this.opcode = Opcode.w;
+    this.b = properties.b;
   }
 
   execute(machine : Machine) {
@@ -346,13 +417,16 @@ class MoveW extends DviCommand {
 // 154	x2	b[2]
 // 155	x3	b[3]
 // 156	x4	b[4]
+interface IMoveX extends IDviCommand {
+  b: number;
+}
 
 class MoveX extends DviCommand {
-  opcode: Opcode.x;
-  b: number = 0;
-  constructor(properties) {
+  opcode: Opcode.x = Opcode.x;
+  b: number ;
+  constructor(properties : IMoveX ) {
     super(properties);
-    this.opcode = Opcode.x;
+    this.b = properties.b;
   }
 
   execute(machine : Machine) {
@@ -372,13 +446,16 @@ class MoveX extends DviCommand {
 // 158	down2	a[2]
 // 159	down3	a[3]
 // 160	down4	a[4]
+interface IMoveDown extends IDviCommand {
+  a: number;
+}
 
 class MoveDown extends DviCommand {
-  opcode: Opcode.down;
-  a: number = 0;
-  constructor(properties) {
+  opcode: Opcode.down = Opcode.down;
+  a: number ;
+  constructor(properties : IMoveDown) {
     super(properties);
-    this.opcode = Opcode.down;
+    this.a = properties.a;
   }
 
   execute(machine : Machine) {
@@ -395,14 +472,17 @@ class MoveDown extends DviCommand {
 // 163	y2	a[2]
 // 164	y3	a[3]
 // 165	y4	a[4]
+interface IMoveY extends IDviCommand {
+  a: number;
+}
 
 class MoveY extends DviCommand {
-  opcode: Opcode.y;
-  a: number = 0;
-  constructor(properties) {
+  opcode: Opcode.y = Opcode.y;
+  a: number ;
+  constructor(properties : IMoveY) {
     super(properties);
-    this.opcode = Opcode.y;
-  }
+    this.a = properties.a;
+  }  
 
   execute(machine : Machine) {
     if (this.length > 1) machine.position.y = this.a;
@@ -422,16 +502,19 @@ class MoveY extends DviCommand {
 // 168	z2	a[2]
 // 169	z3	a[3]
 // 170	z4	a[4]
+interface IMoveZ extends IDviCommand {
+  a: number;
+}
 
 class MoveZ extends DviCommand {
-  opcode: Opcode.z;
-  a: number = 0;
-  
-  constructor(properties) {
-    super(properties);
-    this.opcode = Opcode.z;
-  }
+  opcode: Opcode.z = Opcode.z;
+  a: number ;
 
+  constructor(properties : IMoveZ) {
+    super(properties);
+    this.a = properties.a;
+  }    
+  
   execute(machine : Machine) {
     if (this.length > 1) machine.position.z = this.a;
     machine.moveDown(machine.position.z);
@@ -450,14 +533,18 @@ class MoveZ extends DviCommand {
 // 236	fnt2	k[2]
 // 237	fnt3	k[3]
 // 238	fnt4	k[4]
+interface ISetFont extends IDviCommand {
+  k: number;
+}
 
 class SetFont extends DviCommand {
-  opcode: Opcode.fnt;
-  k: number = 0;
-  constructor(properties) {
+  opcode: Opcode.fnt = Opcode.fnt;
+  k: number ;
+
+  constructor(properties : ISetFont) {
     super(properties);
-    this.opcode = Opcode.fnt;
-  }
+    this.k = properties.k;
+  }    
 
   execute(machine : Machine) {
     if (machine.fonts[this.k]) {
@@ -476,15 +563,18 @@ class SetFont extends DviCommand {
 // 241	xxx3	k[3], x[k]
 // 242	xxx4	k[4], x[k]
 
-class Special extends DviCommand {
-  opcode: Opcode.xxx;
+interface ISpecial extends IDviCommand {
+  x: string;
+}
 
-  x: string = '';
+class Special extends DviCommand {
+  opcode: Opcode.xxx= Opcode.xxx;;
+  x: string;
   
-  constructor(properties) {
+  constructor(properties : ISpecial) {
     super(properties);
-    this.opcode = Opcode.xxx;
     this.special = true;
+    this.x = properties.x;
   }
 
   toString() : string {
@@ -502,19 +592,35 @@ class Special extends DviCommand {
 // 246	fnt_def4	k[4], c[4], s[4], d[4], 
 // a[1], l[1], n[a+l]
 
-class FontDefinition extends DviCommand {
-  opcode: Opcode.fnt_def;
-  k: number = 0; // font id
-  c: number = 0; // checksum
-  s: number = 0; // fixed-point scale factor (applied to char widths of font)
-  d: number = 0; // design-size factors with the magnification (`s/1000`)
-  a: number = 0; // length of directory path of font (`./` if a = 0)
-  l: number = 0; // length of font name
-  n: string = ''; // font name (first `a` bytes is dir, remaining `l` = name)
+interface IFontDefinition extends IDviCommand {
+  k: number ; // font id
+  c: number ; // checksum
+  s: number ; // fixed-point scale factor (applied to char widths of font)
+  d: number ; // design-size factors with the magnification (`s/1000`)
+  a: number ; // length of directory path of font (`./` if a = 0)
+  l: number ; // length of font name
+  n: string; // font name (first `a` bytes is dir, remaining `l` = name)
+}
 
-  constructor(properties) {
+class FontDefinition extends DviCommand {
+  opcode: Opcode.fnt_def = Opcode.fnt_def;
+  k: number ; // font id
+  c: number ; // checksum
+  s: number ; // fixed-point scale factor (applied to char widths of font)
+  d: number ; // design-size factors with the magnification (`s/1000`)
+  a: number ; // length of directory path of font (`./` if a = 0)
+  l: number ; // length of font name
+  n: string; // font name (first `a` bytes is dir, remaining `l` = name)
+
+  constructor(properties : IFontDefinition) {
     super(properties);
-    this.opcode = Opcode.fnt_def;
+    this.k = properties.k;
+    this.c = properties.c;
+    this.s = properties.s;
+    this.d = properties.d;
+    this.a = properties.a;
+    this.l = properties.l;
+    this.n = properties.n;
   }
   
   execute(machine : Machine) {
@@ -532,17 +638,29 @@ class FontDefinition extends DviCommand {
 }
 
 // 247	pre	i[1], num[4], den[4], mag[4],  k[1], x[k]	preamble
-
+interface IPreamble extends IDviCommand {
+  i: number ;
+  num: number ;
+  den: number ;
+  mag: number ;
+  x: string;
+}
 class Preamble extends DviCommand {
-  opcode: Opcode.pre;
-  i: number = 0;
-  num: number = 0;
-  den: number = 0;
-  mag: number = 0;
-  x: string = '';
-  constructor(properties) {
+  opcode: Opcode.pre = Opcode.pre;
+  
+  i: number ;
+  num: number ;
+  den: number ;
+  mag: number ;
+  x: string;
+  
+  constructor(properties : IPreamble) {
     super(properties);
-    this.opcode = Opcode.pre;
+    this.i = properties.i;
+    this.x = properties.x;
+    this.num = properties.num;
+    this.den = properties.den;
+    this.mag = properties.mag;
   }
 
   execute(machine : Machine) {
@@ -566,22 +684,39 @@ class Preamble extends DviCommand {
 
 // 248	post	p[4], num[4], den[4], mag[4], l[4], u[4], s[2], t[2]
 // < font definitions >	postamble beginning
+interface IPost extends IDviCommand {
+  p : number ;
+  num : number ;
+  den : number ;
+  mag : number ;
+  l : number ;
+  u : number ;
+  s : number ;
+  t : number ;  
+}
 
 class Post extends DviCommand {
-  opcode: Opcode.post;
+  opcode: Opcode.post= Opcode.post;
 
-  p : number = 0;
-  num : number = 0;
-  den : number = 0;
-  mag : number = 0;
-  l : number = 0;
-  u : number = 0;
-  s : number = 0;
-  t : number = 0;
+  p : number ;
+  num : number ;
+  den : number ;
+  mag : number ;
+  l : number ;
+  u : number ;
+  s : number ;
+  t : number ;
   
-  constructor(properties) {
+  constructor(properties : IPost) {
     super(properties);
-    this.opcode = Opcode.post;
+    this.p = properties.p;
+    this.num = properties.num;
+    this.den = properties.den;
+    this.mag = properties.mag;
+    this.l = properties.l;
+    this.u = properties.u;
+    this.s = properties.s;
+    this.t = properties.t;
   }
   
   execute(machine : Machine) {
@@ -594,16 +729,21 @@ class Post extends DviCommand {
 }
 
 // 249	post_post	q[4], i[1]; 223's	postamble ending
+interface IPostPost extends IDviCommand {
+  q : number ;
+  i : number ;  
+}
 
 class PostPost extends DviCommand {
-  opcode: Opcode.post_post;
+  opcode: Opcode.post_post = Opcode.post_post;
 
-  q : number = 0;
-  i : number = 0;
+  q : number ;
+  i : number ;
   
   constructor(properties) {
     super(properties);
-    this.opcode = Opcode.post_post;
+    this.q = properties.q;
+    this.i = properties.i;
   }
 
   execute(machine : Machine) {

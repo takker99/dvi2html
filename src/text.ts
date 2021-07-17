@@ -1,5 +1,6 @@
 import { Machine, Rule } from "./machine";
 import { Writable } from 'stream';
+import { Buffer } from 'buffer';
 
 const epsilon = 0.00001;
 

@@ -1,5 +1,4 @@
-//  var path = execSync('kpsewhich ' + name + '.tfm').toString().split("\n")[0];
-
+import { Buffer } from 'buffer';
 import { Tfm } from './tfm/tfm';
 import { loadFont } from './tfm/index';
 
