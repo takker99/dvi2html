@@ -4,10 +4,11 @@ module.exports = {
   entry: path.resolve(__dirname, "src/index.ts"),
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "index_bundle.js",
-    library: "$",
-    libraryTarget: "umd",
-    globalObject: "this"
+    filename: "index.js",
+    library: "dvi2html"
+    //library: "$",
+    //libraryTarget: "umd",
+    //globalObject: "this"
   },
   resolve: {
     extensions: ['.ts', '.js', '.json'],
@@ -17,11 +18,11 @@ module.exports = {
   },
   module: {
     rules: [
-      {
+      /*{
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: "babel-loader",
-      },
+      },*/
       {
         test: /\.(ts)$/,
         exclude: /node_modules/,

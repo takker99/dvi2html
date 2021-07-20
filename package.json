@@ -1,12 +1,12 @@
 {
   "name": "dvi2html",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Convert DVI to HTML5/CSS",
-  "main": "dist/index_bundle.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "compile": "webpack",
+    "compile": "rimraf dist && tsc",
     "build": "cd tools && node tfm2json.js && node glyphs.js && cd .. && npm run compile"
   },
   "files": [
@@ -24,6 +24,7 @@
     "@types/node": "^10.17.13",
     "babel-loader": "^8.2.2",
     "eslint": "^7.23.0",
+    "rimraf": "^3.0.2",
     "ts-loader": "^9.2.3",
     "typescript": "^4.3.5",
     "webpack": "^5.45.1",
