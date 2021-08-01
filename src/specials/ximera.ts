@@ -89,7 +89,7 @@ function* specialsToXimera(commands) {
 	  yield new XimeraBegin(ximera);
         } else if (command.x.startsWith('ximera:end ')) {
 	  let ximera = command.x.replace(/^ximera:end /, '');
-	  yield new XimeraBegin(ximera);
+	  yield new XimeraEnd(ximera);
         } else if (command.x === 'ximera:save') {
 	  yield new XimeraSave();
         } else if (command.x === 'ximera:restore') {

@@ -35,10 +35,16 @@ export function dvi2html( dviStream, htmlStream ) {
 export function dvi2vdom( dviStream: any,
                           h: any,
                           ximeraRuleHandler : any,
+                          ximeraPushHandler : any,
+                          ximeraPopHandler : any,                          
                           callback: any ) {
   let parser = ximera(title(papersize(html(svg(color(mergeText(dviParser(dviStream))))))));
 
-  let machine = new VDomMachine( h, ximeraRuleHandler, callback );
+  let machine = new VDomMachine( h,
+                                 ximeraRuleHandler,
+                                 ximeraPushHandler,
+                                 ximeraPopHandler,
+                                 callback );
 
   execute( parser, machine );
 
