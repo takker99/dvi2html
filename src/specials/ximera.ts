@@ -52,6 +52,39 @@ class XimeraRule extends DviCommand {
   }  
 }
 
+
+class XimeraRuleClose extends DviCommand {
+  constructor() {
+    super({});
+  }
+
+  execute(machine : Machine) {
+    machine.setXimeraRuleClose();
+  }
+  
+  toString() : string {
+    return `setXimeraRuleClose { }`;
+  }  
+}
+
+
+class XimeraRuleOpen extends DviCommand {
+  rule: string;
+  
+  constructor(rule : string) {
+    super({});
+    this.rule = rule;
+  }
+
+  execute(machine : Machine) {
+    machine.setXimeraRuleOpen( this.rule );
+  }
+  
+  toString() : string {
+    return `setXimeraRuleOpen { rule: '${this.rule}' }`;
+  }  
+}
+
 class XimeraSave extends DviCommand {
   constructor() {
     super({});
@@ -84,6 +117,11 @@ function* specialsToXimera(commands) {
         if (command.x.startsWith('ximera:rule ')) {
 	  let ximera = command.x.replace(/^ximera:rule /, '');
 	  yield new XimeraRule(ximera);
+        } else if (command.x.startsWith('ximera:rule:open ')) {
+	  let ximera = command.x.replace(/^ximera:rule:open /, '');
+	  yield new XimeraRuleOpen(ximera);
+        } else if (command.x.startsWith('ximera:rule:close ')) {
+	  yield new XimeraRuleClose();                    
         } else if (command.x.startsWith('ximera:begin ')) {
 	  let ximera = command.x.replace(/^ximera:begin /, '');
 	  yield new XimeraBegin(ximera);

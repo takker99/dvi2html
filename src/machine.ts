@@ -68,6 +68,12 @@ export class Machine {
 
   setXimeraRule( r : string ) {
   }
+
+  setXimeraRuleOpen( r : string ) {
+  }
+
+  setXimeraRuleClose( ) {
+  }    
   
   pushXimera( e : string ) {
   }
