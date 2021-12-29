@@ -1,51 +1,45 @@
-import * as fs from "fs";
-import { execSync } from "child_process";
-import { dvi2html } from "./src";
-import { Writable } from 'stream';
+import { dvi2html } from "./src/mod.ts";
 
 let fonts = "";
 //fonts = fonts + `@font-face { font-family: esint10; src: url('./esint/esint10.ttf'); }\n`;
-fs.readdirSync('./fonts').forEach(file => {
-  let name = file.replace(/.ttf/, '');
-  fonts = fonts + `@font-face { font-family: ${name}; src: url('fonts/${file}'); }\n`;
-});
-fs.writeFileSync("fonts.css", fonts);
+for await (const file of Deno.readDir("./fonts")) {
+  if (!file.isFile) continue;
+  const name = file.name.replace(/.ttf/, "");
+  fonts +=
+    `@font-face { font-family: ${name}; src: url('fonts/${file.name}'); }\n`;
+}
+await Deno.writeTextFile("fonts.css", fonts);
 
-//execSync("latex sample/sample.tex");
+const filename = "sample.dvi";
 
-let filename = 'sample.dvi';
+const buffer = await Deno.readFile(filename);
 
-let stream = fs.createReadStream(filename, { highWaterMark: 256 });
-var buffer = fs.readFileSync(filename);
-
-let html = "";
-html = html + "<!doctype html>\n";
-html = html + "<html lang=en>\n";
-html = html + "<head>\n";
-html = html + '<link rel="stylesheet" type="text/css" href="fonts.css">\n';
-html = html + '<link rel="stylesheet" type="text/css" href="base.css">\n';
-html = html + "</head>\n";
-html = html + '<body>\n';
-html = html + '<div style="position: absolute; width: 100%;">\n';
+let html = `<!doctype html>
+<html lang=en>
+<head>
+<link rel="stylesheet" type="text/css" href="fonts.css">
+<link rel="stylesheet" type="text/css" href="base.css">
+</head>
+<body>
+<div style="position: absolute; width: 100%;">`;
 
 //html = html + dviParser( buffer );
 
-const myWritable = new Writable({
+const myWritable = new WritableStream({
   write(chunk, encoding, callback) {
     html = html + chunk;
     callback();
-  }
+  },
 });
 
 async function main() {
-  dvi2html( buffer, myWritable );
-  
-  html = html + '</div>\n';
-  html = html + '</body>\n';
-  html = html + "</html>\n";
+  dvi2html(buffer, myWritable);
 
-  fs.writeFileSync("index.html", html);
+  html += `</div>
+</body>
+</html>`;
+  await Deno.writeTextFile("index.html", html);
 }
 
-main()
+main();
 console.log("DONE");
