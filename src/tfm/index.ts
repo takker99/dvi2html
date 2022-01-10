@@ -22,7 +22,7 @@ import {
   TfmKern,
   TfmLigature,
 } from "./tfm.ts";
-import { fontdata } from "./fonts.ts";
+import fontdata from "./fonts.json" assert { type: "json" };
 
 const NO_TAG = 0;
 const LIG_TAG = 1;

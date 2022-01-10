@@ -1,8 +1,8 @@
-import { Buffer } from "buffer";
-import { Machine, Rule } from "./machine";
+import { Buffer } from "./deps/buffer.ts";
+import { Machine, Rule } from "./machine.ts";
 
-import * as glyphs from "./tfm/encodings.json";
-import fontlist from "../tools/fontlist.json" assert "json";
+import glyphs from "./tfm/encodings.json" assert { type: "json" };
+import fontlist from "../tools/fontlist.json" assert { type: "json" };
 
 export default class HTMLMachine extends Machine {
   output: WritableStream;
