@@ -88,15 +88,18 @@ const glyphToCodepoint = (glyphs: Record<string, number>, name: string) => {
 const execute = (
   token: string,
   stack: (number | string[])[],
+  // deno-lint-ignore no-explicit-any
   state: { brace?: any; bracket?: any },
   table: number[],
   glyphs: Record<string, number>,
 ) => {
   if (token == "repeat") {
-    let code = stack.pop();
-    let count = stack.pop();
+    // deno-lint-ignore no-explicit-any
+    const code: any = stack.pop();
+    // deno-lint-ignore no-explicit-any
+    const count: any = stack.pop();
     for (let i = 0; i < count; i++) {
-      for (let c of code) {
+      for (const c of code) {
         execute(c, stack, state, table, glyphs);
       }
     }
@@ -109,6 +112,7 @@ const execute = (
   }
 
   if (state.brace) {
+    //@ts-ignore no-explicit-any
     stack[stack.length - 1].push(token);
     return;
   }
@@ -134,6 +138,7 @@ const execute = (
       table.push(glyphToCodepoint(glyphs, token.slice(1)));
     }
 
+    //@ts-ignore no-explicit-any
     stack.push(token);
     return;
   }
@@ -147,7 +152,7 @@ const execute = (
 const loadEncoding = async (s: string, glyphs: Record<string, number>) => {
   const filename = await kpsewhich(s);
   const encoding = new TextDecoder().decode(await Deno.readFile(filename));
-  console.log(s,filename)
+  console.log(s, filename);
   const stack: string[][] = [];
   const state = {};
   const table: number[] = [];

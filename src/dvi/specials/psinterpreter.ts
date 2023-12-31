@@ -1,4 +1,4 @@
-import { Matrix, rotate, scale, translate } from "../../matrix";
+import { Matrix, rotate, scale, translate } from "../../matrix.ts";
 
 const stateQueue: Matrix[] = [];
 
@@ -151,7 +151,7 @@ export const interpret = (
     }
     // Operators
     if (token in operators) {
-      //@ts-ignore
+      //@ts-ignore no-explicit-any
       operators[token](this);
       continue;
     }
@@ -261,6 +261,7 @@ function* tokens(input: string) {
 // Postscript stack objects
 abstract class StackObject {
   name: string;
+  // deno-lint-ignore no-explicit-any
   value: any;
   constructor(name: string) {
     this.name = name;

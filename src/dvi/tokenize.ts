@@ -1,4 +1,3 @@
-import { TextDecoder } from "util";
 import {
   BOP,
   DOWN,
@@ -60,7 +59,7 @@ import {
   Z2,
   Z3,
   Z4,
-} from "./const";
+} from "./const.ts";
 
 // 133	put1	c[1]	typeset a character
 // 134	put2	c[2]
@@ -80,9 +79,6 @@ export interface PutChar {
 export interface SetChar {
   opcode: typeof SET_CHAR;
   c: number;
-}
-
-export interface SetText {
 }
 
 // 137	put_rule	a[4], b[4]	typeset a rule
@@ -359,13 +355,14 @@ const parseCommand = (
     case PUT_CHAR:
     case PUT2:
     case PUT3:
-    case PUT4:
+    case PUT4: {
       const charLength = (opcode - SET1 + 1) as (1 | 2 | 3 | 4);
       if (buffer.byteLength < charLength + 1) return;
       return [{
         opcode: PUT_CHAR,
         c: readUint(buffer, 1, charLength),
       }, charLength + 1];
+    }
     case NOP:
     case EOP:
     case PUSH:

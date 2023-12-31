@@ -1,5 +1,4 @@
-import { TextDecoder } from "util";
-import * as fontdata from "./fonts.json";
+import fontdata from "./fonts.json" with { type: "json" };
 
 const LIG_TAG = 1;
 const LIST_TAG = 2;
@@ -8,10 +7,10 @@ const EXT_TAG = 3;
 const KERN_OPCODE = 128;
 
 export const loadFont = (path: string) => {
-  // @ts-ignore
-  if (!fontdata[path]) throw Error(`Could not find font ${path}`);
-  // @ts-ignore
-  return parse(new Uint32Array(fontdata[path]));
+  if (!Object.hasOwn(fontdata, path)) {
+    throw Error(`Could not find font ${path}`);
+  }
+  return parse(new Uint32Array(fontdata[path as keyof typeof fontdata]));
 };
 
 export const parse = (tfm: Uint32Array): TFM => {
@@ -79,6 +78,7 @@ export const parse = (tfm: Uint32Array): TFM => {
   position += table_lengths.italic_correction * 4;
   const lig_kern = slice(table_lengths.lig_kern);
   position += table_lengths.lig_kern * 4;
+  // deno-lint-ignore no-unused-vars
   const kern = slice(table_lengths.kern);
   position += table_lengths.kern * 4;
   const extensible_character = slice(table_lengths.extensible_character);
@@ -102,7 +102,7 @@ export const parse = (tfm: Uint32Array): TFM => {
     face: header.face,
     ligKernPrograms: readLigKernPrograms(lig_kern),
     characters: charecterInfo.map(
-      (charInfo, i) => {
+      (charInfo) => {
         const { width_index, height_index, depth_index, italic_index } =
           charInfo;
         const char: TFMChar = {
@@ -410,6 +410,7 @@ const readLigKernPrograms = (buffer: number[]) =>
 
     if (op_byte >= KERN_OPCODE) {
       // kern step
+      // deno-lint-ignore no-unused-vars
       const kern_index = 256 * (op_byte - KERN_OPCODE) + remainder;
       return {
         skip_byte,
@@ -420,9 +421,13 @@ const readLigKernPrograms = (buffer: number[]) =>
     }
 
     // Ligature step
+    // deno-lint-ignore no-unused-vars
     const number_of_chars_to_pass_over = op_byte >> 2;
+    // deno-lint-ignore no-unused-vars
     const current_char_is_deleted = (op_byte & 0x02) == 0;
+    // deno-lint-ignore no-unused-vars
     const next_char_is_deleted = (op_byte & 0x01) == 0;
+    // deno-lint-ignore no-unused-vars
     const ligature_char_code = remainder;
     return skip_byte >= 128
       ? {

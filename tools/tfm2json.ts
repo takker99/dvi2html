@@ -1,4 +1,4 @@
-import fontlist from "./fontlist.json" assert { type: "json" };
+import fontlist from "../src/fontlist.json" assert { type: "json" };
 
 const fonts: Record<string, number[]> = {};
 
@@ -9,10 +9,12 @@ for (const fontname of fontnames) {
     args: [`${fontname}.tfm`],
   });
   const { stdout } = await kpsewhich.output();
-    const filename = new TextDecoder().decode(stdout).trim();
+  const filename = new TextDecoder().decode(stdout).trim();
   console.log(fontname, filename);
 
-  fonts[fontname] = [...new Uint32Array((await Deno.readFile(filename)).buffer)];
+  fonts[fontname] = [
+    ...new Uint32Array((await Deno.readFile(filename)).buffer),
+  ];
 }
 
 await Deno.writeTextFile(

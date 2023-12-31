@@ -1,6 +1,6 @@
-import { interpret as interpretPS } from "./psinterpreter";
-import { SpecialPlugin } from "../mod";
-import { Matrix } from "../../matrix";
+import { interpret as interpretPS } from "./psinterpreter.ts";
+import { SpecialPlugin } from "../mod.ts";
+import { Matrix } from "../../matrix.ts";
 
 export interface PS {
   type: "ps";

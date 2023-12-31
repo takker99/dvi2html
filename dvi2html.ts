@@ -1,23 +1,22 @@
-import { promises } from "fs";
-import { parse } from "./src/dvi/mod";
-import { color } from "./src/dvi/specials/color";
-import { papersize } from "./src/dvi/specials/papersize";
-import { svg } from "./src/dvi/specials/svg";
-import { ps } from "./src/dvi/specials/ps";
-import { resolve } from "path";
-import { convertToHTML } from "./src/html";
-import { tokenize } from "./src/dvi/tokenize";
+import { parse } from "./src/dvi/mod.ts";
+import { color } from "./src/dvi/specials/color.ts";
+import { papersize } from "./src/dvi/specials/papersize.ts";
+import { svg } from "./src/dvi/specials/svg.ts";
+// deno-lint-ignore no-unused-vars
+import { ps } from "./src/dvi/specials/ps.ts";
+import { convertToHTML } from "./src/html.ts";
+// deno-lint-ignore no-unused-vars
+import { tokenize } from "./src/dvi/tokenize.ts";
 
-(async () => {
-  // console.log(loadFont("cmb10"));
-  const file = await promises.readFile(
-    resolve(__dirname, "./test/two_page_tikz.dvi"),
-  );
-  // for (const token of tokenize(file)) {
-  //   console.log(token);
-  // }
-  const div = convertToHTML(parse(file, [papersize, color(), svg()]));
-  const html = `<!DOCTYPE html>
+// console.log(loadFont("cmb10"));
+const file = await Deno.readFile(
+  new URL("./test/two_page_tikz.dvi", import.meta.url),
+);
+// for (const token of tokenize(file)) {
+//   console.log(token);
+// }
+const div = convertToHTML(parse(file, [papersize, color(), svg()]));
+const html = `<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -47,28 +46,27 @@ import { tokenize } from "./src/dvi/tokenize";
 </head>
 
 <body>${div}</body></html>`;
-  console.log(html);
-  // for (const command of parse(file, [papersize, color(), svg(),ps()])) {
-  //   switch (command.type) {
-  //     case "rect":
-  //     case "info":
-  //     case "color":
-  //     case "papersize":
-  //     case "svg":
-  //       console.log(command);
-  //       break;
-  //     case "special":
-  //       console.log({ type: command.type, data: new TextDecoder().decode(command.data) });
-  //       break;
-  //     case "text":
-  //       console.log({
-  //         type: command.type,
-  //         text: command.text,
-  //         font: command.font.name,
-  //         top: command.top,
-  //         left: command.left,
-  //       });
-  //       break;
-  //   }
-  // }
-})();
+console.log(html);
+// for (const command of parse(file, [papersize, color(), svg(),ps()])) {
+//   switch (command.type) {
+//     case "rect":
+//     case "info":
+//     case "color":
+//     case "papersize":
+//     case "svg":
+//       console.log(command);
+//       break;
+//     case "special":
+//       console.log({ type: command.type, data: new TextDecoder().decode(command.data) });
+//       break;
+//     case "text":
+//       console.log({
+//         type: command.type,
+//         text: command.text,
+//         font: command.font.name,
+//         top: command.top,
+//         left: command.left,
+//       });
+//       break;
+//   }
+// }

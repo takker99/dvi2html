@@ -1,5 +1,5 @@
-import { loadFont, TFM } from "../tfm/mod";
-import { tokenize } from "./tokenize";
+import { loadFont, TFM } from "../tfm/mod.ts";
+import { tokenize } from "./tokenize.ts";
 import {
   BOP,
   DOWN,
@@ -26,7 +26,7 @@ import {
   XXX,
   Y,
   Z,
-} from "./const";
+} from "./const.ts";
 
 export interface Register {
   horizontal: number;
@@ -94,6 +94,7 @@ export type SpecialPlugin<T> = (
 ) => T | null | undefined;
 
 export function* parse<
+  // deno-lint-ignore no-explicit-any
   Plugins extends SpecialPlugin<any>[] = SpecialPlugin<Special>[],
 >(
   dvi: Uint8Array,
@@ -232,7 +233,7 @@ export function* middleParser(
       case PUSH:
         stack.push({ ...register });
         break;
-      case POP:
+      case POP: {
         const register_ = stack.pop();
         if (register_) {
           register.horizontal = register_.horizontal;
@@ -243,6 +244,7 @@ export function* middleParser(
           register.z = register_.z;
         }
         break;
+      }
       case RIGHT:
         register.horizontal += command.b;
         break;
@@ -279,7 +281,7 @@ export function* middleParser(
           ...register,
         };
         break;
-      case FNT_DEF:
+      case FNT_DEF: {
         if (fonts.has(command.k)) break;
         const name = command.n;
         const scaleFactor = command.s;
@@ -294,6 +296,7 @@ export function* middleParser(
           metrics: font,
         });
         break;
+      }
       case PRE:
         version = command.i;
         numerator = command.num;
@@ -336,7 +339,7 @@ const getTextWidth = (text: string, font: DviFont) => {
   let width = 0;
   for (const char of text) {
     const codePoint = char.codePointAt(0) ?? 0;
-    let metrics = font.metrics.characters.at(codePoint);
+    const metrics = font.metrics.characters.at(codePoint);
     if (metrics === undefined) {
       throw Error(`Could not find font metric for ${codePoint}`);
     }

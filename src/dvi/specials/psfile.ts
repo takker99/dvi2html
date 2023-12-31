@@ -1,5 +1,11 @@
-import { SpecialPlugin } from "../mod";
-import { Matrix, rotate, scale, toSVGTransform, translate } from "../../matrix";
+import { SpecialPlugin } from "../mod.ts";
+import {
+  Matrix,
+  rotate,
+  scale,
+  toSVGTransform,
+  translate,
+} from "../../matrix.ts";
 
 export interface PSFile {
   type: "psfile";
@@ -7,7 +13,7 @@ export interface PSFile {
   toSVG: (matrix: Matrix, x: number, y: number) => string;
 }
 
-export const psfile: SpecialPlugin<PSFile> = (command, next) => {
+export const psfile: SpecialPlugin<PSFile> = (command) => {
   const ps = new TextDecoder().decode(command.data);
   if (!ps.startsWith("psfile=")) return;
 
@@ -65,7 +71,7 @@ export const psfile: SpecialPlugin<PSFile> = (command, next) => {
         -lly,
       );
       return `<image x="${llx}" y="${lly}" width="${urx}" height="${ury}" href="${href}"` +
-        `${toSVGTransform(matrix)}></image>`;
+        `${toSVGTransform(transformedMatrix)}></image>`;
     },
   };
 };

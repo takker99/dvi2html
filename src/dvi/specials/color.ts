@@ -1,4 +1,4 @@
-import { SpecialPlugin } from "../mod";
+import { SpecialPlugin } from "../mod.ts";
 
 export type TexColor = "black" | "white" | `#${string}`;
 

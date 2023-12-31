@@ -1,10 +1,10 @@
-import { identifyMatrix, Matrix, toSVGTransform } from "./matrix";
-import { ParseInfo, Rule, Special, Text } from "./dvi/mod";
-import { SVG } from "./dvi/specials/svg";
-import { Color, TexColor } from "./dvi/specials/color";
-import { Papersize } from "./dvi/specials/papersize";
-import glyphs from "./encodings.json";
-import fontlist from "./fontlist.json";
+import { identifyMatrix, Matrix, toSVGTransform } from "./matrix.ts";
+import { ParseInfo, Rule, Special, Text } from "./dvi/mod.ts";
+import { SVG } from "./dvi/specials/svg.ts";
+import { Color, TexColor } from "./dvi/specials/color.ts";
+import { Papersize } from "./dvi/specials/papersize.ts";
+import glyphs from "./encodings.json" with { type: "json" };
+import fontlist from "./fontlist.json" with { type: "json" };
 
 export const convertToHTML = (
   commands: Iterable<
@@ -19,14 +19,11 @@ export const convertToHTML = (
 ): string => {
   let pointsPerDviUnit = 0;
 
-  let svgDepth = 0;
   let color: TexColor = "black";
   const depth: ("font-color" | "svg")[] = [];
-  let colorDepth = false;
-  let matrix: Matrix = [...identifyMatrix];
+  const matrix: Matrix = [...identifyMatrix];
   let fontName = "";
   let fontSize = 0;
-  let fontDepth = 0;
   let html = "";
 
   let lastTextV = 0;
@@ -42,7 +39,7 @@ export const convertToHTML = (
 
         for (const c of command.text) {
           const codePoint = c.codePointAt(0) ?? 0;
-          let metrics = command.font.metrics.characters.at(codePoint);
+          const metrics = command.font.metrics.characters.at(codePoint);
           if (metrics === undefined) {
             throw Error(`Could not find font metric for ${codePoint}`);
           }
@@ -50,29 +47,30 @@ export const convertToHTML = (
           textWidth += metrics.width;
           textHeight = Math.max(textHeight, metrics.height);
 
-          //@ts-ignore
-          const encoding = fontlist[command.font.name];
-          //@ts-ignore
-          const glyph = glyphs[encoding];
-          if (glyph) {
-            //@ts-ignore
-            htmlText += String.fromCodePoint(glyph[codePoint]);
-          } else {
-            // This is ridiculous.
-            htmlText += String.fromCodePoint(
-              (codePoint >= 0 && codePoint <= 9)
-                ? 161 + codePoint
-                : (codePoint >= 10 && codePoint <= 19)
-                ? 173 + codePoint - 10
-                : (codePoint === 20)
-                ? 8729 // O RLLY?!
-                : (codePoint >= 21 && codePoint <= 32)
-                ? 184 + codePoint - 21
-                : (codePoint === 127)
-                ? 196
-                : codePoint,
-            );
-          }
+          const encoding = Object.hasOwn(fontlist, command.font.name)
+            ? fontlist[command.font.name as keyof typeof fontlist]
+            : undefined;
+          const glyph = encoding && Object.hasOwn(glyphs, encoding)
+            ? glyphs[encoding as keyof typeof glyphs]
+            : undefined;
+          const newCodePoint = glyph && Object.hasOwn(glyph, codePoint)
+            ? glyph[codePoint as unknown as keyof typeof glyph]
+            : undefined;
+          htmlText += String.fromCodePoint(
+            newCodePoint ??
+                // This is ridiculous.
+                (codePoint >= 0 && codePoint <= 9)
+              ? 161 + codePoint
+              : (codePoint >= 10 && codePoint <= 19)
+              ? 173 + codePoint - 10
+              : (codePoint === 20)
+              ? 8729 // O RLLY?!
+              : (codePoint >= 21 && codePoint <= 32)
+              ? 184 + codePoint - 21
+              : (codePoint === 127)
+              ? 196
+              : codePoint,
+          );
         }
 
         // tfm is based on 1/2^16 pt units, rather than dviunit which is 10^−7 meters
@@ -130,7 +128,6 @@ export const convertToHTML = (
         const bottom = command.top * pointsPerDviUnit;
         const top = bottom - height;
 
-        const rect = ``;
         html += depth.includes("svg")
           ? `<rect x="${left}" y="${top}" width="${width}" height="${height}" fill=${color} ${
             toSVGTransform(matrix)
@@ -141,11 +138,12 @@ export const convertToHTML = (
       }
       case "special":
         break;
-      case "info":
+      case "info": {
         const dviUnit = command.magnification * command.numerator / 1000.0 /
           command.denominator;
         pointsPerDviUnit = dviUnit * 72.27 / 100000.0 / 2.54;
         break;
+      }
       case "svg": {
         const top = command.top * pointsPerDviUnit;
         const left = command.left * pointsPerDviUnit;
@@ -168,7 +166,6 @@ export const convertToHTML = (
           }
         }
 
-        //@ts-ignore
         html += command.svg.replaceAll("{?x}", `${left}`).replaceAll(
           "{?y}",
           `${top}`,
