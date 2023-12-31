@@ -1,14 +1,14 @@
 {
   "name": "dvi2html",
-  "version": "0.0.6",
+  "version": "1.5.0",
   "description": "Convert DVI to HTML5/CSS",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "node tools/tfm2json.js && tsc"
   },
   "files": [
-    "lib/**/*"
+    "dist/**/*"
   ],
   "author": "Jim Fowler",
   "license": "GPL-3.0",

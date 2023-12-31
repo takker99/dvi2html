@@ -1,4 +1,4 @@
-import desiredFonts from "./fontlist.json" assert { type: "json" };
+import desiredFonts from "../src/fontlist.json" assert { type: "json" };
 
 const kpsewhich = async (s: string) => {
   const result = new Deno.Command("kpsewhich", {
@@ -171,7 +171,7 @@ const main = async () => {
     tables[encoding] = table;
   }
 
-  const outputPath = new URL("./encodings.json", import.meta.url);
+  const outputPath = new URL("../src/encodings.json", import.meta.url);
   await Deno.writeTextFile(outputPath, JSON.stringify(tables));
 };
 

@@ -3,8 +3,8 @@ import { ParseInfo, Rule, Special, Text } from "./dvi/mod";
 import { SVG } from "./dvi/specials/svg";
 import { Color, TexColor } from "./dvi/specials/color";
 import { Papersize } from "./dvi/specials/papersize";
-import glyphs from "../tools/encodings.json";
-import fontlist from "../tools/fontlist.json";
+import glyphs from "./encodings.json";
+import fontlist from "./fontlist.json";
 
 export const convertToHTML = (
   commands: Iterable<

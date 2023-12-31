@@ -16,6 +16,6 @@ for (const fontname of fontnames) {
 }
 
 await Deno.writeTextFile(
-  new URL("./fonts.json", import.meta.url),
+  new URL("../src/tfm/fonts.json", import.meta.url),
   JSON.stringify(fonts),
 );
