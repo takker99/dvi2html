@@ -1,15 +1,21 @@
 {
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESNext",
     "module": "commonjs",
     "declaration": true,
     "outDir": "./lib",
     "downlevelIteration": true,
     "resolveJsonModule": true,
-    "lib": [ "es2015" ]
+    "lib": [
+      "ESNext"
+    ]
   },
   "include": [
-    "src/index.ts"
+    "dvi2html.ts"
   ],
-  "exclude": ["node_modules", "**/__tests__/*"]  
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*"
+  ]
 }

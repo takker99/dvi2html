@@ -1,170 +1,202 @@
-import { Machine, Rule } from "./machine";
-import Matrix from './matrix';
-import { Writable } from 'stream';
+import { identifyMatrix, Matrix, toSVGTransform } from "./matrix";
+import { ParseInfo, Rule, Special, Text } from "./dvi/mod";
+import { SVG } from "./dvi/specials/svg";
+import { Color, TexColor } from "./dvi/specials/color";
+import { Papersize } from "./dvi/specials/papersize";
+import glyphs from "../tools/encodings.json";
+import fontlist from "../tools/fontlist.json";
 
-export default class HTMLMachine extends Machine {
-  output : Writable;
-  pointsPerDviUnit : number;
+export const convertToHTML = (
+  commands: Iterable<
+    | Text
+    | Rule
+    | Special
+    | ParseInfo
+    | SVG
+    | Papersize
+    | Color
+  >,
+): string => {
+  let pointsPerDviUnit = 0;
 
-  svgDepth : number;
-  color : string;
-  colorStack : string[];
+  let svgDepth = 0;
+  let color: TexColor = "black";
+  const depth: ("font-color" | "svg")[] = [];
+  let colorDepth = false;
+  let matrix: Matrix = [...identifyMatrix];
+  let fontName = "";
+  let fontSize = 0;
+  let fontDepth = 0;
+  let html = "";
 
-  paperwidth : number;
-  paperheight : number;
+  let lastTextV = 0;
+  let lastTextRight = 0;
 
-  pushColor( c : string ) {
-    this.colorStack.push(this.color);
-    this.color = c;
-  }
+  for (const command of commands) {
+    switch (command.type) {
+      case "text": {
+        let textWidth = 0;
+        let textHeight = 0;
 
-  popColor( ) {
-    this.color = this.colorStack.pop();
-  }
+        let htmlText = "";
 
-  setPapersize( width : number, height : number ) {
-    this.paperwidth = width;
-    this.paperheight = height;
-  }
+        for (const c of command.text) {
+          const codePoint = c.codePointAt(0) ?? 0;
+          let metrics = command.font.metrics.characters.at(codePoint);
+          if (metrics === undefined) {
+            throw Error(`Could not find font metric for ${codePoint}`);
+          }
 
-  getCurrentPosition(): [number, number] {
-	  return [
-		  this.position.h * this.pointsPerDviUnit,
-		  this.position.v * this.pointsPerDviUnit
-	  ];
-  }
+          textWidth += metrics.width;
+          textHeight = Math.max(textHeight, metrics.height);
 
-  setCurrentPosition(x: number, y: number) {
-	  this.position.h = x / this.pointsPerDviUnit;
-	  this.position.v = y / this.pointsPerDviUnit;
-  }
+          //@ts-ignore
+          const encoding = fontlist[command.font.name];
+          //@ts-ignore
+          const glyph = glyphs[encoding];
+          if (glyph) {
+            //@ts-ignore
+            htmlText += String.fromCodePoint(glyph[codePoint]);
+          } else {
+            // This is ridiculous.
+            htmlText += String.fromCodePoint(
+              (codePoint >= 0 && codePoint <= 9)
+                ? 161 + codePoint
+                : (codePoint >= 10 && codePoint <= 19)
+                ? 173 + codePoint - 10
+                : (codePoint === 20)
+                ? 8729 // O RLLY?!
+                : (codePoint >= 21 && codePoint <= 32)
+                ? 184 + codePoint - 21
+                : (codePoint === 127)
+                ? 196
+                : codePoint,
+            );
+          }
+        }
 
-  putHTML( html : string ) {
-    this.output.write( html );
-  }
+        // tfm is based on 1/2^16 pt units, rather than dviunit which is 10^−7 meters
+        const dviUnitsPerFontUnit = command.font.metrics.design_size /
+          1048576.0 *
+          65536 / 1048576;
 
-  putSVG( svg : string ) {
-    let left = this.position.h * this.pointsPerDviUnit;
-    let top = this.position.v * this.pointsPerDviUnit;
+        const left = command.left * pointsPerDviUnit;
 
-	if (svg.match(/<svg beginpicture>/)) {
-		if (this.svgDepth > 0) {
-			// In this case we are inside another svg element so drop the svg start tags.
-			svg = svg.replace("<svg beginpicture>", "");
-		} else {
-			svg = svg.replace("<svg beginpicture>", `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" ` +
-							  `xmlns:xlink="http://www.w3.org/1999/xlink" ` +
-							  `width="${this.paperwidth}pt" height="${this.paperheight}pt" ` +
-							  `viewBox="-72 -72 ${this.paperwidth} ${this.paperheight}">`);
-		}
-	}
+        const width = textWidth * pointsPerDviUnit * dviUnitsPerFontUnit;
+        const height = textHeight * pointsPerDviUnit * dviUnitsPerFontUnit;
+        const top = command.top * pointsPerDviUnit;
 
-	if (svg.match(/<\/svg endpicture>/)) {
-		// If we are inside another svg element, then drop the svg end tag.
-		// Otherwise just remove the " endpicture" bit.
-		svg = svg.replace("<\/svg endpicture>", this.svgDepth > 0 ? "" : "<\/svg>");
-	}
+        const fontsize = (command.font.metrics.design_size / 1048576.0) *
+          command.font.scaleFactor / command.font.designSize;
 
-    svg = svg.replace(/{\?x}/g, left.toString());
-    svg = svg.replace(/{\?y}/g, top.toString());
+        if (fontName !== command.font.name || fontSize !== fontsize) {
+          fontName = command.font.name;
+          fontSize = fontsize;
+          html += `${
+            depth.at(-1) === "font-color"
+              ? depth.includes("svg") ? "</g>" : "</span>"
+              : ""
+          }${
+            depth.includes("svg")
+              ? `<g fill="${color}" font-family="${fontName} font-size=${fontSize}>`
+              : `<span class="font color ${fontName}" style="color: ${color};font-size: ${fontSize}pt;">`
+          }`;
+          if (depth.at(-1) !== "font-color") depth.push("font-color");
+        }
 
-    this.svgDepth += (svg.match(/<svg.*>/g) || []).length;
-    this.svgDepth -= (svg.match(/<\/svg.*>/g) || []).length;
+        if (!depth.includes("svg")) {
+          const hasSpace = (lastTextV == command.top) &&
+            (left > lastTextRight + 2);
 
-    this.output.write( svg );
-  }
-
-  constructor( o : Writable ) {
-    super();
-    this.output = o;
-    this.color = 'black';
-    this.colorStack = [];
-    this.svgDepth = 0;
-  }
-
-  preamble ( numerator : number, denominator : number, magnification : number, comment : string ) {
-    let dviUnit = magnification * numerator / 1000.0 / denominator;
-
-    let resolution = 300.0; // ppi
-    let tfm_conv = (25400000.0 / numerator) * (denominator / 473628672) / 16.0;
-    let conv = (numerator / 254000.0) * (resolution / denominator);
-    conv = conv * (magnification / 1000.0);
-
-    this.pointsPerDviUnit = dviUnit * 72.27 / 100000.0 / 2.54;
-  }
-
-  putRule( rule : Rule ) {
-    let a = rule.a * this.pointsPerDviUnit;
-    let b = rule.b * this.pointsPerDviUnit;
-    let left = this.position.h * this.pointsPerDviUnit;
-    let bottom = this.position.v * this.pointsPerDviUnit;
-    let top = bottom - a;
-
-	this.output.write(`<rect x="${left}" y="${top}" width="${b}" height="${a}" fill="${this.color}"` +
-					  `${this.matrix.toSVGTransform()}></rect>`);
-  }
-
-  putText( text : Buffer ) : number {
-    let textWidth = 0;
-    let textHeight = 0;
-    let textDepth = 0;
-
-    var htmlText = "";
-
-    for( let i = 0; i < text.length; i++ ) {
-      let c = text[i];
-      let metrics = this.font.metrics.characters[c];
-      if (metrics === undefined){
-        //TODO: Handle this better. Error only happens for c === 127
-	      console.error(`Could not find font metric for ${c}`);
-	      metrics = this.font.metrics.characters[126];
+          html += `<span class="text" style="top: ${
+            top - height
+          }pt; left: ${left}pt;"><span ${
+            hasSpace ? 'class="has-space" ' : ""
+          } style="vertical-align: ${-height}pt;">${htmlText}</span></span>\n`;
+          lastTextV = command.top;
+          lastTextRight = left + width;
+        } else {
+          const bottom = command.top * pointsPerDviUnit;
+          // No 'pt' on fontsize since those units are potentially scaled
+          html +=
+            `<text alignment-baseline="baseline" y="${bottom}" x="${left}">${htmlText}</text>\n`;
+        }
+        break;
       }
+      case "rect": {
+        const height = command.height * pointsPerDviUnit;
+        const width = command.width * pointsPerDviUnit;
+        const left = command.left * pointsPerDviUnit;
+        const bottom = command.top * pointsPerDviUnit;
+        const top = bottom - height;
 
-      textWidth += metrics.width;
-      textHeight = Math.max(textHeight, metrics.height);
-      textDepth = Math.max(textDepth, metrics.depth);
-
-      // This is ridiculous.
-      if ((c >= 0) && (c <= 9)) {
-        htmlText += `&#${161 + c};`;
-      } else if ((c >= 10) && (c <= 19)) {
-	htmlText += `&#${173 + c - 10};`;
-      } else if (c == 20) {
-	htmlText += `&#${8729};`; // O RLLY?!
-      } else if ((c >= 21) && (c <= 32)) {
-	htmlText += `&#${184 + c - 21};`;
-      } else if (c == 127) {
-	htmlText += `&#${196};`;
-      } else {
-	htmlText += String.fromCharCode(c);
+        const rect = ``;
+        html += depth.includes("svg")
+          ? `<rect x="${left}" y="${top}" width="${width}" height="${height}" fill=${color} ${
+            toSVGTransform(matrix)
+          }></rect>\n`
+          // https://annualbeta.com/blog/1px-hairline-css-borders-on-hidpi-screens/
+          : `<span class="rect" style="background: ${color}; top: ${top}pt; left: ${left}pt; width: ${width}pt; height: ${height}pt;"></span>\n`;
+        break;
       }
+      case "special":
+        break;
+      case "info":
+        const dviUnit = command.magnification * command.numerator / 1000.0 /
+          command.denominator;
+        pointsPerDviUnit = dviUnit * 72.27 / 100000.0 / 2.54;
+        break;
+      case "svg": {
+        const top = command.top * pointsPerDviUnit;
+        const left = command.left * pointsPerDviUnit;
+
+        let depthDiff = (command.svg.match(/<svg.*>/g) ?? []).length -
+          (command.svg.match(/<\/svg.*>/g) ?? []).length;
+        for (let i = 0; i < depthDiff; i++) {
+          depth.push("svg");
+        }
+        while (depthDiff < 0) {
+          switch (depth.pop()) {
+            case "font-color":
+              html += depth.includes("svg") ? "</g>" : "</span>";
+              break;
+            case "svg":
+              depthDiff++;
+              break;
+            default:
+              break;
+          }
+        }
+
+        //@ts-ignore
+        html += command.svg.replaceAll("{?x}", `${left}`).replaceAll(
+          "{?y}",
+          `${top}`,
+        );
+        break;
+      }
+      case "papersize":
+        break;
+      case "color":
+        if (color === command.color) break;
+        color = command.color;
+        html += `${
+          depth.at(-1) === "font-color"
+            ? depth.includes("svg") ? "</g>" : "</span>"
+            : ""
+        }${
+          depth.includes("svg")
+            ? `<g fill="${color}" font-family="${fontName} font-size=${fontSize}>`
+            : `<span class="font color ${fontName}" style="color: ${color};font-size: ${fontSize}pt;">`
+        }`;
+        if (depth.at(-1) !== "font-color") depth.push("font-color");
+        break;
     }
-
-    // tfm is based on 1/2^16 pt units, rather than dviunit which is 10^−7 meters
-    var dviUnitsPerFontUnit = this.font.metrics.designSize / 1048576.0 * 65536 / 1048576;
-
-    var top = (this.position.v - textHeight * dviUnitsPerFontUnit) * this.pointsPerDviUnit;
-    let left = this.position.h * this.pointsPerDviUnit;
-
-    var width = textWidth * this.pointsPerDviUnit * dviUnitsPerFontUnit;
-    var height = textHeight * this.pointsPerDviUnit * dviUnitsPerFontUnit;
-    var depth = textDepth * this.pointsPerDviUnit * dviUnitsPerFontUnit;
-    var top = this.position.v * this.pointsPerDviUnit;
-
-    let fontsize = (this.font.metrics.designSize / 1048576.0) * this.font.scaleFactor / this.font.designSize;
-
-    if (this.svgDepth == 0) {
-	this.output.write( `<span style="line-height: 0; color: ${this.color}; font-family: ${this.font.name}; font-size: ${fontsize}pt; position: absolute; top: ${top - height}pt; left: ${left}pt; overflow: visible;"><span style="margin-top: -${fontsize}pt; line-height: ${0}pt; height: ${fontsize}pt; display: inline-block; vertical-align: baseline; ">${htmlText}</span><span style="display: inline-block; vertical-align: ${height}pt; height: ${0}pt; line-height: 0;"></span></span>` );
-    } else {
-      let bottom = this.position.v * this.pointsPerDviUnit;
-      // No 'pt' on fontsize since those units are potentially scaled
-	  this.output.write(`<text alignment-baseline="baseline" y="${bottom}" x="${left}" ` +
-						`font-family="${this.font.name}" font-size="${fontsize}" ` +
-						`fill="${this.color}"${this.matrix.toSVGTransform()}>` +
-						`${htmlText}</text>`);
-	}
-
-    return textWidth * dviUnitsPerFontUnit * this.font.scaleFactor / this.font.designSize;
   }
-}
 
+  for (const index of depth) {
+    html += index === "svg" ? "</g>" : "</span>";
+  }
+
+  return `<div class="page">${html}</div>`;
+};

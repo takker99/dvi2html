@@ -1,72 +1,61 @@
 // The matrix is in the format of an svg transform matrix.  In other words it is the matrix
-// [[ values[0], values[3], values[5] ],
-//  [ values[2], values[4], values[6] ],
+// [[ values[0], values[2], values[4] ],
+//  [ values[1], values[3], values[5] ],
 //  [     0    ,     0    ,     1     ]]
-type valueArray = [number, number, number, number, number, number];
-export default class Matrix {
-	private values: valueArray;
+export type Matrix = [number, number, number, number, number, number];
 
-	constructor(m?: Matrix | void) {
-		this.values = m ? m.values.slice(0) as valueArray : [1, 0, 0, 1, 0, 0];
-	}
+export const identifyMatrix: Matrix = [1, 0, 0, 1, 0, 0];
 
-	isIdentity(): boolean {
-		return (Math.abs(this.values[0] - 1) < Number.EPSILON && Math.abs(this.values[1]) < Number.EPSILON &&
-				Math.abs(this.values[2]) < Number.EPSILON && Math.abs(this.values[3] - 1) < Number.EPSILON &&
-				Math.abs(this.values[4]) < Number.EPSILON && Math.abs(this.values[5]) < Number.EPSILON);
-	}
+export const isIdentity = (
+  m: Matrix,
+): boolean => (Math.abs(m[0] - 1) < Number.EPSILON &&
+  Math.abs(m[1]) < Number.EPSILON &&
+  Math.abs(m[2]) < Number.EPSILON && Math.abs(m[3] - 1) < Number.EPSILON &&
+  Math.abs(m[4]) < Number.EPSILON && Math.abs(m[5]) < Number.EPSILON);
 
-	// this = this * A
-	multiplyRight(A: Matrix): Matrix {
-		let result = new Matrix();
-		result.values[0] = this.values[0] * A.values[0] + this.values[2] * A.values[1];
-		result.values[1] = this.values[1] * A.values[0] + this.values[3] * A.values[1];
-		result.values[2] = this.values[0] * A.values[2] + this.values[2] * A.values[3];
-		result.values[3] = this.values[1] * A.values[2] + this.values[3] * A.values[3];
-		result.values[4] = this.values[0] * A.values[4] + this.values[2] * A.values[5] + this.values[4];
-		result.values[5] = this.values[1] * A.values[4] + this.values[3] * A.values[5] + this.values[5];
-		this.values = A.values;
-		return this;
-	}
+// A * B
+export const multiply = (A: Matrix, B: Matrix): Matrix => [
+  A[0] * B[0] + A[2] * B[1],
+  A[1] * B[0] + A[3] * B[1],
+  A[0] * B[2] + A[2] * B[3],
+  A[1] * B[2] + A[3] * B[3],
+  A[0] * B[4] + A[2] * B[5] + A[4],
+  A[1] * B[4] + A[3] * B[5] + A[5],
+];
 
-	// this = this * [[x, 0, 0], [0, y, 0], [0, 0, 1]]
-	scale(x: number, y: number): Matrix {
-		this.values[0] *= x;
-		this.values[1] *= x;
-		this.values[2] *= y;
-		this.values[3] *= y;
-		return this;
-	}
+// this = this * [[x, 0, 0], [0, y, 0], [0, 0, 1]]
+export const scale = (
+  m: Matrix,
+  x: number,
+  y: number,
+): Matrix => [m[0] * x, m[1] * x, m[2] * y, m[3] * y, m[4], m[5]];
 
-	// this = this * [[1, 0, x], [0, 1, y], [0, 0, 1]]
-	translate(x: number, y: number): Matrix {
-		this.values[4] = this.values[0] * x + this.values[2] * y + this.values[4];
-		this.values[5] = this.values[1] * x + this.values[3] * y + this.values[5];
-		return this;
-	}
+// this = this * [[1, 0, x], [0, 1, y], [0, 0, 1]]
+export const translate = (m: Matrix, x: number, y: number): Matrix => [
+  m[0],
+  m[1],
+  m[2],
+  m[3],
+  m[0] * x + m[2] * y + m[4],
+  m[1] * x + m[3] * y + m[5],
+];
 
-	// this = this * [[cos(x), sin(x), 0], [-sin(x), cos(x), 0], [0, 0, 1]]
-	// x is in degrees
-	rotate(x: number): Matrix {
-		let rad = x * Math.PI / 180;
-		let c = Math.cos(rad);
-		let s = Math.sin(rad);
-		let m0 = this.values[0] * c + this.values[2] * s;
-		let m1 = this.values[1] * c + this.values[3] * s;
-		let m2 = -this.values[0] * s + this.values[2] * c;
-		let m3 = -this.values[1] * s + this.values[3] * c;
-		this.values[0] = m0;
-		this.values[1] = m1;
-		this.values[2] = m2;
-		this.values[3] = m3;
-		return this;
-	}
+// this = this * [[cos(x), sin(x), 0], [-sin(x), cos(x), 0], [0, 0, 1]]
+// x is in degrees
+export const rotate = (m: Matrix, x: number): Matrix => {
+  const rad = x * Math.PI / 180;
+  const c = Math.cos(rad);
+  const s = Math.sin(rad);
+  return [
+    m[0] * c + m[2] * s,
+    m[1] * c + m[3] * s,
+    -m[0] * s + m[2] * c,
+    -m[1] * s + m[3] * c,
+    m[4],
+    m[5],
+  ];
+};
 
-	toSVGTransform(): string {
-		return this.isIdentity() ? "" : ` transform="matrix(${this.values.join(" ")})"`;
-	}
-
-	toString(): string {
-		return `[${this.values.join(",")}]`;
-	}
-}
+export const toSVGTransform = (m: Matrix): string =>
+  isIdentity(m) ? "" : ` transform="matrix(${m.join(" ")})"`;
+export const toString = (m: Matrix): string => `[${m.join(",")}]`;
