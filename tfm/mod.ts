@@ -40,20 +40,30 @@ export const parse = (tfm: Uint32Array): TFM => {
     !(smallest_character_code <= largest_character_code + 1 &&
       largest_character_code < 256)
   ) {
-    throw new Error("Invalid TFM file");
+    throw new Error(
+      `Smallest character code (${smallest_character_code}) must be larger than largest character code (${largest_character_code}) and largest character code must be less than 256 (actual: ${largest_character_code})`,
+    );
   }
   if (table_lengths.extensible_character > 256) {
-    throw new Error("Invalid TFM file");
+    throw new Error(
+      `Extensible character must be less than 256 (actual: ${table_lengths.extensible_character})`,
+    );
   }
-  if (
-    entire_file_length !==
-      6 + header_length + table_lengths.character_info + table_lengths.width +
+  {
+    const actual = 6 + header_length + table_lengths.character_info +
+      table_lengths.width +
         table_lengths.height + table_lengths.depth +
         table_lengths.italic_correction + table_lengths.lig_kern +
         table_lengths.kern + table_lengths.extensible_character +
-        table_lengths.font_parameter
+      table_lengths.font_parameter;
+
+    if (
+      entire_file_length !== actual
   ) {
-    throw new Error("Invalid TFM file");
+      throw new Error(
+        `entire_file_length must be ${actual} (actual: ${entire_file_length})`,
+      );
+    }
   }
 
   // Read the tables
