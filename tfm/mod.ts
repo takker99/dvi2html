@@ -213,9 +213,11 @@ const readHeader = (buffer: ArrayBuffer): Header => {
     buffer.slice(9, 9 + codingSchemeLength),
   );
 
-  const family = new TextDecoder().decode(buffer.slice(48, 48 + 20));
+  const familyLength = view.getUint8(48);
+  if (familyLength > 20) throw new Error("Invalid TFM file");
+  const family = new TextDecoder().decode(buffer.slice(49, 49 + familyLength));
 
-  const header17 = new Uint8Array(buffer, 20, 4);
+  const header17 = new Uint8Array(buffer, 68, 4);
   const seven_bit_safe_flag = header17[0];
   const face = header17[3];
 
