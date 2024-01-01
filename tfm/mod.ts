@@ -52,14 +52,14 @@ export const parse = (tfm: Uint32Array): TFM => {
   {
     const actual = 6 + header_length + table_lengths.character_info +
       table_lengths.width +
-        table_lengths.height + table_lengths.depth +
-        table_lengths.italic_correction + table_lengths.lig_kern +
-        table_lengths.kern + table_lengths.extensible_character +
+      table_lengths.height + table_lengths.depth +
+      table_lengths.italic_correction + table_lengths.lig_kern +
+      table_lengths.kern + table_lengths.extensible_character +
       table_lengths.font_parameter;
 
     if (
       entire_file_length !== actual
-  ) {
+    ) {
       throw new Error(
         `entire_file_length must be ${actual} (actual: ${entire_file_length})`,
       );
@@ -107,7 +107,6 @@ export const parse = (tfm: Uint32Array): TFM => {
   return {
     checksum: header.checksum,
     design_size: header.design_size,
-    coding_scheme: header.coding_scheme,
     family: header.family,
     face: header.face,
     ligKernPrograms: readLigKernPrograms(lig_kern),
@@ -117,9 +116,9 @@ export const parse = (tfm: Uint32Array): TFM => {
           charInfo;
         const char: TFMChar = {
           width: width[width_index],
-          height: height[height_index],
-          depth: depth[depth_index],
-          italic_correction: italic_correction[italic_index],
+          height: height.at(height_index) ?? 0,
+          depth: depth.at(depth_index) ?? 0,
+          italic_correction: italic_correction.at(italic_index) ?? 0,
         };
         switch (charInfo.type) {
           case "lig":
@@ -142,15 +141,21 @@ export const parse = (tfm: Uint32Array): TFM => {
   };
 };
 
-export interface TFM extends FontParameter {
-  checksum: number;
-  design_size: number;
-  coding_scheme: string;
-  family: string;
-  face: number;
-  ligKernPrograms: unknown[];
-  characters: TFMChar[];
-}
+export type TFM =
+  & (
+    | SymbolFontParameter
+    | ExtensionFontParameter
+    | ItalicFontParameter
+    | FontParameter
+  )
+  & {
+    checksum: number;
+    design_size: number;
+    family: string;
+    face: number;
+    ligKernPrograms: unknown[];
+    characters: TFMChar[];
+  };
 export interface TFMChar {
   width: number;
   height: number;
@@ -200,7 +205,7 @@ interface Header {
  * A three-letter code (e.g., MIE) can be used for such face data.
  *
  * ``header[18 ... whatever]`` might also be present; the individual words are simply called ``header[18]``, ``header[19]``, etc., at the moment.
-        */
+ */
 const readHeader = (buffer: ArrayBuffer): Header => {
   const view = new DataView(buffer);
   const checksum = view.getUint32(0);
@@ -410,8 +415,8 @@ const readLigKernPrograms = (buffer: number[]) =>
       };
   });
 
-interface SymbolFontParameter extends FontParameter {
-  scheme: "TeX math symbols";
+export type SymbolFontParameter = Omit<FontParameter, "coding_scheme"> & {
+  coding_scheme: "TeX math symbols";
   num1: number;
   num2: number;
   num3: number;
@@ -429,14 +434,21 @@ interface SymbolFontParameter extends FontParameter {
   axis_height: number;
   default_rule_thickness?: undefined;
   big_op_spacing?: undefined;
-}
-interface ExtensionFontParameter extends FontParameter {
-  scheme: "TeX math extension" | "euler substitutions only";
+};
+export type ExtensionFontParameter = Omit<FontParameter, "coding_scheme"> & {
+  coding_scheme: "TeX math extension" | "euler substitutions only";
   default_rule_thickness: number;
-  big_op_spacing: number[];
-}
+  big_op_spacing: [number, number, number, number, number];
+};
 
-interface FontParameter {
+export type ItalicFontParameter =
+  & Omit<FontParameter, "coding_scheme" | "extra_space">
+  & {
+    coding_scheme: "TeX math italic";
+  };
+
+export interface FontParameter {
+  coding_scheme: string;
   slant: number;
   spacing: number;
   space_stretch: number;
@@ -467,11 +479,8 @@ const readFontParamerters = (
 ):
   | SymbolFontParameter
   | ExtensionFontParameter
+  | ItalicFontParameter
   | FontParameter => {
-  if (codingScheme === "TeX math italic") {
-    throw new Error("TeX math italic is not supported yet.");
-  }
-
   //  Set the font parameters.
   const slant = buffer[0];
   const spacing = buffer[1];
@@ -479,6 +488,17 @@ const readFontParamerters = (
   const space_shrink = buffer[3];
   const x_height = buffer[4];
   const quad = buffer[5];
+  if (codingScheme === "TeX math italic") {
+    return {
+      coding_scheme: codingScheme,
+      slant,
+      spacing,
+      space_stretch,
+      space_shrink,
+      x_height,
+      quad,
+    };
+  }
   const extra_space = buffer[6];
 
   if (codingScheme === "TeX math symbols") {
@@ -500,7 +520,7 @@ const readFontParamerters = (
     const axis_height = buffer[21];
 
     return {
-      scheme: codingScheme,
+      coding_scheme: codingScheme,
       slant,
       spacing,
       space_stretch,
@@ -531,9 +551,15 @@ const readFontParamerters = (
     codingScheme === "euler substitutions only"
   ) {
     const default_rule_thickness = buffer[7];
-    const big_op_spacing = buffer.slice(8, 8 + 5);
+    const big_op_spacing = buffer.slice(8, 8 + 5) as [
+      number,
+      number,
+      number,
+      number,
+      number,
+    ];
     return {
-      scheme: codingScheme,
+      coding_scheme: codingScheme,
       slant,
       spacing,
       space_stretch,
@@ -547,6 +573,7 @@ const readFontParamerters = (
   }
 
   return {
+    coding_scheme: codingScheme,
     slant,
     spacing,
     space_stretch,
