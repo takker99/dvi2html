@@ -1,11 +1,5 @@
 import { SpecialPlugin } from "../mod.ts";
-import {
-  Matrix,
-  rotate,
-  scale,
-  toSVGTransform,
-  translate,
-} from "./matrix.ts";
+import { Matrix, rotate, scale, toSVGTransform, translate } from "./matrix.ts";
 
 export interface PSFile {
   type: "psfile";
