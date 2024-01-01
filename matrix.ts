@@ -1,7 +1,11 @@
-// The matrix is in the format of an svg transform matrix.  In other words it is the matrix
-// [[ values[0], values[2], values[4] ],
-//  [ values[1], values[3], values[5] ],
-//  [     0    ,     0    ,     1     ]]
+/** The matrix is in the format of an svg transform matrix.  In other words it is the matrix
+ *
+ * [[ values[0], values[2], values[4] ],
+ *
+ *  [ values[1], values[3], values[5] ],
+ *
+ *  [     0    ,     0    ,     1     ]]
+ */
 export type Matrix = [number, number, number, number, number, number];
 
 export const identifyMatrix: Matrix = [1, 0, 0, 1, 0, 0];
@@ -57,4 +61,4 @@ export const rotate = (m: Matrix, x: number): Matrix => {
 };
 
 export const toSVGTransform = (m: Matrix): string =>
-  isIdentity(m) ? "" : ` transform="matrix(${m.join(" ")})"`;
+  isIdentity(m) ? "" : `transform="matrix(${m.join(" ")})"`;
