@@ -1,4 +1,4 @@
-import { Matrix, rotate, scale, translate } from "../../matrix.ts";
+import { Matrix, rotate, scale, translate } from "./matrix.ts";
 
 const stateQueue: Matrix[] = [];
 

@@ -1,4 +1,4 @@
-import { identifyMatrix, Matrix, toSVGTransform } from "./matrix.ts";
+import { identifyMatrix, Matrix, toSVGTransform } from "./dvi/specials/matrix.ts";
 import { ParseInfo, Rule, Special, Text } from "./dvi/mod.ts";
 import { SVG } from "./dvi/specials/svg.ts";
 import { Color, TexColor } from "./dvi/specials/color.ts";

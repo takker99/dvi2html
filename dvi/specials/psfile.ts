@@ -5,7 +5,7 @@ import {
   scale,
   toSVGTransform,
   translate,
-} from "../../matrix.ts";
+} from "./matrix.ts";
 
 export interface PSFile {
   type: "psfile";
