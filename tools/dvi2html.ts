@@ -1,8 +1,8 @@
 // deno-lint-ignore no-unused-vars
-import { color, papersize, parse, ps, svg } from "./dvi/mod.ts";
-import { convertToHTML } from "./html.ts";
+import { color, papersize, parse, ps, svg } from "../dvi/mod.ts";
+import { convertToHTML } from "../mod.ts";
 // deno-lint-ignore no-unused-vars
-import { tokenize } from "./dvi/tokenize.ts";
+import { tokenize } from "../dvi/tokenize.ts";
 
 // console.log(loadFont("cmb10"));
 const file = await Deno.readFile(
