@@ -1,8 +1,5 @@
 import { identifyMatrix, Matrix, toSVGTransform } from "./dvi/specials/matrix.ts";
-import { ParseInfo, Rule, Special, Text } from "./dvi/mod.ts";
-import { SVG } from "./dvi/specials/svg.ts";
-import { Color, TexColor } from "./dvi/specials/color.ts";
-import { Papersize } from "./dvi/specials/papersize.ts";
+import { ParseInfo, Rule, Special, Text ,SVG,Color,TexColor,Papersize} from "./dvi/mod.ts";
 import glyphs from "./encodings.json" with { type: "json" };
 import fontlist from "./fontlist.json" with { type: "json" };
 

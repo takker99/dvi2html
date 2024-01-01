@@ -28,6 +28,14 @@ import {
   Z,
 } from "./const.ts";
 
+export type { TFM };
+export * from "./specials/color.ts";
+export * from "./specials/svg.ts";
+export * from "./specials/papersize.ts";
+export * from "./specials/ps.ts";
+export * from "./specials/psfile.ts";
+export type { Matrix } from "./specials/matrix.ts";
+
 export interface Register {
   horizontal: number;
   vertical: number;
@@ -133,7 +141,7 @@ export function* parse<
   }
 }
 
-export function* middleParser(
+function* middleParser(
   dvi: Uint8Array,
 ): Generator<
   | Text

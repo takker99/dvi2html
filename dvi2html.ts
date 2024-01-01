@@ -1,9 +1,5 @@
-import { parse } from "./dvi/mod.ts";
-import { color } from "./dvi/specials/color.ts";
-import { papersize } from "./dvi/specials/papersize.ts";
-import { svg } from "./dvi/specials/svg.ts";
 // deno-lint-ignore no-unused-vars
-import { ps } from "./dvi/specials/ps.ts";
+import { color, papersize, parse, ps, svg } from "./dvi/mod.ts";
 import { convertToHTML } from "./html.ts";
 // deno-lint-ignore no-unused-vars
 import { tokenize } from "./dvi/tokenize.ts";
