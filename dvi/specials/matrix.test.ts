@@ -8,7 +8,7 @@ import {
   toSVGTransform,
   translate,
 } from "./matrix.ts";
-import { assertEquals } from "https://deno.land/std@0.210.0/assert/mod.ts";
+import { assertEquals } from "../../deps_test.ts";
 
 Deno.test("isIdentity()", () => {
   {

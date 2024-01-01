@@ -1,5 +1,5 @@
 import { loadFont } from "./mod.ts";
-import { assertSnapshot } from "https://deno.land/std@0.210.0/testing/snapshot.ts";
+import { assertSnapshot } from "../deps_test.ts";
 import fontdata from "./fonts.json" with { type: "json" };
 
 Deno.test("parse()", async (t) => {

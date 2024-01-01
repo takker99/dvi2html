@@ -1,5 +1,5 @@
 import { tokenize } from "./tokenize.ts";
-import { assertSnapshot } from "https://deno.land/std@0.210.0/testing/snapshot.ts";
+import { assertSnapshot } from "../deps_test.ts";
 
 Deno.test("tokenize()", async (t) => {
   await t.step(

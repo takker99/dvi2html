@@ -1,5 +1,5 @@
 import { color, papersize, parse, ps, svg } from "./mod.ts";
-import { assertSnapshot } from "https://deno.land/std@0.210.0/testing/snapshot.ts";
+import { assertSnapshot } from "../deps_test.ts";
 
 const test = async (t: Deno.TestContext, filename: string) => {
   const result: unknown[] = [];
