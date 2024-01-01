@@ -58,4 +58,3 @@ export const rotate = (m: Matrix, x: number): Matrix => {
 
 export const toSVGTransform = (m: Matrix): string =>
   isIdentity(m) ? "" : ` transform="matrix(${m.join(" ")})"`;
-export const toString = (m: Matrix): string => `[${m.join(",")}]`;
