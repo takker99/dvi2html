@@ -1,4 +1,4 @@
-import fontlist from "../src/fontlist.json" assert { type: "json" };
+import fontlist from "../fontlist.json" assert { type: "json" };
 
 const fonts: Record<string, number[]> = {};
 
@@ -18,6 +18,6 @@ for (const fontname of fontnames) {
 }
 
 await Deno.writeTextFile(
-  new URL("../src/tfm/fonts.json", import.meta.url),
+  new URL("../tfm/fonts.json", import.meta.url),
   JSON.stringify(fonts),
 );

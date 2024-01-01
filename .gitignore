@@ -2,6 +2,6 @@
 node_modules
 lib
 dist
-src/tfm/fonts.json
-src/encodings.json
-src/fontlist.json
+tfm/fonts.json
+encodings.json
+fontlist.json

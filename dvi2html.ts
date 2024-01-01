@@ -1,12 +1,12 @@
-import { parse } from "./src/dvi/mod.ts";
-import { color } from "./src/dvi/specials/color.ts";
-import { papersize } from "./src/dvi/specials/papersize.ts";
-import { svg } from "./src/dvi/specials/svg.ts";
+import { parse } from "./dvi/mod.ts";
+import { color } from "./dvi/specials/color.ts";
+import { papersize } from "./dvi/specials/papersize.ts";
+import { svg } from "./dvi/specials/svg.ts";
 // deno-lint-ignore no-unused-vars
-import { ps } from "./src/dvi/specials/ps.ts";
-import { convertToHTML } from "./src/html.ts";
+import { ps } from "./dvi/specials/ps.ts";
+import { convertToHTML } from "./html.ts";
 // deno-lint-ignore no-unused-vars
-import { tokenize } from "./src/dvi/tokenize.ts";
+import { tokenize } from "./dvi/tokenize.ts";
 
 // console.log(loadFont("cmb10"));
 const file = await Deno.readFile(
