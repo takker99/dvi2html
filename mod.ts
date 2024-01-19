@@ -39,6 +39,9 @@ export const convertToHTML = (
   let lastTextV = 0;
   let lastTextRight = 0;
 
+  let paperwidth = 0;
+  let paperheight = 0;
+
   for (const command of commands) {
     switch (command.type) {
       case "text": {
@@ -155,37 +158,51 @@ export const convertToHTML = (
         break;
       }
       case "svg": {
-        const top = command.top * pointsPerDviUnit;
-        const left = command.left * pointsPerDviUnit;
+        let svg = command.svg;
+        for (const match of command.svg.matchAll(/<svg\s[^>]+>/g)) {
+          const tag = match[0];
+          if (tag === "<svg beginpicture>") {
+            // In this case we are inside another svg element so drop the svg start tags.
+            svg = `${svg.slice(0, match.index)}${
+              depth.includes("svg")
+                ? ""
+                : `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${paperwidth}pt" height="${paperheight}pt" viewBox="-72 -72 ${paperwidth} ${paperheight}">`
+            }${svg.slice(match.index! + tag.length)}`;
+          }
 
-        let depthDiff = (command.svg.match(/<svg.*>/g) ?? []).length -
-          (command.svg.match(/<\/svg.*>/g) ?? []).length;
-        for (let i = 0; i < depthDiff; i++) {
+          if (tag !== "<svg beginpicture>" || !depth.includes("svg")) {
           depth.push("svg");
         }
-        while (depthDiff < 0) {
-          switch (depth.pop()) {
-            case "font-color":
-              html += depth.includes("svg") ? "</g>" : "</span>";
-              break;
-            case "svg":
-              depthDiff++;
-              break;
-            default:
-              break;
+        }
+
+        for (const match of command.svg.matchAll(/<\/svg\s[^>]+>/g)) {
+          const tag = match[0];
+          if (tag === "<\/svg endpicture>") {
+            // If we are inside another svg element, then drop the svg end tag.
+            // Otherwise just remove the " endpicture" bit.
+            svg = `${svg.slice(0, match.index)}${
+              !depth.includes("svg") ? "" : "<\/svg>"
+            }${svg.slice(match.index! + tag.length)}`;
+          }
+
+          if (tag !== "<\/svg endpicture>" || depth.includes("svg")) {
+            depth.pop();
           }
         }
 
-        html += command.svg.replaceAll("{?x}", `${left}`).replaceAll(
+        const top = command.top * pointsPerDviUnit;
+        const left = command.left * pointsPerDviUnit;
+        html += svg.replaceAll("{?x}", `${left}`).replaceAll(
           "{?y}",
           `${top}`,
         );
         break;
       }
       case "papersize":
+        paperheight = command.height;
+        paperwidth = command.width;
         break;
       case "color":
-        if (color === command.color) break;
         color = command.color;
         html += `${
           depth.at(-1) === "font-color"
