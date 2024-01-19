@@ -13,8 +13,6 @@ import {
   TexColor,
   Text,
 } from "./dvi/mod.ts";
-import glyphs from "./encodings.json" with { type: "json" };
-import fontlist from "./fontlist.json" with { type: "json" };
 
 export const convertToHTML = (
   commands: Iterable<
@@ -30,7 +28,7 @@ export const convertToHTML = (
   let pointsPerDviUnit = 0;
 
   let color: TexColor = "black";
-  const depth: ("font-color" | "svg")[] = [];
+  const depth: ("svg")[] = [];
   const matrix: Matrix = [...identifyMatrix];
   let fontName = "";
   let fontSize = 0;
@@ -38,6 +36,9 @@ export const convertToHTML = (
 
   let lastTextV = 0;
   let lastTextRight = 0;
+
+  let paperwidth = 0;
+  let paperheight = 0;
 
   for (const command of commands) {
     switch (command.type) {
@@ -57,19 +58,9 @@ export const convertToHTML = (
           textWidth += metrics.width;
           textHeight = Math.max(textHeight, metrics.height);
 
-          const encoding = Object.hasOwn(fontlist, command.font.name)
-            ? fontlist[command.font.name as keyof typeof fontlist]
-            : undefined;
-          const glyph = encoding && Object.hasOwn(glyphs, encoding)
-            ? glyphs[encoding as keyof typeof glyphs]
-            : undefined;
-          const newCodePoint = glyph && Object.hasOwn(glyph, codePoint)
-            ? glyph[codePoint as unknown as keyof typeof glyph]
-            : undefined;
           htmlText += String.fromCodePoint(
-            newCodePoint ??
-                // This is ridiculous.
-                (codePoint >= 0 && codePoint <= 9)
+            // This is ridiculous.
+            (codePoint >= 0 && codePoint <= 9)
               ? 161 + codePoint
               : (codePoint >= 10 && codePoint <= 19)
               ? 173 + codePoint - 10
@@ -94,40 +85,26 @@ export const convertToHTML = (
         const height = textHeight * pointsPerDviUnit * dviUnitsPerFontUnit;
         const top = command.top * pointsPerDviUnit;
 
-        const fontsize = (command.font.metrics.design_size / 1048576.0) *
+        fontName = command.font.name;
+        fontSize = (command.font.metrics.design_size / 1048576.0) *
           command.font.scaleFactor / command.font.designSize;
-
-        if (fontName !== command.font.name || fontSize !== fontsize) {
-          fontName = command.font.name;
-          fontSize = fontsize;
-          html += `${
-            depth.at(-1) === "font-color"
-              ? depth.includes("svg") ? "</g>" : "</span>"
-              : ""
-          }${
-            depth.includes("svg")
-              ? `<g fill="${color}" font-family="${fontName} font-size=${fontSize}>`
-              : `<span class="font color ${fontName}" style="color: ${color};font-size: ${fontSize}pt;">`
-          }`;
-          if (depth.at(-1) !== "font-color") depth.push("font-color");
-        }
 
         if (!depth.includes("svg")) {
           const hasSpace = (lastTextV == command.top) &&
             (left > lastTextRight + 2);
 
-          html += `<span class="text" style="top: ${
+          html += `<span class="text ${fontName}" style="top:${
             top - height
-          }pt; left: ${left}pt;"><span ${
+          }pt;left:${left}pt;color:${color};font-size:${fontSize}pt;"><span ${
             hasSpace ? 'class="has-space" ' : ""
-          } style="vertical-align: ${-height}pt;">${htmlText}</span></span>\n`;
+          } style="vertical-align:${-height}pt;">${htmlText}</span></span>\n`;
           lastTextV = command.top;
           lastTextRight = left + width;
         } else {
           const bottom = command.top * pointsPerDviUnit;
           // No 'pt' on fontsize since those units are potentially scaled
           html +=
-            `<text alignment-baseline="baseline" y="${bottom}" x="${left}">${htmlText}</text>\n`;
+            `<text alignment-baseline="baseline" y="${bottom}" x="${left}" fill="${color}" font-size="${fontSize}" font-family="${fontName}">${htmlText}</text>\n`;
         }
         break;
       }
@@ -155,48 +132,52 @@ export const convertToHTML = (
         break;
       }
       case "svg": {
-        const top = command.top * pointsPerDviUnit;
-        const left = command.left * pointsPerDviUnit;
+        let svg = command.svg;
+        for (const match of command.svg.matchAll(/<svg\s[^>]+>/g)) {
+          const tag = match[0];
+          if (tag === "<svg beginpicture>") {
+            // In this case we are inside another svg element so drop the svg start tags.
+            svg = `${svg.slice(0, match.index)}${
+              depth.includes("svg")
+                ? ""
+                : `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${paperwidth}pt" height="${paperheight}pt" viewBox="-72 -72 ${paperwidth} ${paperheight}">`
+            }${svg.slice(match.index! + tag.length)}`;
+          }
 
-        let depthDiff = (command.svg.match(/<svg.*>/g) ?? []).length -
-          (command.svg.match(/<\/svg.*>/g) ?? []).length;
-        for (let i = 0; i < depthDiff; i++) {
-          depth.push("svg");
-        }
-        while (depthDiff < 0) {
-          switch (depth.pop()) {
-            case "font-color":
-              html += depth.includes("svg") ? "</g>" : "</span>";
-              break;
-            case "svg":
-              depthDiff++;
-              break;
-            default:
-              break;
+          if (tag !== "<svg beginpicture>" || !depth.includes("svg")) {
+            depth.push("svg");
           }
         }
 
-        html += command.svg.replaceAll("{?x}", `${left}`).replaceAll(
+        for (const match of command.svg.matchAll(/<\/svg\s[^>]+>/g)) {
+          const tag = match[0];
+          if (tag === "<\/svg endpicture>") {
+            // If we are inside another svg element, then drop the svg end tag.
+            // Otherwise just remove the " endpicture" bit.
+            svg = `${svg.slice(0, match.index)}${
+              !depth.includes("svg") ? "" : "<\/svg>"
+            }${svg.slice(match.index! + tag.length)}`;
+          }
+
+          if (tag !== "<\/svg endpicture>" || depth.includes("svg")) {
+            depth.pop();
+          }
+        }
+
+        const top = command.top * pointsPerDviUnit;
+        const left = command.left * pointsPerDviUnit;
+        html += svg.replaceAll("{?x}", `${left}`).replaceAll(
           "{?y}",
           `${top}`,
         );
         break;
       }
       case "papersize":
+        paperheight = command.height;
+        paperwidth = command.width;
         break;
       case "color":
-        if (color === command.color) break;
         color = command.color;
-        html += `${
-          depth.at(-1) === "font-color"
-            ? depth.includes("svg") ? "</g>" : "</span>"
-            : ""
-        }${
-          depth.includes("svg")
-            ? `<g fill="${color}" font-family="${fontName} font-size=${fontSize}>`
-            : `<span class="font color ${fontName}" style="color: ${color};font-size: ${fontSize}pt;">`
-        }`;
-        if (depth.at(-1) !== "font-color") depth.push("font-color");
         break;
     }
   }
