@@ -28,7 +28,7 @@ export const convertToHTML = (
   let pointsPerDviUnit = 0;
 
   let color: TexColor = "black";
-  const depth: ("font-color" | "svg")[] = [];
+  const depth: ("svg")[] = [];
   const matrix: Matrix = [...identifyMatrix];
   let fontName = "";
   let fontSize = 0;
@@ -59,8 +59,8 @@ export const convertToHTML = (
           textHeight = Math.max(textHeight, metrics.height);
 
           htmlText += String.fromCodePoint(
-                // This is ridiculous.
-                (codePoint >= 0 && codePoint <= 9)
+            // This is ridiculous.
+            (codePoint >= 0 && codePoint <= 9)
               ? 161 + codePoint
               : (codePoint >= 10 && codePoint <= 19)
               ? 173 + codePoint - 10
@@ -85,40 +85,26 @@ export const convertToHTML = (
         const height = textHeight * pointsPerDviUnit * dviUnitsPerFontUnit;
         const top = command.top * pointsPerDviUnit;
 
-        const fontsize = (command.font.metrics.design_size / 1048576.0) *
+        fontName = command.font.name;
+        fontSize = (command.font.metrics.design_size / 1048576.0) *
           command.font.scaleFactor / command.font.designSize;
-
-        if (fontName !== command.font.name || fontSize !== fontsize) {
-          fontName = command.font.name;
-          fontSize = fontsize;
-          html += `${
-            depth.at(-1) === "font-color"
-              ? depth.includes("svg") ? "</g>" : "</span>"
-              : ""
-          }${
-            depth.includes("svg")
-              ? `<g fill="${color}" font-family="${fontName} font-size=${fontSize}>`
-              : `<span class="font color ${fontName}" style="color: ${color};font-size: ${fontSize}pt;">`
-          }`;
-          if (depth.at(-1) !== "font-color") depth.push("font-color");
-        }
 
         if (!depth.includes("svg")) {
           const hasSpace = (lastTextV == command.top) &&
             (left > lastTextRight + 2);
 
-          html += `<span class="text" style="top: ${
+          html += `<span class="text ${fontName}" style="top:${
             top - height
-          }pt; left: ${left}pt;"><span ${
+          }pt;left:${left}pt;color:${color};font-size:${fontSize}pt;"><span ${
             hasSpace ? 'class="has-space" ' : ""
-          } style="vertical-align: ${-height}pt;">${htmlText}</span></span>\n`;
+          } style="vertical-align:${-height}pt;">${htmlText}</span></span>\n`;
           lastTextV = command.top;
           lastTextRight = left + width;
         } else {
           const bottom = command.top * pointsPerDviUnit;
           // No 'pt' on fontsize since those units are potentially scaled
           html +=
-            `<text alignment-baseline="baseline" y="${bottom}" x="${left}">${htmlText}</text>\n`;
+            `<text alignment-baseline="baseline" y="${bottom}" x="${left}" fill="${color}" font-size="${fontSize}" font-family="${fontName}">${htmlText}</text>\n`;
         }
         break;
       }
@@ -159,8 +145,8 @@ export const convertToHTML = (
           }
 
           if (tag !== "<svg beginpicture>" || !depth.includes("svg")) {
-          depth.push("svg");
-        }
+            depth.push("svg");
+          }
         }
 
         for (const match of command.svg.matchAll(/<\/svg\s[^>]+>/g)) {
@@ -192,16 +178,6 @@ export const convertToHTML = (
         break;
       case "color":
         color = command.color;
-        html += `${
-          depth.at(-1) === "font-color"
-            ? depth.includes("svg") ? "</g>" : "</span>"
-            : ""
-        }${
-          depth.includes("svg")
-            ? `<g fill="${color}" font-family="${fontName} font-size=${fontSize}>`
-            : `<span class="font color ${fontName}" style="color: ${color};font-size: ${fontSize}pt;">`
-        }`;
-        if (depth.at(-1) !== "font-color") depth.push("font-color");
         break;
     }
   }
