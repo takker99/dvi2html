@@ -7,6 +7,8 @@ import {
   Color,
   Papersize,
   ParseInfo,
+  PS,
+  PSFile,
   Rule,
   Special,
   SVG,
@@ -20,6 +22,8 @@ export const convertToHTML = (
     | Rule
     | Special
     | ParseInfo
+    | PSFile
+    | PS
     | SVG
     | Papersize
     | Color
@@ -29,7 +33,7 @@ export const convertToHTML = (
 
   let color: TexColor = "black";
   const depth: ("svg")[] = [];
-  const matrix: Matrix = [...identifyMatrix];
+  let matrix: Matrix = [...identifyMatrix];
   let fontName = "";
   let fontSize = 0;
   let html = "";
@@ -178,6 +182,16 @@ export const convertToHTML = (
         break;
       case "color":
         color = command.color;
+        break;
+      case "ps":
+        matrix = command.interpret(matrix);
+        break;
+      case "psfile":
+        html += depth.includes("svg")
+          ? command.toSVG(matrix)
+          : `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${paperwidth}pt" height="${paperheight}pt" viewBox="-72 -72 ${paperwidth} ${paperheight}">${
+            command.toSVG(matrix)
+          }</svg>}`;
         break;
     }
   }

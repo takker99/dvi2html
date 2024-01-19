@@ -4,7 +4,7 @@ import { Matrix, rotate, scale, toSVGTransform, translate } from "./matrix.ts";
 export interface PSFile {
   type: "psfile";
   href: string;
-  toSVG: (matrix: Matrix, x: number, y: number) => string;
+  toSVG: (matrix: Matrix) => string;
 }
 
 export const psfile: SpecialPlugin<PSFile> = (command) => {
@@ -46,12 +46,16 @@ export const psfile: SpecialPlugin<PSFile> = (command) => {
   return {
     type: "psfile",
     href,
-    toSVG: (matrix, x, y) => {
+    toSVG: (matrix) => {
       const transformedMatrix = translate(
         scale(
           rotate(
             scale(
-              translate(matrix, x + hoffset, y - voffset),
+              translate(
+                matrix,
+                command.horizontal + hoffset,
+                command.vertical - voffset,
+              ),
               hscale / 100,
               vscale / 100,
             ),
@@ -64,8 +68,9 @@ export const psfile: SpecialPlugin<PSFile> = (command) => {
         -llx,
         -lly,
       );
-      return `<image x="${llx}" y="${lly}" width="${urx}" height="${ury}" href="${href}"` +
-        `${toSVGTransform(transformedMatrix)}></image>`;
+      return `<image x="${llx}" y="${lly}" width="${urx}" height="${ury}" href="${href}" ${
+        toSVGTransform(transformedMatrix)
+      }></image>`;
     },
   };
 };

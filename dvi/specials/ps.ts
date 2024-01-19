@@ -5,11 +5,7 @@ import { Matrix } from "./matrix.ts";
 export interface PS {
   type: "ps";
   ps: string;
-  interpret: (
-    matrix: Matrix,
-    x: number,
-    y: number,
-  ) => { matrix: Matrix; x: number; y: number };
+  interpret: (matrix: Matrix) => Matrix;
 }
 
 export const ps: () => SpecialPlugin<PS> = () => {
@@ -24,8 +20,24 @@ export const ps: () => SpecialPlugin<PS> = () => {
       const nextData = new TextDecoder().decode(next.data);
       if (nextData.startsWith("ps: ")) return null;
     }
-    const interpret: PS["interpret"] = (matrix, x, y) =>
-      interpretPS(psText, matrix, x, y);
+    const interpret: PS["interpret"] = (matrix) => {
+      const result = interpretPS(
+        psText,
+        matrix,
+        command.horizontal,
+        command.vertical,
+      );
+      command.emitChange({
+        horizontal: result.horizontal,
+        vertical: result.vertical,
+        w: command.w,
+        x: command.x,
+        y: command.y,
+        z: command.z,
+      });
+      return result.matrix;
+    };
+
     psText = "";
     return {
       type: "ps",
