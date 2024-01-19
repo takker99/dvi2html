@@ -83,7 +83,8 @@ export const interpret = (
     },
 
     // Path construction operators
-    currentpoint: () => stack.push(new PSNumber(temp.x), new PSNumber(temp.y)),
+    currentpoint: () =>
+      stack.push(new PSNumber(temp.horizontal), new PSNumber(temp.vertical)),
 
     moveto: () => {
       const y = stack.pop();
