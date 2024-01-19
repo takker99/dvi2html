@@ -32,7 +32,7 @@ export const convertToHTML = (
   let pointsPerDviUnit = 0;
 
   let color: TexColor = "black";
-  const depth: ("svg")[] = [];
+  let depth = 0;
   let matrix: Matrix = [...identifyMatrix];
   let fontName = "";
   let fontSize = 0;
@@ -93,7 +93,7 @@ export const convertToHTML = (
         fontSize = (command.font.metrics.design_size / 1048576.0) *
           command.font.scaleFactor / command.font.designSize;
 
-        if (!depth.includes("svg")) {
+        if (depth <= 0) {
           const hasSpace = (lastTextV == command.top) &&
             (left > lastTextRight + 2);
 
@@ -119,7 +119,7 @@ export const convertToHTML = (
         const bottom = command.top * pointsPerDviUnit;
         const top = bottom - height;
 
-        html += depth.includes("svg")
+        html += depth > 0
           ? `<rect x="${left}" y="${top}" width="${width}" height="${height}" fill=${color} ${
             toSVGTransform(matrix)
           }></rect>\n`
@@ -142,15 +142,13 @@ export const convertToHTML = (
           if (tag === "<svg beginpicture>") {
             // In this case we are inside another svg element so drop the svg start tags.
             svg = `${svg.slice(0, match.index)}${
-              depth.includes("svg")
+              depth > 0
                 ? ""
                 : `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${paperwidth}pt" height="${paperheight}pt" viewBox="-72 -72 ${paperwidth} ${paperheight}">`
             }${svg.slice(match.index! + tag.length)}`;
           }
 
-          if (tag !== "<svg beginpicture>" || !depth.includes("svg")) {
-            depth.push("svg");
-          }
+          if (tag !== "<svg beginpicture>" || depth <= 0) depth++;
         }
 
         for (const match of command.svg.matchAll(/<\/svg\s[^>]+>/g)) {
@@ -158,13 +156,13 @@ export const convertToHTML = (
           if (tag === "<\/svg endpicture>") {
             // If we are inside another svg element, then drop the svg end tag.
             // Otherwise just remove the " endpicture" bit.
-            svg = `${svg.slice(0, match.index)}${
-              !depth.includes("svg") ? "" : "<\/svg>"
-            }${svg.slice(match.index! + tag.length)}`;
+            svg = `${svg.slice(0, match.index)}${depth > 0 ? "<\/svg>" : ""}${
+              svg.slice(match.index! + tag.length)
+            }`;
           }
 
-          if (tag !== "<\/svg endpicture>" || depth.includes("svg")) {
-            depth.pop();
+          if (tag !== "<\/svg endpicture>" || depth > 0) {
+            depth--;
           }
         }
 
@@ -187,7 +185,7 @@ export const convertToHTML = (
         matrix = command.interpret(matrix);
         break;
       case "psfile":
-        html += depth.includes("svg")
+        html += depth > 0
           ? command.toSVG(matrix)
           : `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${paperwidth}pt" height="${paperheight}pt" viewBox="-72 -72 ${paperwidth} ${paperheight}">${
             command.toSVG(matrix)
@@ -196,9 +194,7 @@ export const convertToHTML = (
     }
   }
 
-  for (const index of depth) {
-    html += index === "svg" ? "</g>" : "</span>";
-  }
+  for (let _ = depth; _ > 0; _--) html += "</svg>";
 
   return `<div class="page">${html}</div>`;
 };
