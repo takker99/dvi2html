@@ -1,4 +1,4 @@
-import fontlist from "../fontlist.json" assert { type: "json" };
+import fontlist from "../fontlist.json" with { type: "json" };
 
 const fonts: Record<string, number[]> = {};
 
