@@ -10,11 +10,11 @@ const stateQueue: Matrix[] = [];
 export const interpret = (
   psInput: string,
   matrix: Matrix,
-  x: number,
-  y: number,
+  horizontal: number,
+  vertical: number,
 ) => {
   const stack: StackObject[] = [];
-  const temp = { matrix, x, y };
+  const temp = { matrix, horizontal, vertical };
 
   /** The value of each key is the number of parameters from the stack it needs. */
   const operators = {
@@ -88,8 +88,8 @@ export const interpret = (
     moveto: () => {
       const y = stack.pop();
       const x = stack.pop();
-      temp.x = x?.value;
-      temp.y = y?.value;
+      temp.horizontal = x?.value;
+      temp.vertical = y?.value;
     },
 
     // Coordinate system and matrix operators

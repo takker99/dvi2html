@@ -59,15 +59,10 @@ export interface Rule {
   width: number;
   height: number;
 }
-export interface Special {
+export interface Special extends Omit<Register, "fontNum"> {
   type: "special";
   data: Uint8Array;
-  horizontal: number;
-  vertical: number;
-  w: number;
-  x: number;
-  y: number;
-  z: number;
+  emitChange: (register: Omit<Register, "fontNum">) => void;
 }
 export interface ParseInfo {
   type: "info";
@@ -287,6 +282,14 @@ function* middleParser(
           type: "special",
           data: command.x,
           ...register,
+          emitChange: (newRegister) => {
+            register.horizontal = newRegister.horizontal;
+            register.vertical = newRegister.vertical;
+            register.w = newRegister.w;
+            register.x = newRegister.x;
+            register.y = newRegister.y;
+            register.z = newRegister.z;
+          },
         };
         break;
       case FNT_DEF: {
