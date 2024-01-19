@@ -13,8 +13,6 @@ import {
   TexColor,
   Text,
 } from "./dvi/mod.ts";
-import glyphs from "./encodings.json" with { type: "json" };
-import fontlist from "./fontlist.json" with { type: "json" };
 
 export const convertToHTML = (
   commands: Iterable<
@@ -60,17 +58,7 @@ export const convertToHTML = (
           textWidth += metrics.width;
           textHeight = Math.max(textHeight, metrics.height);
 
-          const encoding = Object.hasOwn(fontlist, command.font.name)
-            ? fontlist[command.font.name as keyof typeof fontlist]
-            : undefined;
-          const glyph = encoding && Object.hasOwn(glyphs, encoding)
-            ? glyphs[encoding as keyof typeof glyphs]
-            : undefined;
-          const newCodePoint = glyph && Object.hasOwn(glyph, codePoint)
-            ? glyph[codePoint as unknown as keyof typeof glyph]
-            : undefined;
           htmlText += String.fromCodePoint(
-            newCodePoint ??
                 // This is ridiculous.
                 (codePoint >= 0 && codePoint <= 9)
               ? 161 + codePoint
