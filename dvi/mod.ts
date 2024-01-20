@@ -1,4 +1,4 @@
-import { loadFont, TFM } from "../tfm/mod.ts";
+import { parse as parseTFM, TFM } from "../tfm/mod.ts";
 import { tokenize } from "./tokenize.ts";
 import {
   BOP,
@@ -96,13 +96,21 @@ export type SpecialPlugin<T> = (
   next?: Text | Rule | Special | ParseInfo,
 ) => T | null | undefined;
 
-export function* parse<
+export interface ParseInit<
+  // deno-lint-ignore no-explicit-any
+  Plugins extends SpecialPlugin<any>[],
+> {
+  tfmLoader: (filename: string) => Promise<Uint32Array>;
+  plugins?: Plugins;
+}
+
+export async function* parse<
   // deno-lint-ignore no-explicit-any
   Plugins extends SpecialPlugin<any>[] = SpecialPlugin<Special>[],
 >(
   dvi: Uint8Array,
-  plugins?: [...Plugins],
-): Generator<
+  init: ParseInit<Plugins>,
+): AsyncGenerator<
   | Text
   | Rule
   | Special
@@ -111,18 +119,18 @@ export function* parse<
     [K in keyof Plugins]: Plugins[K] extends SpecialPlugin<infer U> ? U : never;
   }[number]
 > {
-  const iterator = middleParser(dvi);
-  const result = iterator.next();
+  const iterator = middleParser(dvi, init.tfmLoader);
+  const result = await iterator.next();
   let next = !result.done ? result.value : undefined;
 
   while (next) {
     const command = next;
-    const result = iterator.next();
+    const result = await iterator.next();
     next = !result.done ? result.value : undefined;
 
-    if (command.type === "special" && plugins) {
+    if (command.type === "special" && init.plugins) {
       let found = false;
-      for (const plugin of plugins) {
+      for (const plugin of init.plugins) {
         const result = plugin(command, next);
         if (result === undefined) continue;
         if (result !== null) yield result;
@@ -136,9 +144,10 @@ export function* parse<
   }
 }
 
-function* middleParser(
+async function* middleParser(
   dvi: Uint8Array,
-): Generator<
+  tfmLoader: (filename: string) => Promise<Uint32Array>,
+): AsyncGenerator<
   | Text
   | Rule
   | Special
@@ -298,7 +307,7 @@ function* middleParser(
         const scaleFactor = command.s;
         const designSize = command.d;
         const checksum = command.c;
-        const font = loadFont(command.n);
+        const font = parseTFM(await tfmLoader(command.n));
         fonts.set(command.k, {
           name,
           checksum,

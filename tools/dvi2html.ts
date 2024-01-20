@@ -3,6 +3,7 @@ import { convertToHTML } from "../mod.ts";
 import { tokenize } from "../dvi/tokenize.ts";
 import { join } from "https://deno.land/std@0.212.0/path/mod.ts";
 import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts#^";
+import { tfmLoader } from "../tfm/tfmLoader.ts";
 
 const token = new Command()
   .arguments("<input:string> [output:string]")
@@ -23,7 +24,12 @@ const parser = new Command()
   .action(async (_, input, output) => {
     const dvi = await Deno.readFile(join(Deno.cwd(), input));
     const log: unknown[] = [];
-    for (const command of parse(dvi, [papersize, ps(), svg(), color()])) {
+    for await (
+      const command of parse(dvi, {
+        plugins: [papersize, ps(), svg(), color()],
+        tfmLoader,
+      })
+    ) {
       switch (command.type) {
         case "rect":
         case "info":
@@ -64,7 +70,11 @@ await new Command()
   .action(async (_, input, output) => {
     const dvi = await Deno.readFile(join(Deno.cwd(), input));
 
-    const div = convertToHTML(parse(dvi, [papersize, color(), svg()]));
+    const div = convertToHTML(
+      await Array.fromAsync(
+        parse(dvi, { plugins: [papersize, color(), svg()], tfmLoader }),
+      ),
+    );
     const html = `<!DOCTYPE html>
 <html>
 <head>
