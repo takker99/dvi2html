@@ -141,14 +141,15 @@ export const convertToHTML = (
           const tag = match[0];
           if (tag === "<svg beginpicture>") {
             // In this case we are inside another svg element so drop the svg start tags.
-            svg = `${svg.slice(0, match.index)}${
+            svg = svg.replace(
+              tag,
               depth > 0
                 ? ""
-                : `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${paperwidth}pt" height="${paperheight}pt" viewBox="-72 -72 ${paperwidth} ${paperheight}">`
-            }${svg.slice(match.index! + tag.length)}`;
+                : `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${paperwidth}pt" height="${paperheight}pt" viewBox="-72 -72 ${paperwidth} ${paperheight}">`,
+            );
           }
 
-          if (tag !== "<svg beginpicture>" || depth <= 0) depth++;
+          depth++;
         }
 
         for (const match of command.svg.matchAll(/<\/svg\s[^>]+>/g)) {
@@ -156,14 +157,10 @@ export const convertToHTML = (
           if (tag === "<\/svg endpicture>") {
             // If we are inside another svg element, then drop the svg end tag.
             // Otherwise just remove the " endpicture" bit.
-            svg = `${svg.slice(0, match.index)}${depth > 0 ? "<\/svg>" : ""}${
-              svg.slice(match.index! + tag.length)
-            }`;
+            svg = svg.replace(tag, depth === 1 ? "<\/svg>" : "");
           }
 
-          if (tag !== "<\/svg endpicture>" || depth > 0) {
-            depth--;
-          }
+          depth = Math.max(0, depth - 1);
         }
 
         const top = command.top * pointsPerDviUnit;
