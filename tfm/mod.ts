@@ -1,18 +1,8 @@
-import fontdata from "./fonts.json" with { type: "json" };
-
 const LIG_TAG = 1;
 const LIST_TAG = 2;
 const EXT_TAG = 3;
 
 const KERN_OPCODE = 128;
-
-export const loadFont = (path: string) => {
-  if (!Object.hasOwn(fontdata, path)) {
-    throw Error(`Could not find font ${path}`);
-  }
-  return parse(new Uint32Array(fontdata[path as keyof typeof fontdata]));
-};
-
 export const parse = (tfm: Uint32Array): TFM => {
   // Read and set the table lengths
   const view = new DataView(tfm.buffer, tfm.byteOffset, tfm.byteLength);
