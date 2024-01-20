@@ -3,353 +3,6 @@ export const snapshot = {};
 snapshot[`parse() 1`] = `
 [
   {
-    comment: " TeX output 2023.12.31:1042",
-    denominator: 473628672,
-    magnification: 1000,
-    numerator: 25400000,
-    type: "info",
-    version: 2,
-  },
-  {
-    data: "header=l3backend-dvips.pro",
-    type: "special",
-  },
-  {
-    height: 794.96999,
-    type: "papersize",
-    width: 614.295,
-  },
-  {
-    color: "black",
-    type: "color",
-  },
-  {
-    color: "black",
-    type: "color",
-  },
-  {
-    color: "black",
-    type: "color",
-  },
-  {
-    font: "cmr10",
-    left: 5046272,
-    text: "This",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 6581570.625,
-    text: "example",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 9187295.875,
-    text: "sho",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 10119365.875,
-    text: "ws",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 11108529.5,
-    text: "dieren",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 13222072,
-    text: "t",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 13734278.125,
-    text: "examples",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 16598506.125,
-    text: "on",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 17547621.375,
-    text: "ho",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 18221187.625,
-    text: "w",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 18951847.5,
-    text: "to",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 19791734.875,
-    text: "use",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 20962943.5,
-    text: "the",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmtt10",
-    left: 22130512.5,
-    text: "xcolor",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 24452223,
-    text: "pac",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 25417061.125,
-    text: "k",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 25726538.375,
-    text: "age",
-    top: 4128768,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 4063232,
-    text: "to",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 4864229.375,
-    text: "c",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 5137296.25,
-    text: "hange",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 7030563.625,
-    text: "the",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 8159241.625,
-    text: "colour",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 10127147.75,
-    text: "of",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 10873532,
-    text: "elemen",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 12821412.625,
-    text: "ts",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 13553232.5,
-    text: "in",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 14317820.5,
-    text: "L",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr7",
-    left: 14491491.75,
-    text: "A",
-    top: 4780853,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 14780038.75,
-    text: "T",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 15144105.625,
-    text: "E",
-    top: 5056284,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 15508195.625,
-    text: "X.",
-    top: 4915200,
-    type: "text",
-  },
-  {
-    color: "#0000ff",
-    type: "color",
-  },
-  {
-    color: "#0000ff",
-    type: "color",
-  },
-  {
-    font: "tcrm1000",
-    left: 5046354,
-    text: "",
-    top: 6356992,
-    type: "text",
-  },
-  {
-    color: "#0000ff",
-    type: "color",
-  },
-  {
-    font: "cmr10",
-    left: 5701634,
-    text: "First",
-    top: 6356992,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 7299988.875,
-    text: "item",
-    top: 6356992,
-    type: "text",
-  },
-  {
-    color: "#0000ff",
-    type: "color",
-  },
-  {
-    font: "tcrm1000",
-    left: 5046354,
-    text: "",
-    top: 7667712,
-    type: "text",
-  },
-  {
-    color: "#0000ff",
-    type: "color",
-  },
-  {
-    font: "cmr10",
-    left: 5701634,
-    text: "Second",
-    top: 7667712,
-    type: "text",
-  },
-  {
-    font: "cmr10",
-    left: 7922582,
-    text: "item",
-    top: 7667712,
-    type: "text",
-  },
-  {
-    color: "black",
-    type: "color",
-  },
-  {
-    color: "#ff0000",
-    type: "color",
-  },
-  {
-    height: 93233,
-    left: 4063232,
-    top: 9109504,
-    type: "rect",
-    width: 22609920,
-  },
-  {
-    color: "black",
-    type: "color",
-  },
-  {
-    color: "black",
-    type: "color",
-  },
-  {
-    font: "cmr10",
-    left: 15204352,
-    text: "1",
-    top: 41484288,
-    type: "text",
-  },
-  {
-    color: "black",
-    type: "color",
-  },
-]
-`;
-
-snapshot[`parse() 2`] = `
-[
-  {
     comment: " TeX output 2017.07.23:1405",
     denominator: 473628672,
     magnification: 1000,
@@ -1679,6 +1332,5259 @@ snapshot[`parse() 2`] = `
     text: "2",
     top: 41451520,
     type: "text",
+  },
+]
+`;
+
+snapshot[`parse() 2`] = `
+[
+  {
+    comment: " TeX output 2023.12.31:1042",
+    denominator: 473628672,
+    magnification: 1000,
+    numerator: 25400000,
+    type: "info",
+    version: 2,
+  },
+  {
+    data: "header=l3backend-dvips.pro",
+    type: "special",
+  },
+  {
+    height: 794.96999,
+    type: "papersize",
+    width: 614.295,
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    font: "cmr10",
+    left: 5046272,
+    text: "This",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 6581570.625,
+    text: "example",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 9187295.875,
+    text: "sho",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 10119365.875,
+    text: "ws",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 11108529.5,
+    text: "dieren",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 13222072,
+    text: "t",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 13734278.125,
+    text: "examples",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 16598506.125,
+    text: "on",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 17547621.375,
+    text: "ho",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 18221187.625,
+    text: "w",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 18951847.5,
+    text: "to",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 19791734.875,
+    text: "use",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 20962943.5,
+    text: "the",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmtt10",
+    left: 22130512.5,
+    text: "xcolor",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 24452223,
+    text: "pac",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 25417061.125,
+    text: "k",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 25726538.375,
+    text: "age",
+    top: 4128768,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 4063232,
+    text: "to",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 4864229.375,
+    text: "c",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 5137296.25,
+    text: "hange",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 7030563.625,
+    text: "the",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 8159241.625,
+    text: "colour",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 10127147.75,
+    text: "of",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 10873532,
+    text: "elemen",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 12821412.625,
+    text: "ts",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 13553232.5,
+    text: "in",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 14317820.5,
+    text: "L",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr7",
+    left: 14491491.75,
+    text: "A",
+    top: 4780853,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 14780038.75,
+    text: "T",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 15144105.625,
+    text: "E",
+    top: 5056284,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 15508195.625,
+    text: "X.",
+    top: 4915200,
+    type: "text",
+  },
+  {
+    color: "#0000ff",
+    type: "color",
+  },
+  {
+    color: "#0000ff",
+    type: "color",
+  },
+  {
+    font: "tcrm1000",
+    left: 5046354,
+    text: "",
+    top: 6356992,
+    type: "text",
+  },
+  {
+    color: "#0000ff",
+    type: "color",
+  },
+  {
+    font: "cmr10",
+    left: 5701634,
+    text: "First",
+    top: 6356992,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 7299988.875,
+    text: "item",
+    top: 6356992,
+    type: "text",
+  },
+  {
+    color: "#0000ff",
+    type: "color",
+  },
+  {
+    font: "tcrm1000",
+    left: 5046354,
+    text: "",
+    top: 7667712,
+    type: "text",
+  },
+  {
+    color: "#0000ff",
+    type: "color",
+  },
+  {
+    font: "cmr10",
+    left: 5701634,
+    text: "Second",
+    top: 7667712,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: 7922582,
+    text: "item",
+    top: 7667712,
+    type: "text",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "#ff0000",
+    type: "color",
+  },
+  {
+    height: 93233,
+    left: 4063232,
+    top: 9109504,
+    type: "rect",
+    width: 22609920,
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    font: "cmr10",
+    left: 15204352,
+    text: "1",
+    top: 41484288,
+    type: "text",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+]
+`;
+
+snapshot[`parse() 3`] = `
+[
+  {
+    comment: " TeX output 2024.01.19:1720",
+    denominator: 473628672,
+    magnification: 1000,
+    numerator: 25400000,
+    type: "info",
+    version: 2,
+  },
+  {
+    height: 170.71059,
+    type: "papersize",
+    width: 186.38557,
+  },
+  {
+    data: "ps::%%HiResBoundingBox: 0 0 186.38557pt 170.71059pt
+",
+    type: "special",
+  },
+  {
+    height: 794.96999,
+    type: "papersize",
+    width: 614.295,
+  },
+  {
+    height: 170.71059,
+    type: "papersize",
+    width: 186.38557,
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    left: -3880017,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M -2.84544 -31.29819 M -2.84544 -28.45274 L 110.96552 -28.45274 M -2.84544 0.0 L 110.96552 0.0 M -2.84544 28.45274 L 110.96552 28.45274 M -2.84544 56.90549 L 110.96552 56.90549 M -2.84544 85.35823 L 110.96552 85.35823 M 0.0 -31.29819 L 0.0 110.96552 M 28.45274 -31.29819 L 28.45274 110.96552 M 56.90549 -31.29819 L 56.90549 110.96552 M 85.35823 -31.29819 L 85.35823 110.96552 M 110.96552 110.96552  " fill="none"/>
+ </g>
+ </g>
+ <path d=" M -5.69046 0.0 L 119.04144 0.0  " fill="none"/>
+ <g transform="translate(119.04144,0.0)">
+ <g stroke-width="0.31999">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -1.19998 1.59998 C -1.09998 0.99998 0.0 0.09999 0.29999 0.0 C 0.0 -0.09999 -1.09998 -0.99998 -1.19998 -1.59998  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(123.03441,-2.15277)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: -3880017,
+    text: "x",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    left: -3505461,
+    svg: "</g> </g>
+ ",
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    left: -3880017,
+    svg: '</g></g>
+ </g>
+ <path d=" M 0.0 -34.1432 L 0.0 119.04144  " fill="none"/>
+ <g transform="matrix(0.0,1.0,-1.0,0.0,0.0,119.04144)">
+ <g stroke-width="0.31999">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -1.19998 1.59998 C -1.09998 0.99998 0.0 0.09999 0.29999 0.0 C 0.0 -0.09999 -1.09998 -0.99998 -1.19998 -1.59998  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(-9.73267,125.53441)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: -3880017,
+    text: "f",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -3488619,
+    text: "(",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: -3233755.875,
+    text: "x",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -2859199,
+    text: ")",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    left: -2604337,
+    svg: "</g> </g>
+ ",
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    left: -3880017,
+    svg: '</g></g>
+ </g>
+ <g stroke="#f00" fill="#f00">
+ <path d=" M 0.0 0.0 L 4.74182 4.74182 L 9.48366 9.48366 L 14.2255 14.2255 L 18.96733 18.96733 L 23.70917 23.70917 L 28.451 28.451 L 33.19284 33.19284 L 37.93466 37.93466 L 42.6765 42.6765 L 47.41833 47.41833 L 52.16017 52.16017 L 56.90201 56.90201 L 61.64384 61.64384 L 66.38568 66.38568 L 71.1275 71.1275 L 75.86934 75.86934 L 80.61118 80.61118 L 85.35301 85.35301 L 90.09485 90.09485 L 94.83669 94.83669 L 99.57852 99.57852 L 104.32036 104.32036 L 109.06218 109.06218 L 113.80402 113.80402  " fill="none"/>
+ <g transform="translate(117.33699,111.30402)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#f00">
+ <g stroke="none"> ',
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    color: "#ff0000",
+    type: "color",
+  },
+  {
+    font: "cmmi10",
+    left: -3880017,
+    text: "f",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -3488619,
+    text: "(",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: -3233755.875,
+    text: "x",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -2859199,
+    text: ")",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -2422295.875,
+    text: "=",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: -1730529.625,
+    text: "x",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    left: -1355975,
+    svg: "</g> </g>
+ ",
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    left: -3880017,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke="#00f" fill="#00f">
+ <path d=" M 0.0 0.0 L 4.74182 4.71925 L 9.48366 9.3087 L 14.2255 13.63939 L 18.96733 17.59236 L 23.70917 21.05779 L 28.451 23.94014 L 33.19284 26.1591 L 37.93466 27.65259 L 42.6765 28.38023 L 47.41833 28.32076 L 52.16017 27.47806 L 56.90201 25.87212 L 61.64384 23.5507 L 66.38568 20.57544 L 71.1275 17.031 L 75.86934 13.0142 L 80.61118 8.63663 L 85.35301 4.01982 L 90.09485 -0.70766 L 94.83669 -5.41606 L 99.57852 -9.97426 L 104.32036 -14.25676 L 109.06218 -18.14331 L 113.80402 -21.52754  " fill="none"/>
+ <g transform="translate(117.33699,-24.02754)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#00f">
+ <g stroke="none"> ',
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    color: "#0000ff",
+    type: "color",
+  },
+  {
+    font: "cmmi10",
+    left: -3880017,
+    text: "f",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -3488619,
+    text: "(",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: -3233755.875,
+    text: "x",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -2859199,
+    text: ")",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -2422295.875,
+    text: "=",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -1730529.625,
+    text: "sin",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: -816667.625,
+    text: "x",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    left: -442113,
+    svg: "</g> </g>
+ ",
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    left: -3880017,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke="#ff8000" fill="#ff8000">
+ <path d=" M 0.0 1.42271 L 4.74182 1.6806 L 9.48366 1.98538 L 14.2255 2.34529 L 18.96733 2.77077 L 23.70917 3.27309 L 28.451 3.86658 L 33.19284 4.56816 L 37.93466 5.39653 L 42.6765 6.37512 L 47.41833 7.53127 L 52.16017 8.89713 L 56.90201 10.51044 L 61.64384 12.41681 L 66.38568 14.66876 L 71.1275 17.32883 L 75.86934 20.47124 L 80.61118 24.18413 L 85.35301 28.56996 L 90.09485 33.75116 L 94.83669 39.8723 L 99.57852 47.1027 L 104.32036 55.6447 L 109.06218 65.73575 L 113.80402 77.65762  " fill="none"/>
+ <g transform="translate(117.33699,75.15761)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#ff8000">
+ <g stroke="none"> ',
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    color: "#ff8000",
+    type: "color",
+  },
+  {
+    font: "cmmi10",
+    left: -3880017,
+    text: "f",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -3488619,
+    text: "(",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: -3233755.875,
+    text: "x",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -2859199,
+    text: ")",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -2422295.875,
+    text: "=",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmr7",
+    left: -1521268.625,
+    text: "1",
+    top: 3942650,
+    type: "text",
+  },
+  {
+    height: 26213,
+    left: -1651886.625,
+    top: 4049952,
+    type: "rect",
+    width: 522470,
+  },
+  {
+    font: "cmr7",
+    left: -1651886.625,
+    text: "20",
+    top: 4426680,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -1050773.625,
+    text: "e",
+    top: 4200686,
+    type: "text",
+  },
+  {
+    font: "cmmi7",
+    left: -759501.75,
+    text: "x",
+    top: 3962861,
+    type: "text",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    left: -429548,
+    svg: "</g> </g>
+ ",
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    left: -3880017,
+    svg: "</g></g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g></svg endpicture>",
+    top: 4200686,
+    type: "svg",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+]
+`;
+
+snapshot[`parse() 4`] = `
+[
+  {
+    comment: " TeX output 2024.01.19:1617",
+    denominator: 473628672,
+    magnification: 1000,
+    numerator: 25400000,
+    type: "info",
+    version: 2,
+  },
+  {
+    height: 102.35054,
+    type: "papersize",
+    width: 160.94818,
+  },
+  {
+    data: "ps::%%HiResBoundingBox: 0 0 160.94818pt 102.35054pt
+",
+    type: "special",
+  },
+  {
+    height: 794.96999,
+    type: "papersize",
+    width: 614.295,
+  },
+  {
+    height: 102.35054,
+    type: "papersize",
+    width: 160.94818,
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    left: -3081083,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <path d=" M 0.0 0.0 L 0.0 0.2 M 0.0 42.67911 M 0.0 0.0 L 0.0 30.7289 M 0.0 54.62932 L 0.0 85.35823 M -13.1453 42.67911 M -13.1453 42.67911 M 4.78012 16.60924 M 4.78012 68.74896 M 0.0 85.15823 L 0.0 85.35823 L 0.2 85.35823 M 28.45274 85.35822 M 0.0 85.35823 L 28.45274 85.35822 M 28.45274 85.35822 L 56.90549 85.35823 M 56.90549 85.35823 M 0.0 85.35823 L 56.90549 85.35823 M 28.45274 85.35823 M 56.70549 85.35823 L 56.90549 85.35823 L 56.90549 85.15823 M 56.90549 42.67911 M 56.90549 85.35823 L 56.90549 58.61263 M 56.90549 26.74559 L 56.90549 0.0 M 63.47812 42.67911 M 63.47812 42.67911 M 56.90549 85.35823 L 56.90549 58.61263 M 56.90549 71.98543 M 56.90549 0.2 L 56.90549 0.0 L 0.0 0.0  " fill="none"/>
+ <g stroke="#000" fill="#000">
+ <g stroke-width="0.79999">
+ <path d=" M -11.95021 42.67911 C -11.95021 36.07912 -6.59999 30.7289 0.0 30.7289 C 6.59999 30.7289 11.95021 36.07912 11.95021 42.67911 C 11.95021 49.2791 6.59999 54.62932 0.0 54.62932 C -6.59999 54.62932 -11.95021 49.2791 -11.95021 42.67911 Z M 0.0 42.67911  " fill="none"/>
+ <path d=" M 0.0 34.31401 L 0.0 51.0442  " fill="none"/>
+ <g transform="matrix(0.0,1.0,-1.0,0.0,0.0,48.6542)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"></g></g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <path d=" M 0.0 46.9115 L 1.99167 46.9115 L 0.0 51.1438 L -1.99167 46.9115 L 0.0 46.9115  " />
+ </g>
+ <g stroke-width="0.4">
+ <g transform="matrix(0.0,1.0,-1.0,0.0,0.0,42.67911)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g transform="translate(-23.64183,40.52634)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: -3081083,
+    text: "I",
+    top: 1853847,
+    type: "text",
+  },
+  {
+    font: "cmr7",
+    left: -2792996.75,
+    text: "0",
+    top: 1952150,
+    type: "text",
+  },
+  {
+    left: -2498994,
+    svg: "</g> </g>
+ ",
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    left: -3081083,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(4.98012,14.10924)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    font: "cmsy10",
+    left: -3081083,
+    text: " ",
+    top: 1853847,
+    type: "text",
+  },
+  {
+    left: -2571357,
+    svg: "</g> </g>
+ ",
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    left: -3081083,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(4.98012,66.24896)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -3081083,
+    text: "+",
+    top: 1853847,
+    type: "text",
+  },
+  {
+    left: -2571357,
+    svg: "</g> </g>
+ ",
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    left: -3081083,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(16.93854,40.01242)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: -3081083,
+    text: "V",
+    top: 1853847,
+    type: "text",
+  },
+  {
+    font: "cmr7",
+    left: -2698789.25,
+    text: "0",
+    top: 1952150,
+    type: "text",
+  },
+  {
+    left: -2404787,
+    svg: "</g> </g>
+ ",
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    left: -3081083,
+    svg: '</g></g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g transform="translate(28.45274,85.35822)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ </g>
+ </g>
+ <g transform="translate(56.90549,85.35823)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g fill-opacity="1.0">
+ <path d=" M 58.49857 85.35823 C 58.49857 86.23807 57.78532 86.95131 56.90549 86.95131 C 56.02565 86.95131 55.31241 86.23807 55.31241 85.35823 C 55.31241 84.4784 56.02565 83.76515 56.90549 83.76515 C 57.78532 83.76515 58.49857 84.4784 58.49857 85.35823 Z M 56.90549 85.35823  " />
+ </g>
+ </g>
+ <g transform="translate(28.45274,85.35823)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <path d=" M 26.71004 85.35823 L 26.71004 83.36656 L 30.94234 85.35823 L 26.71004 87.3499 L 26.71004 85.35823  " />
+ </g>
+ <g transform="translate(24.01176,90.39117)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: -3081083,
+    text: "I",
+    top: 1853847,
+    type: "text",
+  },
+  {
+    font: "cmr7",
+    left: -2792996.75,
+    text: "0",
+    top: 1952150,
+    type: "text",
+  },
+  {
+    left: -2498994,
+    svg: "</g> </g>
+ ",
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    left: -3081083,
+    svg: '</g></g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke-width="0.79999">
+ <g stroke-linejoin="bevel">
+ <path d=" M 56.90549 59.01262 L 62.88058 55.9237 L 50.93039 50.54587 L 62.88058 45.16803 L 50.93039 39.79019 L 62.88058 34.41235 L 50.93039 29.03452 L 56.90549 26.3456  " fill="none"/>
+ <g stroke-width="0.4">
+ <g transform="matrix(0.0,-1.0,1.0,0.0,56.90549,42.67911)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g transform="translate(65.0927,40.52634)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: -3081083,
+    text: "R",
+    top: 1853847,
+    type: "text",
+  },
+  {
+    font: "cmr7",
+    left: -2583474.875,
+    text: "1",
+    top: 1952150,
+    type: "text",
+  },
+  {
+    left: -2289472,
+    svg: "</g> </g>
+ ",
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    left: -3081083,
+    svg: '</g></g>
+ </g>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,56.90549,71.98543)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <path d=" M 56.90549 73.72813 L 54.91382 73.72813 L 56.90549 69.49583 L 58.89716 73.72813 L 56.90549 73.72813  " />
+ </g>
+ <g transform="translate(45.44127,69.43779)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: -3081083,
+    text: "i",
+    top: 1853847,
+    type: "text",
+  },
+  {
+    font: "cmr7",
+    left: -2855303,
+    text: "1",
+    top: 1952150,
+    type: "text",
+  },
+  {
+    left: -2561300,
+    svg: "</g> </g>
+ ",
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    left: -3081083,
+    svg: '</g></g>
+ </g>
+ <path d=" M 56.90549 85.35823 L 113.81097 85.35823 L 113.81097 85.15823 M 113.81097 42.67911 M 113.81097 85.35823 L 113.81097 58.61263 M 113.81097 26.74559 L 113.81097 0.0 M 120.3836 42.67911 M 120.3836 42.67911 M 113.81097 85.35823 L 113.81097 58.61263 M 113.81097 71.98543 M 113.81097 0.2 L 113.81097 0.0 L 113.61098 0.0 M 85.35823 0.0 M 113.81097 0.0 L 85.35823 0.0 M 85.35823 0.0 L 56.90549 0.0 M 56.90549 0.0 M 57.10548 0.0 L 56.90549 0.0  " fill="none"/>
+ <g stroke="#000" fill="#000">
+ <g stroke-width="0.79999">
+ <g stroke-linejoin="bevel">
+ <path d=" M 113.81097 59.01262 L 119.78607 55.9237 L 107.83588 50.54587 L 119.78607 45.16803 L 107.83588 39.79019 L 119.78607 34.41235 L 107.83588 29.03452 L 113.81097 26.3456  " fill="none"/>
+ <g stroke-width="0.4">
+ <g transform="matrix(0.0,-1.0,1.0,0.0,113.81097,42.67911)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g transform="translate(121.99818,40.52634)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: -3081083,
+    text: "R",
+    top: 1853847,
+    type: "text",
+  },
+  {
+    font: "cmr7",
+    left: -2583474.875,
+    text: "2",
+    top: 1952150,
+    type: "text",
+  },
+  {
+    left: -2289472,
+    svg: "</g> </g>
+ ",
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    left: -3081083,
+    svg: '</g></g>
+ </g>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,113.81097,71.98543)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <path d=" M 113.81097 73.72813 L 111.8193 73.72813 L 113.81097 69.49583 L 115.80264 73.72813 L 113.81097 73.72813  " />
+ </g>
+ <g transform="translate(102.34676,69.43779)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: -3081083,
+    text: "i",
+    top: 1853847,
+    type: "text",
+  },
+  {
+    font: "cmr7",
+    left: -2855303,
+    text: "2",
+    top: 1952150,
+    type: "text",
+  },
+  {
+    left: -2561300,
+    svg: "</g> </g>
+ ",
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    left: -3081083,
+    svg: '</g></g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g transform="matrix(-1.0,0.0,0.0,-1.0,85.35823,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ </g>
+ </g>
+ <g transform="translate(56.90549,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <g fill-opacity="1.0">
+ <path d=" M 58.49857 0.0 C 58.49857 0.87984 57.78532 1.59308 56.90549 1.59308 C 56.02565 1.59308 55.31241 0.87984 55.31241 0.0 C 55.31241 -0.87984 56.02565 -1.59308 56.90549 -1.59308 C 57.78532 -1.59308 58.49857 -0.87984 58.49857 0.0 Z M 56.90549 0.0  " />
+ </g>
+ </g>
+ </g>
+ </g>
+ </g></svg endpicture>',
+    top: 1853847,
+    type: "svg",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+]
+`;
+
+snapshot[`parse() 5`] = `
+[
+  {
+    comment: " TeX output 2024.01.20:0947",
+    denominator: 473628672,
+    magnification: 1000,
+    numerator: 25400000,
+    type: "info",
+    version: 2,
+  },
+  {
+    height: 172.19498,
+    type: "papersize",
+    width: 223.75726,
+  },
+  {
+    data: "ps::%%HiResBoundingBox: 0 0 223.75726pt 172.19498pt
+",
+    type: "special",
+  },
+  {
+    height: 794.96999,
+    type: "papersize",
+    width: 614.295,
+  },
+  {
+    height: 172.19498,
+    type: "papersize",
+    width: 223.75726,
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    left: -2939205,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"></g></g>
+ <g transform="translate(-27.4213,-10.00485)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)">',
+    top: 5893005,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 22.16492 -11.36641 L 25.54085 -8.75508 M 66.49475 -18.82185 L 69.87068 -16.21053 M 110.82458 -26.2773 L 114.20052 -23.66597 M 84.17336 36.59789 L 80.79741 33.98656 M 128.50319 29.14244 L 125.12724 26.53111 M 172.83302 21.687 L 169.45708 19.07567  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 10.33478 0.3554 L 14.54362 -0.35245 M 31.00433 16.34355 L 35.21318 15.63571 M 51.67389 32.33171 L 55.88274 31.62387 M 143.32379 -22.01085 L 139.11493 -21.303 M 163.99335 -6.02269 L 159.78448 -5.31483 M 184.6629 9.96547 L 180.45404 10.67332  " fill="none"/>
+ </g>
+ </g>
+ <path d=" M 0.0 -7.63869 L 132.98901 -30.00493  " fill="none"/>
+ <path d=" M 62.00844 40.3256 L 194.99745 17.95937  " fill="none"/>
+ <path d=" M 0.0 -7.63869 L 62.00844 40.3256  " fill="none"/>
+ <path d=" M 132.98901 -30.00493 L 194.99745 17.95937  " fill="none"/>
+ <g transform="translate(11.76894,-22.33827)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmsy10",
+    left: -1142123,
+    text: " ",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -632396.75,
+    text: "2",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: -304716,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(60.47296,-29.22136)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1142123,
+    text: "0",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: -814442,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(104.8028,-36.6768)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1142123,
+    text: "2",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: -814442,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(144.52614,-33.79135)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmsy10",
+    left: -1142123,
+    text: " ",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -632396.75,
+    text: "2",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: -304716,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(167.33344,-16.14949)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1142123,
+    text: "0",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: -814442,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(188.00299,-0.16133)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1142123,
+    text: "2",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: -814442,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 84.17336 128.25748 L 80.79741 125.64615 M 128.50319 120.80203 L 125.12724 118.1907 M 172.83302 113.34659 L 169.45708 110.73526  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 10.33478 92.01498 L 14.54362 91.30714 M 31.00433 108.00314 L 35.21318 107.2953 M 51.67389 123.9913 L 55.88274 123.28346  " fill="none"/>
+ </g>
+ </g>
+ <path d=" M 62.00844 131.9852 L 194.99745 109.61896  " fill="none"/>
+ <path d=" M 0.0 84.0209 L 62.00844 131.9852  " fill="none"/>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 10.33478 0.3554 L 10.33478 4.62332 M 31.00433 16.34355 L 31.00433 20.61148 M 51.67389 32.33171 L 51.67389 36.59964 M 10.33478 92.01498 L 10.33478 87.74706 M 31.00433 108.00314 L 31.00433 103.73521 M 51.67389 123.9913 L 51.67389 119.72337  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 0.0 -0.70612 L 3.37593 1.90521 M 0.0 18.74272 L 3.37593 21.35405 M 0.0 38.19157 L 3.37593 40.8029 M 0.0 57.64043 L 3.37593 60.25175 M 0.0 77.08928 L 3.37593 79.7006 M 62.00844 47.25818 L 58.63249 44.64685 M 62.00844 66.70702 L 58.63249 64.09569 M 62.00844 86.15587 L 58.63249 83.54454 M 62.00844 105.60472 L 58.63249 102.9934 M 62.00844 125.05357 L 58.63249 122.44225  " fill="none"/>
+ </g>
+ </g>
+ <path d=" M 0.0 -7.63869 L 0.0 84.0209  " fill="none"/>
+ <path d=" M 62.00844 40.3256 L 62.00844 131.9852  " fill="none"/>
+ <g transform="translate(-24.08832,-6.97647)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmsy10",
+    left: -1142123,
+    text: " ",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -632396.75,
+    text: "0",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: -304715.5,
+    text: ":",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -122670.5,
+    text: "4",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: 205010,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(-24.08832,12.47237)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmsy10",
+    left: -1142123,
+    text: " ",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -632396.75,
+    text: "0",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: -304715.5,
+    text: ":",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -122670.5,
+    text: "2",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: 205010,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(-8.53287,33.45584)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1142123,
+    text: "0",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: -814442,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(-16.3106,51.92906)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1142123,
+    text: "0",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: -814441.75,
+    text: ":",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -632396.75,
+    text: "2",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: -304716,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(-16.3106,71.37791)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1142123,
+    text: "0",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: -814441.75,
+    text: ":",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    font: "cmr10",
+    left: -632396.75,
+    text: "4",
+    top: 3270924,
+    type: "text",
+  },
+  {
+    left: -304716,
+    svg: "</g> </g>
+ ",
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -1142123,
+    svg: '</g></g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 143.32379 -22.01085 L 143.32379 -17.74292 M 163.99335 -6.02269 L 163.99335 -1.75476 M 184.6629 9.96547 L 184.6629 14.2334  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 194.99745 24.89194 L 191.6215 22.28061 M 194.99745 44.34077 L 191.6215 41.72945 M 194.99745 63.78963 L 191.6215 61.1783 M 194.99745 83.23848 L 191.6215 80.62715 M 194.99745 102.68733 L 191.6215 100.076  " fill="none"/>
+ </g>
+ </g>
+ <path d=" M 194.99745 17.95937 L 194.99745 109.61896  " fill="none"/>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 22.16492 -11.36641 L 22.16492 -7.09848 M 66.49475 -18.82185 L 66.49475 -14.55392 M 110.82458 -26.2773 L 110.82458 -22.00937  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 0.0 -0.70612 L 4.20885 -1.41396 M 0.0 18.74272 L 4.20885 18.03488 M 0.0 38.19157 L 4.20885 37.48373 M 0.0 57.64043 L 4.20885 56.93259 M 0.0 77.08928 L 4.20885 76.38144  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 84.17336 36.59789 L 84.17336 40.86581 M 128.50319 29.14244 L 128.50319 33.41037 M 172.83302 21.687 L 172.83302 25.95493 M 84.17336 128.25748 L 84.17336 123.98955 M 128.50319 120.80203 L 128.50319 116.5341 M 172.83302 113.34659 L 172.83302 109.07866  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 62.00844 47.25818 L 66.21729 46.55034 M 62.00844 66.70702 L 66.21729 65.99918 M 62.00844 86.15587 L 66.21729 85.44803 M 62.00844 105.60472 L 66.21729 104.89688 M 62.00844 125.05357 L 66.21729 124.34573 M 194.99745 24.89194 L 190.78859 25.5998 M 194.99745 44.34077 L 190.78859 45.04863 M 194.99745 63.78963 L 190.78859 64.49748 M 194.99745 83.23848 L 190.78859 83.94633 M 194.99745 102.68733 L 190.78859 103.39519  " fill="none"/>
+ </g>
+ </g>
+ <clipPath id="pgfcp1"><path d=" M 194.99745 17.95937 L 194.99745 109.61896 L 62.00844 131.9852 L 0.0 84.0209 L 0.0 -7.63869 L 132.98901 -30.00493 Z  "/> </clipPath>
+ <g clip-path="url(#pgfcp1)">
+ <g stroke="#000" fill="#000">
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 62.00844 86.15587 L 69.83131 84.84018 L 66.18376 82.01857 L 58.36089 83.33441 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 69.83131 84.84018 L 77.6542 83.5244 L 74.00665 80.70207 L 66.18376 82.01857 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 77.6542 83.5244 L 85.47708 82.20836 L 81.82953 79.38351 L 74.00665 80.70207 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 85.47708 82.20836 L 93.29997 80.89171 L 89.65242 78.06058 L 81.82953 79.38351 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 93.29997 80.89171 L 101.12285 79.57434 L 97.4753 76.73248 L 89.65242 78.06058 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 101.12285 79.57434 L 108.94574 78.25703 L 105.29819 75.4048 L 97.4753 76.73248 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 108.94574 78.25703 L 116.76862 76.94144 L 113.12106 74.08958 L 105.29819 75.4048 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 116.76862 76.94144 L 124.5915 75.62852 L 120.94395 72.79408 L 113.12106 74.08958 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 124.5915 75.62852 L 132.41438 74.31697 L 128.76683 71.50856 L 120.94395 72.79408 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 132.41438 74.31697 L 140.23727 73.00404 L 136.58972 70.21306 L 128.76683 71.50856 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 140.23727 73.00404 L 148.06015 71.68845 L 144.4126 68.89784 L 136.58972 70.21306 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 148.06015 71.68845 L 155.88304 70.37115 L 152.23549 67.57016 L 144.4126 68.89784 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 155.88304 70.37115 L 163.70592 69.0538 L 160.05836 66.24208 L 152.23549 67.57016 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 163.70592 69.0538 L 171.52881 67.73714 L 167.88126 64.91913 L 160.05836 66.24208 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 171.52881 67.73714 L 179.35168 66.42108 L 175.70413 63.60056 L 167.88126 64.91913 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 179.35168 66.42108 L 187.17458 65.10532 L 183.52702 62.28407 L 175.70413 63.60056 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 187.17458 65.10532 L 194.99745 63.78963 L 191.3499 60.96823 L 183.52702 62.28407 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 58.36089 83.33441 L 66.18376 82.01857 L 62.53621 79.19615 L 54.71333 80.51283 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 66.18376 82.01857 L 74.00665 80.70207 L 70.3591 77.87572 L 62.53621 79.19615 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 74.00665 80.70207 L 81.82953 79.38351 L 78.18198 76.54346 L 70.3591 77.87572 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 81.82953 79.38351 L 89.65242 78.06058 L 86.00487 75.18617 L 78.18198 76.54346 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 89.65242 78.06058 L 97.4753 76.73248 L 93.82774 73.79942 L 86.00487 75.18617 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 97.4753 76.73248 L 105.29819 75.4048 L 101.65063 72.41501 L 93.82774 73.79942 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 105.29819 75.4048 L 113.12106 74.08958 L 109.47351 71.10188 L 101.65063 72.41501 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 113.12106 74.08958 L 120.94395 72.79408 L 117.2964 69.90155 L 109.47351 71.10188 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 120.94395 72.79408 L 128.76683 71.50856 L 125.11928 68.75824 L 117.2964 69.90155 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 128.76683 71.50856 L 136.58972 70.21306 L 132.94217 67.55789 L 125.11928 68.75824 Z  " />
+ <g stroke="#21918c" fill="#21918c">
+ <g stroke="#1a7470">
+ <path d=" M 136.58972 70.21306 L 144.4126 68.89784 L 140.76505 66.24478 L 132.94217 67.55789 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 144.4126 68.89784 L 152.23549 67.57016 L 148.58794 64.86037 L 140.76505 66.24478 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 152.23549 67.57016 L 160.05836 66.24208 L 156.41081 63.47363 L 148.58794 64.86037 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 160.05836 66.24208 L 167.88126 64.91913 L 164.2337 62.11633 L 156.41081 63.47363 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 167.88126 64.91913 L 175.70413 63.60056 L 172.05658 60.78407 L 164.2337 62.11633 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 175.70413 63.60056 L 183.52702 62.28407 L 179.87947 59.46364 L 172.05658 60.78407 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 183.52702 62.28407 L 191.3499 60.96823 L 187.70235 58.14696 L 179.87947 59.46364 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 54.71333 80.51283 L 62.53621 79.19615 L 58.88864 76.37054 L 51.06577 77.69075 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 62.53621 79.19615 L 70.3591 77.87572 L 66.71153 75.03358 L 58.88864 76.37054 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 70.3591 77.87572 L 78.18198 76.54346 L 74.53441 73.64394 L 66.71153 75.03358 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 78.18198 76.54346 L 86.00487 75.18617 L 82.3573 72.14267 L 74.53441 73.64394 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7370">
+ <path d=" M 86.00487 75.18617 L 93.82774 73.79942 L 90.18018 70.51012 L 82.3573 72.14267 Z  " />
+ <g stroke="#218f8d" fill="#218f8d">
+ <g stroke="#1a7270">
+ <path d=" M 93.82774 73.79942 L 101.65063 72.41501 L 98.00307 68.88792 L 90.18018 70.51012 Z  " />
+ <g stroke="#218e8d" fill="#218e8d">
+ <g stroke="#1a7270">
+ <path d=" M 101.65063 72.41501 L 109.47351 71.10188 L 105.82594 67.58359 L 98.00307 68.88792 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7270">
+ <path d=" M 109.47351 71.10188 L 117.2964 69.90155 L 113.64883 66.7821 L 105.82594 67.58359 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 117.2964 69.90155 L 125.11928 68.75824 L 121.47171 66.2348 L 113.64883 66.7821 Z  " />
+ <g stroke="#20918c" fill="#20918c">
+ <g stroke="#1a7470">
+ <path d=" M 125.11928 68.75824 L 132.94217 67.55789 L 129.2946 65.43332 L 121.47171 66.2348 Z  " />
+ <g stroke="#20928c" fill="#20928c">
+ <g stroke="#1a7570">
+ <path d=" M 132.94217 67.55789 L 140.76505 66.24478 L 137.11748 64.12903 L 129.2946 65.43332 Z  " />
+ <g stroke="#20928c" fill="#20928c">
+ <g stroke="#1a7470">
+ <path d=" M 140.76505 66.24478 L 148.58794 64.86037 L 144.94037 62.50685 L 137.11748 64.12903 Z  " />
+ <g stroke="#20918c" fill="#20918c">
+ <g stroke="#1a7470">
+ <path d=" M 148.58794 64.86037 L 156.41081 63.47363 L 152.76324 60.87428 L 144.94037 62.50685 Z  " />
+ <g stroke="#21918c" fill="#21918c">
+ <g stroke="#1a7470">
+ <path d=" M 156.41081 63.47363 L 164.2337 62.11633 L 160.58614 59.37302 L 152.76324 60.87428 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 164.2337 62.11633 L 172.05658 60.78407 L 168.40901 57.98335 L 160.58614 59.37302 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 172.05658 60.78407 L 179.87947 59.46364 L 176.2319 56.6464 L 168.40901 57.98335 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 179.87947 59.46364 L 187.70235 58.14696 L 184.05478 55.32617 L 176.2319 56.6464 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 51.06577 77.69075 L 58.88864 76.37054 L 55.24109 73.53578 L 47.41821 74.86725 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 58.88864 76.37054 L 66.71153 75.03358 L 63.06398 72.14609 L 55.24109 73.53578 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 66.71153 75.03358 L 74.53441 73.64394 L 70.88686 70.57327 L 63.06398 72.14609 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7270">
+ <path d=" M 74.53441 73.64394 L 82.3573 72.14267 L 78.70975 68.61263 L 70.88686 70.57327 Z  " />
+ <g stroke="#228d8d" fill="#228d8d">
+ <g stroke="#1b7171">
+ <path d=" M 82.3573 72.14267 L 90.18018 70.51012 L 86.53262 66.1957 L 78.70975 68.61263 Z  " />
+ <g stroke="#228b8d" fill="#228b8d">
+ <g stroke="#1b6f71">
+ <path d=" M 90.18018 70.51012 L 98.00307 68.88792 L 94.35551 63.81468 L 86.53262 66.1957 Z  " />
+ <g stroke="#238a8d" fill="#238a8d">
+ <g stroke="#1c6e71">
+ <path d=" M 98.00307 68.88792 L 105.82594 67.58359 L 102.17839 62.53842 L 94.35551 63.81468 Z  " />
+ <g stroke="#228c8d" fill="#228c8d">
+ <g stroke="#1b7071">
+ <path d=" M 105.82594 67.58359 L 113.64883 66.7821 L 110.00128 63.00967 L 102.17839 62.53842 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 113.64883 66.7821 L 121.47171 66.2348 L 117.82416 64.36424 L 110.00128 63.00967 Z  " />
+ <g stroke="#1f958b" fill="#1f958b">
+ <g stroke="#19776f">
+ <path d=" M 121.47171 66.2348 L 129.2946 65.43332 L 125.64705 64.83554 L 117.82416 64.36424 Z  " />
+ <g stroke="#1f978b" fill="#1f978b">
+ <g stroke="#18786f">
+ <path d=" M 129.2946 65.43332 L 137.11748 64.12903 L 133.46992 63.55937 L 125.64705 64.83554 Z  " />
+ <g stroke="#1f958b" fill="#1f958b">
+ <g stroke="#19776f">
+ <path d=" M 137.11748 64.12903 L 144.94037 62.50685 L 141.29282 61.17839 L 133.46992 63.55937 Z  " />
+ <g stroke="#20938c" fill="#20938c">
+ <g stroke="#197670">
+ <path d=" M 144.94037 62.50685 L 152.76324 60.87428 L 149.11569 58.76149 L 141.29282 61.17839 Z  " />
+ <g stroke="#20928c" fill="#20928c">
+ <g stroke="#1a7470">
+ <path d=" M 152.76324 60.87428 L 160.58614 59.37302 L 156.93858 56.80078 L 149.11569 58.76149 Z  " />
+ <g stroke="#21918c" fill="#21918c">
+ <g stroke="#1a7470">
+ <path d=" M 160.58614 59.37302 L 168.40901 57.98335 L 164.76146 55.22798 L 156.93858 56.80078 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 168.40901 57.98335 L 176.2319 56.6464 L 172.58435 53.83827 L 164.76146 55.22798 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 176.2319 56.6464 L 184.05478 55.32617 L 180.40723 52.50679 L 172.58435 53.83827 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 47.41821 74.86725 L 55.24109 73.53578 L 51.59354 70.68237 L 43.77066 72.0409 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 55.24109 73.53578 L 63.06398 72.14609 L 59.41643 69.16617 L 51.59354 70.68237 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7270">
+ <path d=" M 63.06398 72.14609 L 70.88686 70.57327 L 67.2393 67.15395 L 59.41643 69.16617 Z  " />
+ <g stroke="#228c8d" fill="#228c8d">
+ <g stroke="#1b7071">
+ <path d=" M 70.88686 70.57327 L 78.70975 68.61263 L 75.0622 64.0911 L 67.2393 67.15395 Z  " />
+ <g stroke="#24878e" fill="#24878e">
+ <g stroke="#1c6c71">
+ <path d=" M 78.70975 68.61263 L 86.53262 66.1957 L 82.88507 59.79222 L 75.0622 64.0911 Z  " />
+ <g stroke="#26818e" fill="#26818e">
+ <g stroke="#1e6772">
+ <path d=" M 86.53262 66.1957 L 94.35551 63.81468 L 90.70796 55.59068 L 82.88507 59.79222 Z  " />
+ <g stroke="#277e8e" fill="#277e8e">
+ <g stroke="#1f6572">
+ <path d=" M 94.35551 63.81468 L 102.17839 62.53842 L 98.53084 54.38402 L 90.70796 55.59068 Z  " />
+ <g stroke="#25838e" fill="#25838e">
+ <g stroke="#1e6971">
+ <path d=" M 102.17839 62.53842 L 110.00128 63.00967 L 106.35373 57.90677 L 98.53084 54.38402 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 110.00128 63.00967 L 117.82416 64.36424 L 114.1766 63.824 L 106.35373 57.90677 Z  " />
+ <g stroke="#1f9d89" fill="#1f9d89">
+ <g stroke="#197e6d">
+ <path d=" M 117.82416 64.36424 L 125.64705 64.83554 L 121.9995 67.34683 L 114.1766 63.824 Z  " />
+ <g stroke="#20a287" fill="#20a287">
+ <g stroke="#19826c">
+ <path d=" M 125.64705 64.83554 L 133.46992 63.55937 L 129.82237 66.14067 L 121.9995 67.34683 Z  " />
+ <g stroke="#209f88" fill="#209f88">
+ <g stroke="#197f6d">
+ <path d=" M 133.46992 63.55937 L 141.29282 61.17839 L 137.64526 61.93924 L 129.82237 66.14067 Z  " />
+ <g stroke="#1f998a" fill="#1f998a">
+ <g stroke="#197a6e">
+ <path d=" M 141.29282 61.17839 L 149.11569 58.76149 L 145.46814 57.64023 L 137.64526 61.93924 Z  " />
+ <g stroke="#1f948c" fill="#1f948c">
+ <g stroke="#197670">
+ <path d=" M 149.11569 58.76149 L 156.93858 56.80078 L 153.29103 54.57733 L 145.46814 57.64023 Z  " />
+ <g stroke="#20918c" fill="#20918c">
+ <g stroke="#1a7470">
+ <path d=" M 156.93858 56.80078 L 164.76146 55.22798 L 161.1139 52.56505 L 153.29103 54.57733 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 164.76146 55.22798 L 172.58435 53.83827 L 168.9368 51.04883 L 161.1139 52.56505 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 172.58435 53.83827 L 180.40723 52.50679 L 176.75967 49.6903 L 168.9368 51.04883 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 43.77066 72.0409 L 51.59354 70.68237 L 47.94598 67.80463 L 40.12311 69.21077 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7370">
+ <path d=" M 51.59354 70.68237 L 59.41643 69.16617 L 55.76888 66.0655 L 47.94598 67.80463 Z  " />
+ <g stroke="#228d8d" fill="#228d8d">
+ <g stroke="#1b7171">
+ <path d=" M 59.41643 69.16617 L 67.2393 67.15395 L 63.59175 63.27907 L 55.76888 66.0655 Z  " />
+ <g stroke="#23878e" fill="#23878e">
+ <g stroke="#1c6c71">
+ <path d=" M 67.2393 67.15395 L 75.0622 64.0911 L 71.41464 58.2742 L 63.59175 63.27907 Z  " />
+ <g stroke="#287c8e" fill="#287c8e">
+ <g stroke="#206372">
+ <path d=" M 75.0622 64.0911 L 82.88507 59.79222 L 79.23752 50.65955 L 71.41464 58.2742 Z  " />
+ <g stroke="#2e6d8e" fill="#2e6d8e">
+ <g stroke="#255772">
+ <path d=" M 82.88507 59.79222 L 90.70796 55.59068 L 87.06041 43.25089 L 79.23752 50.65955 Z  " />
+ <g stroke="#31668e" fill="#31668e">
+ <g stroke="#275171">
+ <path d=" M 90.70796 55.59068 L 98.53084 54.38402 L 94.88329 42.1592 L 87.06041 43.25089 Z  " />
+ <g stroke="#2c728e" fill="#2c728e">
+ <g stroke="#235b72">
+ <path d=" M 98.53084 54.38402 L 106.35373 57.90677 L 102.70618 51.06332 L 94.88329 42.1592 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 106.35373 57.90677 L 114.1766 63.824 L 110.52905 65.02411 L 102.70618 51.06332 Z  " />
+ <g stroke="#28ad80" fill="#28ad80">
+ <g stroke="#208b66">
+ <path d=" M 114.1766 63.824 L 121.9995 67.34683 L 118.35194 73.92842 L 110.52905 65.02411 Z  " />
+ <g stroke="#38b977" fill="#38b977">
+ <g stroke="#2d945f">
+ <path d=" M 121.9995 67.34683 L 129.82237 66.14067 L 126.17482 72.83702 L 118.35194 73.92842 Z  " />
+ <g stroke="#2db37d" fill="#2db37d">
+ <g stroke="#248f64">
+ <path d=" M 129.82237 66.14067 L 137.64526 61.93924 L 133.99771 65.4293 L 126.17482 72.83702 Z  " />
+ <g stroke="#20a586" fill="#20a586">
+ <g stroke="#1a846b">
+ <path d=" M 137.64526 61.93924 L 145.46814 57.64023 L 141.82059 57.81444 L 133.99771 65.4293 Z  " />
+ <g stroke="#1f998a" fill="#1f998a">
+ <g stroke="#187a6e">
+ <path d=" M 145.46814 57.64023 L 153.29103 54.57733 L 149.64348 52.80943 L 141.82059 57.81444 Z  " />
+ <g stroke="#20938c" fill="#20938c">
+ <g stroke="#197670">
+ <path d=" M 153.29103 54.57733 L 161.1139 52.56505 L 157.46635 50.02289 L 149.64348 52.80943 Z  " />
+ <g stroke="#20918c" fill="#20918c">
+ <g stroke="#1a7470">
+ <path d=" M 161.1139 52.56505 L 168.9368 51.04883 L 165.28925 48.28374 L 157.46635 50.02289 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 168.9368 51.04883 L 176.75967 49.6903 L 173.11212 46.87758 L 165.28925 48.28374 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 40.12311 69.21077 L 47.94598 67.80463 L 44.29843 64.91408 L 36.47556 66.37866 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7270">
+ <path d=" M 47.94598 67.80463 L 55.76888 66.0655 L 52.12132 62.90146 L 44.29843 64.91408 Z  " />
+ <g stroke="#228b8d" fill="#228b8d">
+ <g stroke="#1b6f71">
+ <path d=" M 55.76888 66.0655 L 63.59175 63.27907 L 59.9442 59.16512 L 52.12132 62.90146 Z  " />
+ <g stroke="#26808e" fill="#26808e">
+ <g stroke="#1e6672">
+ <path d=" M 63.59175 63.27907 L 71.41464 58.2742 L 67.76709 51.7775 L 59.9442 59.16512 Z  " />
+ <g stroke="#2f6b8e" fill="#2f6b8e">
+ <g stroke="#255672">
+ <path d=" M 71.41464 58.2742 L 79.23752 50.65955 L 75.58997 40.09929 L 67.76709 51.7775 Z  " />
+ <g stroke="#3c4f8a" fill="#3c4f8a">
+ <g stroke="#303f6f">
+ <path d=" M 79.23752 50.65955 L 87.06041 43.25089 L 83.41286 28.74803 L 75.58997 40.09929 Z  " />
+ <g stroke="#424086" fill="#424086">
+ <g stroke="#34336b">
+ <path d=" M 87.06041 43.25089 L 94.88329 42.1592 L 91.23573 27.79784 L 83.41286 28.74803 Z  " />
+ <g stroke="#375a8c" fill="#375a8c">
+ <g stroke="#2c4870">
+ <path d=" M 94.88329 42.1592 L 102.70618 51.06332 L 99.05862 43.30841 L 91.23573 27.79784 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 102.70618 51.06332 L 110.52905 65.02411 L 106.8815 67.13556 L 99.05862 43.30841 Z  " />
+ <g stroke="#4ec36b" fill="#4ec36b">
+ <g stroke="#3e9c55">
+ <path d=" M 110.52905 65.02411 L 118.35194 73.92842 L 114.70439 82.64645 L 106.8815 67.13556 Z  " />
+ <g stroke="#81d34c" fill="#81d34c">
+ <g stroke="#67a93d">
+ <path d=" M 118.35194 73.92842 L 126.17482 72.83702 L 122.52727 81.69673 L 114.70439 82.64645 Z  " />
+ <g stroke="#62cb5f" fill="#62cb5f">
+ <g stroke="#4fa24c">
+ <path d=" M 126.17482 72.83702 L 133.99771 65.4293 L 130.35016 70.34586 L 122.52727 81.69673 Z  " />
+ <g stroke="#30b47b" fill="#30b47b">
+ <g stroke="#269062">
+ <path d=" M 133.99771 65.4293 L 141.82059 57.81444 L 138.17303 58.66844 L 130.35016 70.34586 Z  " />
+ <g stroke="#20a088" fill="#20a088">
+ <g stroke="#19806c">
+ <path d=" M 141.82059 57.81444 L 149.64348 52.80943 L 145.99593 51.28062 L 138.17303 58.66844 Z  " />
+ <g stroke="#1f958b" fill="#1f958b">
+ <g stroke="#19776f">
+ <path d=" M 149.64348 52.80943 L 157.46635 50.02289 L 153.8188 47.54411 L 145.99593 51.28062 Z  " />
+ <g stroke="#20918c" fill="#20918c">
+ <g stroke="#1a7470">
+ <path d=" M 157.46635 50.02289 L 165.28925 48.28374 L 161.6417 45.53143 L 153.8188 47.54411 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 165.28925 48.28374 L 173.11212 46.87758 L 169.46457 44.06683 L 161.6417 45.53143 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 36.47556 66.37866 L 44.29843 64.91408 L 40.65086 62.04282 L 32.82799 63.54953 Z  " />
+ <g stroke="#218e8d" fill="#218e8d">
+ <g stroke="#1a7270">
+ <path d=" M 44.29843 64.91408 L 52.12132 62.90146 L 48.47375 59.83301 L 40.65086 62.04282 Z  " />
+ <g stroke="#23898e" fill="#23898e">
+ <g stroke="#1c6d71">
+ <path d=" M 52.12132 62.90146 L 59.9442 59.16512 L 56.29663 55.41182 L 48.47375 59.83301 Z  " />
+ <g stroke="#29798e" fill="#29798e">
+ <g stroke="#216172">
+ <path d=" M 59.9442 59.16512 L 67.76709 51.7775 L 64.11952 46.30655 L 56.29663 55.41182 Z  " />
+ <g stroke="#365b8c" fill="#365b8c">
+ <g stroke="#2b4870">
+ <path d=" M 67.76709 51.7775 L 75.58997 40.09929 L 71.9424 31.6908 L 64.11952 46.30655 Z  " />
+ <g stroke="#462e7c" fill="#462e7c">
+ <g stroke="#382563">
+ <path d=" M 75.58997 40.09929 L 83.41286 28.74803 L 79.76529 17.49889 L 71.9424 31.6908 Z  " />
+ <g stroke="#481669" fill="#481669">
+ <g stroke="#391254">
+ <path d=" M 83.41286 28.74803 L 91.23573 27.79784 L 87.58817 16.6598 L 79.76529 17.49889 Z  " />
+ <g stroke="#423f85" fill="#423f85">
+ <g stroke="#35326b">
+ <path d=" M 91.23573 27.79784 L 99.05862 43.30841 L 95.41106 36.93019 L 87.58817 16.6598 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 99.05862 43.30841 L 106.8815 67.13556 L 103.23393 67.87045 L 95.41106 36.93019 Z  " />
+ <g stroke="#83d44b" fill="#83d44b">
+ <g stroke="#68a93c">
+ <path d=" M 106.8815 67.13556 L 114.70439 82.64645 L 111.05682 88.14127 L 103.23393 67.87045 Z  " />
+ <g stroke="#d9e319" fill="#d9e319">
+ <g stroke="#adb514">
+ <path d=" M 114.70439 82.64645 L 122.52727 81.69673 L 118.8797 87.3028 L 111.05682 88.14127 Z  " />
+ <g stroke="#a7db34" fill="#a7db34">
+ <g stroke="#86af29">
+ <path d=" M 122.52727 81.69673 L 130.35016 70.34586 L 126.70259 73.11137 L 118.8797 87.3028 Z  " />
+ <g stroke="#4cc26c" fill="#4cc26c">
+ <g stroke="#3c9b56">
+ <path d=" M 130.35016 70.34586 L 138.17303 58.66844 L 134.52547 58.49686 L 126.70259 73.11137 Z  " />
+ <g stroke="#22a785" fill="#22a785">
+ <g stroke="#1b856a">
+ <path d=" M 138.17303 58.66844 L 145.99593 51.28062 L 142.34836 49.39107 L 134.52547 58.49686 Z  " />
+ <g stroke="#1f988b" fill="#1f988b">
+ <g stroke="#18796f">
+ <path d=" M 145.99593 51.28062 L 153.8188 47.54411 L 150.17123 44.9697 L 142.34836 49.39107 Z  " />
+ <g stroke="#20928c" fill="#20928c">
+ <g stroke="#1a7570">
+ <path d=" M 153.8188 47.54411 L 161.6417 45.53143 L 157.99413 42.75983 L 150.17123 44.9697 Z  " />
+ <g stroke="#21918c" fill="#21918c">
+ <g stroke="#1a7470">
+ <path d=" M 161.6417 45.53143 L 169.46457 44.06683 L 165.817 41.25308 L 157.99413 42.75983 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 32.82799 63.54953 L 40.65086 62.04282 L 37.00331 59.22139 L 29.18044 60.7281 Z  " />
+ <g stroke="#218e8d" fill="#218e8d">
+ <g stroke="#1b7270">
+ <path d=" M 40.65086 62.04282 L 48.47375 59.83301 L 44.8262 57.01158 L 37.00331 59.22139 Z  " />
+ <g stroke="#23888e" fill="#23888e">
+ <g stroke="#1c6d71">
+ <path d=" M 48.47375 59.83301 L 56.29663 55.41182 L 52.64908 52.5905 L 44.8262 57.01158 Z  " />
+ <g stroke="#2a778e" fill="#2a778e">
+ <g stroke="#225f72">
+ <path d=" M 56.29663 55.41182 L 64.11952 46.30655 L 60.47197 43.48512 L 52.64908 52.5905 Z  " />
+ <g stroke="#3a538b" fill="#3a538b">
+ <g stroke="#2e426f">
+ <path d=" M 64.11952 46.30655 L 71.9424 31.6908 L 68.29485 28.86937 L 60.47197 43.48512 Z  " />
+ <g stroke="#471f70" fill="#471f70">
+ <g stroke="#39195a">
+ <path d=" M 71.9424 31.6908 L 79.76529 17.49889 L 76.11774 14.67746 L 68.29485 28.86937 Z  " />
+ <g stroke="#440255" fill="#440255">
+ <g stroke="#360144">
+ <path d=" M 79.76529 17.49889 L 87.58817 16.6598 L 83.94061 13.83838 L 76.11774 14.67746 Z  " />
+ <g stroke="#45337f" fill="#45337f">
+ <g stroke="#372965">
+ <path d=" M 87.58817 16.6598 L 95.41106 36.93019 L 91.7635 34.10876 L 83.94061 13.83838 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 95.41106 36.93019 L 103.23393 67.87045 L 99.58638 65.04903 L 91.7635 34.10876 Z  " />
+ <g stroke="#9cd93b" fill="#9cd93b">
+ <g stroke="#7dae2f">
+ <path d=" M 103.23393 67.87045 L 111.05682 88.14127 L 107.40927 85.31984 L 99.58638 65.04903 Z  " />
+ <g stroke="#fce724" fill="#fce724">
+ <g stroke="#c9b91c">
+ <path d=" M 111.05682 88.14127 L 118.8797 87.3028 L 115.23215 84.48137 L 107.40927 85.31984 Z  " />
+ <g stroke="#c7e022" fill="#c7e022">
+ <g stroke="#9fb31b">
+ <path d=" M 118.8797 87.3028 L 126.70259 73.11137 L 123.05504 70.28995 L 115.23215 84.48137 Z  " />
+ <g stroke="#5ac864" fill="#5ac864">
+ <g stroke="#48a050">
+ <path d=" M 126.70259 73.11137 L 134.52547 58.49686 L 130.87791 55.67523 L 123.05504 70.28995 Z  " />
+ <g stroke="#24aa83" fill="#24aa83">
+ <g stroke="#1d8868">
+ <path d=" M 134.52547 58.49686 L 142.34836 49.39107 L 138.7008 46.56964 L 130.87791 55.67523 Z  " />
+ <g stroke="#1f998a" fill="#1f998a">
+ <g stroke="#187a6f">
+ <path d=" M 142.34836 49.39107 L 150.17123 44.9697 L 146.52368 42.14827 L 138.7008 46.56964 Z  " />
+ <g stroke="#20928c" fill="#20928c">
+ <g stroke="#1a7570">
+ <path d=" M 150.17123 44.9697 L 157.99413 42.75983 L 154.34657 39.93839 L 146.52368 42.14827 Z  " />
+ <g stroke="#21918c" fill="#21918c">
+ <g stroke="#1a7470">
+ <path d=" M 157.99413 42.75983 L 165.817 41.25308 L 162.16945 38.43166 L 154.34657 39.93839 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 29.18044 60.7281 L 37.00331 59.22139 L 33.35576 56.44978 L 25.53288 57.91437 Z  " />
+ <g stroke="#218e8d" fill="#218e8d">
+ <g stroke="#1a7270">
+ <path d=" M 37.00331 59.22139 L 44.8262 57.01158 L 41.17865 54.43718 L 33.35576 56.44978 Z  " />
+ <g stroke="#23898e" fill="#23898e">
+ <g stroke="#1c6d71">
+ <path d=" M 44.8262 57.01158 L 52.64908 52.5905 L 49.00153 50.70085 L 41.17865 54.43718 Z  " />
+ <g stroke="#29798e" fill="#29798e">
+ <g stroke="#216172">
+ <path d=" M 52.64908 52.5905 L 60.47197 43.48512 L 56.82442 43.31345 L 49.00153 50.70085 Z  " />
+ <g stroke="#365b8c" fill="#365b8c">
+ <g stroke="#2b4870">
+ <path d=" M 60.47197 43.48512 L 68.29485 28.86937 L 64.6473 31.635 L 56.82442 43.31345 Z  " />
+ <g stroke="#462e7c" fill="#462e7c">
+ <g stroke="#382563">
+ <path d=" M 68.29485 28.86937 L 76.11774 14.67746 L 72.47018 20.28374 L 64.6473 31.635 Z  " />
+ <g stroke="#481669" fill="#481669">
+ <g stroke="#391254">
+ <path d=" M 76.11774 14.67746 L 83.94061 13.83838 L 80.29306 19.33354 L 72.47018 20.28374 Z  " />
+ <g stroke="#423f85" fill="#423f85">
+ <g stroke="#35326b">
+ <path d=" M 83.94061 13.83838 L 91.7635 34.10876 L 88.11595 34.84412 L 80.29306 19.33354 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 91.7635 34.10876 L 99.58638 65.04903 L 95.93883 58.67126 L 88.11595 34.84412 Z  " />
+ <g stroke="#83d44b" fill="#83d44b">
+ <g stroke="#68a93c">
+ <path d=" M 99.58638 65.04903 L 107.40927 85.31984 L 103.76172 74.18216 L 95.93883 58.67126 Z  " />
+ <g stroke="#d9e319" fill="#d9e319">
+ <g stroke="#adb514">
+ <path d=" M 107.40927 85.31984 L 115.23215 84.48137 L 111.5846 73.23244 L 103.76172 74.18216 Z  " />
+ <g stroke="#a7db34" fill="#a7db34">
+ <g stroke="#86af29">
+ <path d=" M 115.23215 84.48137 L 123.05504 70.28995 L 119.40749 61.88156 L 111.5846 73.23244 Z  " />
+ <g stroke="#4cc26c" fill="#4cc26c">
+ <g stroke="#3c9b56">
+ <path d=" M 123.05504 70.28995 L 130.87791 55.67523 L 127.23036 50.20401 L 119.40749 61.88156 Z  " />
+ <g stroke="#22a785" fill="#22a785">
+ <g stroke="#1b856a">
+ <path d=" M 130.87791 55.67523 L 138.7008 46.56964 L 135.05325 42.81625 L 127.23036 50.20401 Z  " />
+ <g stroke="#1f988b" fill="#1f988b">
+ <g stroke="#18796f">
+ <path d=" M 138.7008 46.56964 L 146.52368 42.14827 L 142.87613 39.07979 L 135.05325 42.81625 Z  " />
+ <g stroke="#20928c" fill="#20928c">
+ <g stroke="#1a7570">
+ <path d=" M 146.52368 42.14827 L 154.34657 39.93839 L 150.69902 37.06712 L 142.87613 39.07979 Z  " />
+ <g stroke="#21918c" fill="#21918c">
+ <g stroke="#1a7470">
+ <path d=" M 154.34657 39.93839 L 162.16945 38.43166 L 158.5219 35.60254 L 150.69902 37.06712 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 25.53288 57.91437 L 33.35576 56.44978 L 29.7082 53.69748 L 21.88533 55.10362 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7270">
+ <path d=" M 33.35576 56.44978 L 41.17865 54.43718 L 37.5311 51.95837 L 29.7082 53.69748 Z  " />
+ <g stroke="#228b8d" fill="#228b8d">
+ <g stroke="#1b6f71">
+ <path d=" M 41.17865 54.43718 L 49.00153 50.70085 L 45.35397 49.17198 L 37.5311 51.95837 Z  " />
+ <g stroke="#26808e" fill="#26808e">
+ <g stroke="#1e6672">
+ <path d=" M 49.00153 50.70085 L 56.82442 43.31345 L 53.17686 44.16733 L 45.35397 49.17198 Z  " />
+ <g stroke="#2f6b8e" fill="#2f6b8e">
+ <g stroke="#255672">
+ <path d=" M 56.82442 43.31345 L 64.6473 31.635 L 60.99974 36.55278 L 53.17686 44.16733 Z  " />
+ <g stroke="#3c4f8a" fill="#3c4f8a">
+ <g stroke="#303f6f">
+ <path d=" M 64.6473 31.635 L 72.47018 20.28374 L 68.82263 29.14374 L 60.99974 36.55278 Z  " />
+ <g stroke="#424086" fill="#424086">
+ <g stroke="#34336b">
+ <path d=" M 72.47018 20.28374 L 80.29306 19.33354 L 76.64551 28.05205 L 68.82263 29.14374 Z  " />
+ <g stroke="#375a8c" fill="#375a8c">
+ <g stroke="#2c4870">
+ <path d=" M 80.29306 19.33354 L 88.11595 34.84412 L 84.4684 36.95618 L 76.64551 28.05205 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 88.11595 34.84412 L 95.93883 58.67126 L 92.29128 50.91696 L 84.4684 36.95618 Z  " />
+ <g stroke="#4ec36b" fill="#4ec36b">
+ <g stroke="#3e9c55">
+ <path d=" M 95.93883 58.67126 L 103.76172 74.18216 L 100.11417 59.82127 L 92.29128 50.91696 Z  " />
+ <g stroke="#81d34c" fill="#81d34c">
+ <g stroke="#67a93d">
+ <path d=" M 103.76172 74.18216 L 111.5846 73.23244 L 107.93704 58.72987 L 100.11417 59.82127 Z  " />
+ <g stroke="#62cb5f" fill="#62cb5f">
+ <g stroke="#4fa24c">
+ <path d=" M 111.5846 73.23244 L 119.40749 61.88156 L 115.75993 51.32164 L 107.93704 58.72987 Z  " />
+ <g stroke="#30b47b" fill="#30b47b">
+ <g stroke="#269062">
+ <path d=" M 119.40749 61.88156 L 127.23036 50.20401 L 123.58281 43.70712 L 115.75993 51.32164 Z  " />
+ <g stroke="#20a088" fill="#20a088">
+ <g stroke="#19806c">
+ <path d=" M 127.23036 50.20401 L 135.05325 42.81625 L 131.4057 38.7022 L 123.58281 43.70712 Z  " />
+ <g stroke="#1f958b" fill="#1f958b">
+ <g stroke="#19776f">
+ <path d=" M 135.05325 42.81625 L 142.87613 39.07979 L 139.22858 35.91573 L 131.4057 38.7022 Z  " />
+ <g stroke="#20918c" fill="#20918c">
+ <g stroke="#1a7470">
+ <path d=" M 142.87613 39.07979 L 150.69902 37.06712 L 147.05147 34.17657 L 139.22858 35.91573 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 150.69902 37.06712 L 158.5219 35.60254 L 154.87434 32.77043 L 147.05147 34.17657 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 21.88533 55.10362 L 29.7082 53.69748 L 26.06065 50.93239 L 18.23778 52.2909 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7370">
+ <path d=" M 29.7082 53.69748 L 37.5311 51.95837 L 33.88354 49.41618 L 26.06065 50.93239 Z  " />
+ <g stroke="#228d8d" fill="#228d8d">
+ <g stroke="#1b7171">
+ <path d=" M 37.5311 51.95837 L 45.35397 49.17198 L 41.70642 47.40399 L 33.88354 49.41618 Z  " />
+ <g stroke="#23878e" fill="#23878e">
+ <g stroke="#1c6c71">
+ <path d=" M 45.35397 49.17198 L 53.17686 44.16733 L 49.52931 44.34125 L 41.70642 47.40399 Z  " />
+ <g stroke="#287c8e" fill="#287c8e">
+ <g stroke="#206372">
+ <path d=" M 53.17686 44.16733 L 60.99974 36.55278 L 57.35219 40.04253 L 49.52931 44.34125 Z  " />
+ <g stroke="#2e6d8e" fill="#2e6d8e">
+ <g stroke="#255772">
+ <path d=" M 60.99974 36.55278 L 68.82263 29.14374 L 65.17508 35.8411 L 57.35219 40.04253 Z  " />
+ <g stroke="#31668e" fill="#31668e">
+ <g stroke="#275171">
+ <path d=" M 68.82263 29.14374 L 76.64551 28.05205 L 72.99796 34.63402 L 65.17508 35.8411 Z  " />
+ <g stroke="#2c728e" fill="#2c728e">
+ <g stroke="#235b72">
+ <path d=" M 76.64551 28.05205 L 84.4684 36.95618 L 80.82085 38.15677 L 72.99796 34.63402 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 84.4684 36.95618 L 92.29128 50.91696 L 88.64372 44.074 L 80.82085 38.15677 Z  " />
+ <g stroke="#28ad80" fill="#28ad80">
+ <g stroke="#208b66">
+ <path d=" M 92.29128 50.91696 L 100.11417 59.82127 L 96.46661 47.59683 L 88.64372 44.074 Z  " />
+ <g stroke="#38b977" fill="#38b977">
+ <g stroke="#2d945f">
+ <path d=" M 100.11417 59.82127 L 107.93704 58.72987 L 104.28949 46.39015 L 96.46661 47.59683 Z  " />
+ <g stroke="#2db37d" fill="#2db37d">
+ <g stroke="#248f64">
+ <path d=" M 107.93704 58.72987 L 115.75993 51.32164 L 112.11238 42.18887 L 104.28949 46.39015 Z  " />
+ <g stroke="#20a586" fill="#20a586">
+ <g stroke="#1a846b">
+ <path d=" M 115.75993 51.32164 L 123.58281 43.70712 L 119.93526 37.89014 L 112.11238 42.18887 Z  " />
+ <g stroke="#1f998a" fill="#1f998a">
+ <g stroke="#187a6e">
+ <path d=" M 123.58281 43.70712 L 131.4057 38.7022 L 127.75815 34.82727 L 119.93526 37.89014 Z  " />
+ <g stroke="#20938c" fill="#20938c">
+ <g stroke="#197670">
+ <path d=" M 131.4057 38.7022 L 139.22858 35.91573 L 135.58102 32.81503 L 127.75815 34.82727 Z  " />
+ <g stroke="#20918c" fill="#20918c">
+ <g stroke="#1a7470">
+ <path d=" M 139.22858 35.91573 L 147.05147 34.17657 L 143.40392 31.29881 L 135.58102 32.81503 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 147.05147 34.17657 L 154.87434 32.77043 L 151.22679 29.9403 L 143.40392 31.29881 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 18.23778 52.2909 L 26.06065 50.93239 L 22.41309 48.14291 L 14.59021 49.47438 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 26.06065 50.93239 L 33.88354 49.41618 L 30.23598 46.75322 L 22.41309 48.14291 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7270">
+ <path d=" M 33.88354 49.41618 L 41.70642 47.40399 L 38.05885 45.18044 L 30.23598 46.75322 Z  " />
+ <g stroke="#228c8d" fill="#228c8d">
+ <g stroke="#1b7071">
+ <path d=" M 41.70642 47.40399 L 49.52931 44.34125 L 45.88174 43.21982 L 38.05885 45.18044 Z  " />
+ <g stroke="#24878e" fill="#24878e">
+ <g stroke="#1c6c71">
+ <path d=" M 49.52931 44.34125 L 57.35219 40.04253 L 53.70462 40.803 L 45.88174 43.21982 Z  " />
+ <g stroke="#26818e" fill="#26818e">
+ <g stroke="#1e6772">
+ <path d=" M 57.35219 40.04253 L 65.17508 35.8411 L 61.52751 38.42207 L 53.70462 40.803 Z  " />
+ <g stroke="#277e8e" fill="#277e8e">
+ <g stroke="#1f6572">
+ <path d=" M 65.17508 35.8411 L 72.99796 34.63402 L 69.35039 37.14578 L 61.52751 38.42207 Z  " />
+ <g stroke="#25838e" fill="#25838e">
+ <g stroke="#1e6971">
+ <path d=" M 72.99796 34.63402 L 80.82085 38.15677 L 77.17328 37.6169 L 69.35039 37.14578 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 80.82085 38.15677 L 88.64372 44.074 L 84.99615 38.97127 L 77.17328 37.6169 Z  " />
+ <g stroke="#1f9d89" fill="#1f9d89">
+ <g stroke="#197e6d">
+ <path d=" M 88.64372 44.074 L 96.46661 47.59683 L 92.81905 39.44249 L 84.99615 38.97127 Z  " />
+ <g stroke="#20a287" fill="#20a287">
+ <g stroke="#19826c">
+ <path d=" M 96.46661 47.59683 L 104.28949 46.39015 L 100.64192 38.1663 L 92.81905 39.44249 Z  " />
+ <g stroke="#209f88" fill="#209f88">
+ <g stroke="#197f6d">
+ <path d=" M 104.28949 46.39015 L 112.11238 42.18887 L 108.46481 35.78542 L 100.64192 38.1663 Z  " />
+ <g stroke="#1f998a" fill="#1f998a">
+ <g stroke="#197a6e">
+ <path d=" M 112.11238 42.18887 L 119.93526 37.89014 L 116.28769 33.36856 L 108.46481 35.78542 Z  " />
+ <g stroke="#1f948c" fill="#1f948c">
+ <g stroke="#197670">
+ <path d=" M 119.93526 37.89014 L 127.75815 34.82727 L 124.11058 31.4079 L 116.28769 33.36856 Z  " />
+ <g stroke="#20918c" fill="#20918c">
+ <g stroke="#1a7470">
+ <path d=" M 127.75815 34.82727 L 135.58102 32.81503 L 131.93346 29.8351 L 124.11058 31.4079 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 135.58102 32.81503 L 143.40392 31.29881 L 139.75635 28.4454 L 131.93346 29.8351 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 143.40392 31.29881 L 151.22679 29.9403 L 147.57922 27.11392 L 139.75635 28.4454 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 14.59021 49.47438 L 22.41309 48.14291 L 18.76553 45.33481 L 10.94266 46.65501 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 22.41309 48.14291 L 30.23598 46.75322 L 26.58842 43.99785 L 18.76553 45.33481 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 30.23598 46.75322 L 38.05885 45.18044 L 34.4113 42.6082 L 26.58842 43.99785 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7270">
+ <path d=" M 38.05885 45.18044 L 45.88174 43.21982 L 42.23419 41.10696 L 34.4113 42.6082 Z  " />
+ <g stroke="#228d8d" fill="#228d8d">
+ <g stroke="#1b7171">
+ <path d=" M 45.88174 43.21982 L 53.70462 40.803 L 50.05707 39.47443 L 42.23419 41.10696 Z  " />
+ <g stroke="#228b8d" fill="#228b8d">
+ <g stroke="#1b6f71">
+ <path d=" M 53.70462 40.803 L 61.52751 38.42207 L 57.87996 37.85225 L 50.05707 39.47443 Z  " />
+ <g stroke="#238a8d" fill="#238a8d">
+ <g stroke="#1c6e71">
+ <path d=" M 61.52751 38.42207 L 69.35039 37.14578 L 65.70284 36.54791 L 57.87996 37.85225 Z  " />
+ <g stroke="#228c8d" fill="#228c8d">
+ <g stroke="#1b7071">
+ <path d=" M 69.35039 37.14578 L 77.17328 37.6169 L 73.52573 35.74641 L 65.70284 36.54791 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 77.17328 37.6169 L 84.99615 38.97127 L 81.3486 35.19904 L 73.52573 35.74641 Z  " />
+ <g stroke="#1f958b" fill="#1f958b">
+ <g stroke="#19776f">
+ <path d=" M 84.99615 38.97127 L 92.81905 39.44249 L 89.1715 34.3975 L 81.3486 35.19904 Z  " />
+ <g stroke="#1f978b" fill="#1f978b">
+ <g stroke="#18786f">
+ <path d=" M 92.81905 39.44249 L 100.64192 38.1663 L 96.99437 33.09322 L 89.1715 34.3975 Z  " />
+ <g stroke="#1f958b" fill="#1f958b">
+ <g stroke="#19776f">
+ <path d=" M 100.64192 38.1663 L 108.46481 35.78542 L 104.81726 31.47105 L 96.99437 33.09322 Z  " />
+ <g stroke="#20938c" fill="#20938c">
+ <g stroke="#197670">
+ <path d=" M 108.46481 35.78542 L 116.28769 33.36856 L 112.64014 29.83853 L 104.81726 31.47105 Z  " />
+ <g stroke="#20928c" fill="#20928c">
+ <g stroke="#1a7470">
+ <path d=" M 116.28769 33.36856 L 124.11058 31.4079 L 120.46303 28.33727 L 112.64014 29.83853 Z  " />
+ <g stroke="#21918c" fill="#21918c">
+ <g stroke="#1a7470">
+ <path d=" M 124.11058 31.4079 L 131.93346 29.8351 L 128.2859 26.94762 L 120.46303 28.33727 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 131.93346 29.8351 L 139.75635 28.4454 L 136.1088 25.61066 L 128.2859 26.94762 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 139.75635 28.4454 L 147.57922 27.11392 L 143.93167 24.29044 L 136.1088 25.61066 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 10.94266 46.65501 L 18.76553 45.33481 L 15.11798 42.51756 L 7.2951 43.83424 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 18.76553 45.33481 L 26.58842 43.99785 L 22.94087 41.19713 L 15.11798 42.51756 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 26.58842 43.99785 L 34.4113 42.6082 L 30.76375 39.86487 L 22.94087 41.19713 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 34.4113 42.6082 L 42.23419 41.10696 L 38.58664 38.50758 L 30.76375 39.86487 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7370">
+ <path d=" M 42.23419 41.10696 L 50.05707 39.47443 L 46.40952 37.12085 L 38.58664 38.50758 Z  " />
+ <g stroke="#218f8d" fill="#218f8d">
+ <g stroke="#1a7270">
+ <path d=" M 50.05707 39.47443 L 57.87996 37.85225 L 54.2324 35.73643 L 46.40952 37.12085 Z  " />
+ <g stroke="#218e8d" fill="#218e8d">
+ <g stroke="#1a7270">
+ <path d=" M 57.87996 37.85225 L 65.70284 36.54791 L 62.05528 34.42331 L 54.2324 35.73643 Z  " />
+ <g stroke="#218f8c" fill="#218f8c">
+ <g stroke="#1a7270">
+ <path d=" M 65.70284 36.54791 L 73.52573 35.74641 L 69.87817 33.22298 L 62.05528 34.42331 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 73.52573 35.74641 L 81.3486 35.19904 L 77.70105 32.07964 L 69.87817 33.22298 Z  " />
+ <g stroke="#20918c" fill="#20918c">
+ <g stroke="#1a7470">
+ <path d=" M 81.3486 35.19904 L 89.1715 34.3975 L 85.52394 30.87929 L 77.70105 32.07964 Z  " />
+ <g stroke="#20928c" fill="#20928c">
+ <g stroke="#1a7570">
+ <path d=" M 89.1715 34.3975 L 96.99437 33.09322 L 93.34682 29.56618 L 85.52394 30.87929 Z  " />
+ <g stroke="#20928c" fill="#20928c">
+ <g stroke="#1a7470">
+ <path d=" M 96.99437 33.09322 L 104.81726 31.47105 L 101.16971 28.18176 L 93.34682 29.56618 Z  " />
+ <g stroke="#20918c" fill="#20918c">
+ <g stroke="#1a7470">
+ <path d=" M 104.81726 31.47105 L 112.64014 29.83853 L 108.99258 26.79504 L 101.16971 28.18176 Z  " />
+ <g stroke="#21918c" fill="#21918c">
+ <g stroke="#1a7470">
+ <path d=" M 112.64014 29.83853 L 120.46303 28.33727 L 116.81548 25.43774 L 108.99258 26.79504 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 120.46303 28.33727 L 128.2859 26.94762 L 124.63835 24.10548 L 116.81548 25.43774 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 128.2859 26.94762 L 136.1088 25.61066 L 132.46124 22.78505 L 124.63835 24.10548 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 136.1088 25.61066 L 143.93167 24.29044 L 140.28412 21.46837 L 132.46124 22.78505 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 7.2951 43.83424 L 15.11798 42.51756 L 11.47043 39.69713 L 3.64755 41.01297 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 15.11798 42.51756 L 22.94087 41.19713 L 19.29332 38.38063 L 11.47043 39.69713 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 22.94087 41.19713 L 30.76375 39.86487 L 27.1162 37.06207 L 19.29332 38.38063 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 30.76375 39.86487 L 38.58664 38.50758 L 34.93909 35.73914 L 27.1162 37.06207 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 38.58664 38.50758 L 46.40952 37.12085 L 42.76196 34.41104 L 34.93909 35.73914 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 46.40952 37.12085 L 54.2324 35.73643 L 50.58485 33.08336 L 42.76196 34.41104 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 54.2324 35.73643 L 62.05528 34.42331 L 58.40773 31.76814 L 50.58485 33.08336 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 62.05528 34.42331 L 69.87817 33.22298 L 66.23062 30.47266 L 58.40773 31.76814 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 69.87817 33.22298 L 77.70105 32.07964 L 74.0535 29.18712 L 66.23062 30.47266 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 77.70105 32.07964 L 85.52394 30.87929 L 81.87639 27.8916 L 74.0535 29.18712 Z  " />
+ <g stroke="#21918c" fill="#21918c">
+ <g stroke="#1a7470">
+ <path d=" M 85.52394 30.87929 L 93.34682 29.56618 L 89.69926 26.57639 L 81.87639 27.8916 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 93.34682 29.56618 L 101.16971 28.18176 L 97.52216 25.24872 L 89.69926 26.57639 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 101.16971 28.18176 L 108.99258 26.79504 L 105.34503 23.92062 L 97.52216 25.24872 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 108.99258 26.79504 L 116.81548 25.43774 L 113.16792 22.59769 L 105.34503 23.92062 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 116.81548 25.43774 L 124.63835 24.10548 L 120.9908 21.27911 L 113.16792 22.59769 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 124.63835 24.10548 L 132.46124 22.78505 L 128.81369 19.96263 L 120.9908 21.27911 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 132.46124 22.78505 L 140.28412 21.46837 L 136.63657 18.64679 L 128.81369 19.96263 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 3.64755 41.01297 L 11.47043 39.69713 L 7.82288 36.87589 L 0.0 38.19157 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 11.47043 39.69713 L 19.29332 38.38063 L 15.64577 35.5601 L 7.82288 36.87589 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 19.29332 38.38063 L 27.1162 37.06207 L 23.46864 34.24406 L 15.64577 35.5601 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 27.1162 37.06207 L 34.93909 35.73914 L 31.29153 32.92741 L 23.46864 34.24406 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 34.93909 35.73914 L 42.76196 34.41104 L 39.11441 31.61005 L 31.29153 32.92741 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 42.76196 34.41104 L 50.58485 33.08336 L 46.9373 30.29274 L 39.11441 31.61005 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 50.58485 33.08336 L 58.40773 31.76814 L 54.76018 28.97714 L 46.9373 30.29274 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 58.40773 31.76814 L 66.23062 30.47266 L 62.58307 27.66423 L 54.76018 28.97714 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 66.23062 30.47266 L 74.0535 29.18712 L 70.40594 26.35268 L 62.58307 27.66423 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 74.0535 29.18712 L 81.87639 27.8916 L 78.22884 25.03975 L 70.40594 26.35268 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 81.87639 27.8916 L 89.69926 26.57639 L 86.05171 23.72415 L 78.22884 25.03975 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 89.69926 26.57639 L 97.52216 25.24872 L 93.8746 22.40686 L 86.05171 23.72415 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 97.52216 25.24872 L 105.34503 23.92062 L 101.69748 21.08951 L 93.8746 22.40686 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 105.34503 23.92062 L 113.16792 22.59769 L 109.52037 19.77284 L 101.69748 21.08951 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 113.16792 22.59769 L 120.9908 21.27911 L 117.34325 18.45679 L 109.52037 19.77284 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 120.9908 21.27911 L 128.81369 19.96263 L 125.16614 17.14102 L 117.34325 18.45679 Z  " />
+ <g stroke="#21908c" fill="#21908c">
+ <g stroke="#1a7370">
+ <path d=" M 128.81369 19.96263 L 136.63657 18.64679 L 132.98901 15.82533 L 125.16614 17.14102 Z  " />
+ <path d="  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g></svg endpicture>',
+    top: 3270924,
+    type: "svg",
+  },
+  {
+    left: -2939205,
+    svg: "</g></g>
+ </g>
+ </g>
+ </g>
+ </g></svg endpicture>",
+    top: 5893005,
+    type: "svg",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+]
+`;
+
+snapshot[`parse() 6`] = `
+[
+  {
+    comment: " TeX output 2024.01.20:0946",
+    denominator: 473628672,
+    magnification: 1000,
+    numerator: 25400000,
+    type: "info",
+    version: 2,
+  },
+  {
+    height: 135.96484,
+    type: "papersize",
+    width: 298.77261,
+  },
+  {
+    data: "ps::%%HiResBoundingBox: 0 0 298.77261pt 135.96484pt
+",
+    type: "special",
+  },
+  {
+    height: 794.96999,
+    type: "papersize",
+    width: 614.295,
+  },
+  {
+    height: 135.96484,
+    type: "papersize",
+    width: 298.77261,
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    left: -546270,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g transform="translate(-63.93459,-36.31946)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)">',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 37636,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-3.61632,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4495826,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 37636,
+    text: "T",
+    top: -4495826,
+    type: "text",
+  },
+  {
+    left: 511635,
+    svg: "</g> </g>
+ ",
+    top: -4495826,
+    type: "svg",
+  },
+  {
+    left: 37636,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -4495826,
+    type: "svg",
+  },
+  {
+    left: 3648298,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"></g></svg endpicture>',
+    top: -4495826,
+    type: "svg",
+  },
+  {
+    left: 7254409,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"></g></svg endpicture>',
+    top: -4495826,
+    type: "svg",
+  },
+  {
+    left: 37636,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-4.60416,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -2388659,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 37636,
+    text: "K",
+    top: -2388659,
+    type: "text",
+  },
+  {
+    left: 641113,
+    svg: "</g> </g>
+ ",
+    top: -2388659,
+    type: "svg",
+  },
+  {
+    left: 37636,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -2388659,
+    type: "svg",
+  },
+  {
+    left: 3648298,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-17.87912,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -2388659,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 3648298,
+    text: "X",
+    top: -2388659,
+    type: "text",
+  },
+  {
+    font: "cmsy10",
+    left: 4388304.75,
+    text: "",
+    top: -2388659,
+    type: "text",
+  },
+  {
+    font: "cmmi7",
+    left: 4898031,
+    text: "Z",
+    top: -2290356,
+    type: "text",
+  },
+  {
+    font: "cmmi10",
+    left: 5465642,
+    text: "Y",
+    top: -2388659,
+    type: "text",
+  },
+  {
+    left: 5991750,
+    svg: "</g> </g>
+ ",
+    top: -2388659,
+    type: "svg",
+  },
+  {
+    left: 3648298,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -2388659,
+    type: "svg",
+  },
+  {
+    left: 7254409,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-4.53471,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -2388659,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 7254409,
+    text: "X",
+    top: -2388659,
+    type: "text",
+  },
+  {
+    left: 7848783,
+    svg: "</g> </g>
+ ",
+    top: -2388659,
+    type: "svg",
+  },
+  {
+    left: 7254409,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -2388659,
+    type: "svg",
+  },
+  {
+    left: 37636,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"></g></svg endpicture>',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 3648298,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-4.01389,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 3648298,
+    text: "Y",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 4174407,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 3648298,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 7254409,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-3.77083,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 7254409,
+    text: "Z",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 7748660,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 7254409,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: -546270,
+    svg: '</g></g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M -46.90303 33.96925 C -9.92935 43.59862 20.43729 35.23175 46.98267 8.31114  " fill="none"/>
+ <g transform="matrix(0.70209,-0.712,0.712,0.70209,47.12306,8.16876)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(6.33829,37.16356)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: -546270,
+    text: "x",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: -249082,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: -546270,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M -53.91106 25.62642 C -49.54309 -2.264 -34.78777 -20.54913 -8.82312 -30.56769  " fill="none"/>
+ <g transform="matrix(0.93294,-0.35995,0.35995,0.93294,-8.63655,-30.63966)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(-37.06642,-5.47675)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: -546270,
+    text: "y",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: -264023,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: -546270,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <g stroke-dasharray="0.39998,2.0" stroke-dashoffset="0.0">
+ <path d=" M -46.90303 27.24721 L -14.31299 8.22795  " fill="none"/>
+ <g transform="matrix(0.86363,-0.50401,0.50401,0.86363,-14.14029,8.12715)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g fill="#fff">
+ <g fill="#fff">
+ <path d=" M -41.32132 11.98402 h 21.77203 v 11.30554 h -21.77203 Z  " stroke="none"/>
+ </g>
+ <g transform="translate(-39.16855,15.8868)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmr7",
+    left: -546270,
+    text: "(",
+    top: -183190,
+    type: "text",
+  },
+  {
+    font: "cmmi7",
+    left: -341468.8125,
+    text: "x;y",
+    top: -183190,
+    type: "text",
+  },
+  {
+    font: "cmr7",
+    left: 393616.875,
+    text: ")",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 598415,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: -546270,
+    svg: '</g></g>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M 22.4541 -0.16667 L 45.65411 -0.16667  " fill="none"/>
+ <g transform="translate(45.8541,-0.16667)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(32.19292,3.54716)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: -546270,
+    text: "p",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: -276108,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: -546270,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M 0.06944 -8.02637 L 0.06944 -25.22646  " fill="none"/>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,0.06944,-25.42644)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(2.4222,-17.65279)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: -546270,
+    text: "q",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: -289609,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: -546270,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M 55.09433 -6.5264 L 55.09433 -25.22646  " fill="none"/>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,55.09433,-25.42644)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(57.44708,-17.8264)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: -546270,
+    text: "f",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: -239294,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: -546270,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M 8.58887 -33.81946 L 46.418 -33.81946  " fill="none"/>
+ <g transform="translate(46.61798,-33.81946)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(25.6272,-30.10562)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: -546270,
+    text: "g",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: -274135,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: -546270,
+    svg: "</g></g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g></svg endpicture>",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g transform="translate(-72.4471,-62.83037)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)">',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10688386,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-5.15279,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -7925804,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 10688386,
+    text: "A",
+    top: -7925804,
+    type: "text",
+  },
+  {
+    font: "cmsy7",
+    left: 11179907.25,
+    text: "0",
+    top: -8163629,
+    type: "text",
+  },
+  {
+    left: 11363772,
+    svg: "</g> </g>
+ ",
+    top: -7925804,
+    type: "svg",
+  },
+  {
+    left: 10688386,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -7925804,
+    type: "svg",
+  },
+  {
+    left: 13432792,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"></g></svg endpicture>',
+    top: -7925804,
+    type: "svg",
+  },
+  {
+    left: 16199954,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-5.44618,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -7925804,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 16199954,
+    text: "B",
+    top: -7925804,
+    type: "text",
+  },
+  {
+    font: "cmsy7",
+    left: 16729931.875,
+    text: "0",
+    top: -8163629,
+    type: "text",
+  },
+  {
+    left: 16913796,
+    svg: "</g> </g>
+ ",
+    top: -7925804,
+    type: "svg",
+  },
+  {
+    left: 16199954,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -7925804,
+    type: "svg",
+  },
+  {
+    left: 10688386,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"></g></svg endpicture>',
+    top: -5359886,
+    type: "svg",
+  },
+  {
+    left: 13432792,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-3.75,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -5359886,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 13432792,
+    text: "A",
+    top: -5359886,
+    type: "text",
+  },
+  {
+    left: 13924313,
+    svg: "</g> </g>
+ ",
+    top: -5359886,
+    type: "svg",
+  },
+  {
+    left: 13432792,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -5359886,
+    type: "svg",
+  },
+  {
+    left: 16199954,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"></g></svg endpicture>',
+    top: -5359886,
+    type: "svg",
+  },
+  {
+    left: 18989872,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-4.0434,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -5359886,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 18989872,
+    text: "B",
+    top: -5359886,
+    type: "text",
+  },
+  {
+    left: 19519849,
+    svg: "</g> </g>
+ ",
+    top: -5359886,
+    type: "svg",
+  },
+  {
+    left: 18989872,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -5359886,
+    type: "svg",
+  },
+  {
+    left: 10688386,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-5.33401,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -2749108,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 10688386,
+    text: "C",
+    top: -2749108,
+    type: "text",
+  },
+  {
+    font: "cmsy7",
+    left: 11203662,
+    text: "0",
+    top: -2986933,
+    type: "text",
+  },
+  {
+    left: 11387527,
+    svg: "</g> </g>
+ ",
+    top: -2749108,
+    type: "svg",
+  },
+  {
+    left: 10688386,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -2749108,
+    type: "svg",
+  },
+  {
+    left: 13432792,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"></g></svg endpicture>',
+    top: -2749108,
+    type: "svg",
+  },
+  {
+    left: 16199954,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-5.68124,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -2749108,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 16199954,
+    text: "D",
+    top: -2749108,
+    type: "text",
+  },
+  {
+    font: "cmsy7",
+    left: 16760742.75,
+    text: "0",
+    top: -2986933,
+    type: "text",
+  },
+  {
+    left: 16944607,
+    svg: "</g> </g>
+ ",
+    top: -2749108,
+    type: "svg",
+  },
+  {
+    left: 16199954,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -2749108,
+    type: "svg",
+  },
+  {
+    left: 10688386,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"></g></svg endpicture>',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 13432792,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-3.93124,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 13432792,
+    text: "C",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 13948068,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 13432792,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 16199954,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"></g></svg endpicture>',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 18989872,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g transform="translate(-4.27847,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi10",
+    left: 18989872,
+    text: "D",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 19550660,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 18989872,
+    svg: "</g></g>
+ </g>
+ </g></svg endpicture>",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M -53.14922 57.81255 L 10.94063 57.81255  " fill="none"/>
+ <g transform="translate(11.14061,57.81255)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(-24.59879,61.5264)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "f",
+    top: -183190,
+    type: "text",
+  },
+  {
+    font: "cmsy5",
+    left: 10363624.125,
+    text: "0",
+    top: -380964,
+    type: "text",
+  },
+  {
+    left: 10540891,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M -56.00832 51.45282 L -29.4789 26.6465  " fill="none"/>
+ <g transform="matrix(0.73041,-0.68297,0.68297,0.73041,-29.33284,26.50993)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(-49.28795,33.54645)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "a",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 10340920,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M -62.80754 51.45282 L -62.80754 -11.90005  " fill="none"/>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,-62.80754,-12.10004)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(-72.01762,17.35916)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "g",
+    top: -183190,
+    type: "text",
+  },
+  {
+    font: "cmsy5",
+    left: 10328783.875,
+    text: "0",
+    top: -380964,
+    type: "text",
+  },
+  {
+    left: 10506050,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M 21.29231 51.45282 L 21.29231 -11.90005  " fill="none"/>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,21.29231,-12.10004)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(11.55293,32.61684)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "h",
+    top: -183190,
+    type: "text",
+  },
+  {
+    font: "cmsy5",
+    left: 10363471.125,
+    text: "0",
+    top: -380964,
+    type: "text",
+  },
+  {
+    left: 10540738,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M 28.20566 51.45282 L 55.01979 26.79065  " fill="none"/>
+ <g transform="matrix(0.73598,-0.67691,0.67691,0.73598,55.16696,26.65527)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(44.11266,41.33913)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "b",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 10287116,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke="#fff">
+ <g stroke-width="6.45831">
+ <path d=" M -12.67569 18.65974 L 55.31415 18.65974  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M -12.67569 18.65974 L 54.91418 18.65974  " fill="none"/>
+ <g transform="translate(55.11417,18.65974)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(1.97972,22.3736)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "f",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 10363624,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M 63.86308 12.30002 L 63.86308 -51.73737  " fill="none"/>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,63.86308,-51.93735)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(66.21584,-22.3492)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "h",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 10363471,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M -52.96799 -21.17757 L 10.70557 -21.17757  " fill="none"/>
+ <g transform="translate(10.90555,-21.17757)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(-8.47537,-18.82481)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "k",
+    top: -183190,
+    type: "text",
+  },
+  {
+    font: "cmsy5",
+    left: 10346328.125,
+    text: "0",
+    top: -380964,
+    type: "text",
+  },
+  {
+    left: 10523595,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M -56.0093 -27.5373 L -29.66014 -52.17427  " fill="none"/>
+ <g transform="matrix(0.73042,-0.68295,0.68295,0.73042,-29.51408,-52.31085)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(-48.61514,-45.359)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "c",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 10290857,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M 28.20381 -27.5373 L 54.7847 -51.98334  " fill="none"/>
+ <g transform="matrix(0.73601,-0.6769,0.6769,0.73601,54.93188,-52.11868)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(35.12581,-47.10951)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "d",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 10329466,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M -12.49445 -60.33037 L 54.67911 -60.33037  " fill="none"/>
+ <g transform="translate(54.87909,-60.33037)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07988 2.39986 C -1.69989 0.95992 -0.85313 0.27998 0.0 0.0 C -0.85313 -0.27998 -1.69989 -0.95992 -2.07988 -2.39986  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(19.08223,-57.97762)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "k",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 10346328,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: '</g></g>
+ </g>
+ </g>
+ <g stroke="#fff">
+ <g stroke-width="6.45831">
+ <path d=" M -20.93123 -52.13733 L -20.93123 12.30002  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.39998">
+ <path d=" M -20.93123 -51.73737 L -20.93123 12.30002  " fill="none"/>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,-20.93123,-51.93735)">
+ <g stroke-dasharray="none" stroke-dashoffset="0.0">
+ <g stroke-linecap="round">
+ <g stroke-linejoin="round">
+ <path d=" M -2.07997 2.39995 C -1.69997 0.95996 -0.85316 0.28 0.0 0.0 C -0.85316 -0.28 -1.69997 -0.95996 -2.07997 -2.39995  " fill="none"/>
+ </g>
+ </g>
+ </g>
+  </g>
+ <g transform="translate(-27.43642,-4.63573)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -183190,
+    type: "svg",
+  },
+  {
+    font: "cmmi7",
+    left: 10056648,
+    text: "g",
+    top: -183190,
+    type: "text",
+  },
+  {
+    left: 10328783,
+    svg: "</g> </g>
+ ",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    left: 10056648,
+    svg: "</g></g>
+ </g>
+ </g>
+ </g>
+ </g>
+ </g></svg endpicture>",
+    top: -183190,
+    type: "svg",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+]
+`;
+
+snapshot[`parse() 7`] = `
+[
+  {
+    comment: " TeX output 2024.01.20:0959",
+    denominator: 473628672,
+    magnification: 1000,
+    numerator: 25400000,
+    type: "info",
+    version: 2,
+  },
+  {
+    height: 118.14326,
+    type: "papersize",
+    width: 192.14319,
+  },
+  {
+    data: "ps::%%HiResBoundingBox: 0 0 192.14319pt 118.14326pt
+",
+    type: "special",
+  },
+  {
+    height: 794.96999,
+    type: "papersize",
+    width: 614.295,
+  },
+  {
+    height: 118.14326,
+    type: "papersize",
+    width: 192.14319,
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    left: -1138763,
+    svg: '<svg beginpicture><g stroke-miterlimit="10" transform="translate({?x},{?y}) scale(1,-1)"><g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ <g transform="translate(-3.75,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1138763,
+    text: "H",
+    top: -4288459,
+    type: "text",
+  },
+  {
+    left: -647242,
+    svg: "</g> </g>
+ ",
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    left: -1138763,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(3.75,0.0)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1138763,
+    text: "N",
+    top: -4288459,
+    type: "text",
+  },
+  {
+    left: -647242,
+    svg: "</g> </g>
+ ",
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    left: -1138763,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(-21.21326,-17.7966)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(-21.21326,-17.7966)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <path d=" M -4.83156 -1.41533 L -21.21326 -17.7966  " fill="none"/>
+ <g transform="translate(-51.2133,-17.7966)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(-54.89386,-21.21326)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1138763,
+    text: "R",
+    top: -4288459,
+    type: "text",
+  },
+  {
+    left: -656345,
+    svg: "</g> </g>
+ ",
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    left: -1138763,
+    svg: '</g></g>
+ </g>
+ <path d=" M -21.21326 -17.7966 L -45.53275 -17.7966  " fill="none"/>
+ <g transform="translate(-21.21326,-47.79665)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(-25.10216,-51.2133)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1138763,
+    text: "O",
+    top: -4288459,
+    type: "text",
+  },
+  {
+    left: -629037,
+    svg: "</g> </g>
+ ",
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    left: -1138763,
+    svg: '</g></g>
+ </g>
+ <path d=" M -20.21326 -17.7966 L -20.21326 -42.37982  " fill="none"/>
+ <path d=" M -22.21326 -17.7966 L -22.21326 -42.37982  " fill="none"/>
+ <g transform="translate(28.71326,-17.7966)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(28.71326,-17.7966)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g stroke-linejoin="bevel">
+ <path d=" M 14.6166 0.86975 L 10.04652 -3.70041 L 28.71326 -17.7966 Z  " />
+ </g>
+ <g transform="translate(28.71326,-47.79665)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(28.71326,-47.79665)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <path d=" M 28.71326 -17.7966 L 28.71326 -47.79665  " fill="none"/>
+ <g transform="translate(7.5,-69.0099)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(3.6111,-72.42656)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1138763,
+    text: "O",
+    top: -4288459,
+    type: "text",
+  },
+  {
+    left: -629037,
+    svg: "</g> </g>
+ ",
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    left: -1138763,
+    svg: '</g></g>
+ </g>
+ <path d=" M 29.42088 -48.50429 L 13.0392 -64.88554  " fill="none"/>
+ <path d=" M 28.00563 -47.089 L 11.62395 -63.47026  " fill="none"/>
+ <g transform="translate(58.7133,-47.79665)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(54.9633,-51.2133)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1138763,
+    text: "N",
+    top: -4288459,
+    type: "text",
+  },
+  {
+    left: -647242,
+    svg: "</g> </g>
+ ",
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    left: -1138763,
+    svg: '</g></g>
+ </g>
+ <path d=" M 28.71326 -47.79665 L 52.96338 -47.79665  " fill="none"/>
+ <g transform="translate(87.24529,-57.06728)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(87.24529,-57.06728)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <path d=" M 64.36574 -49.63275 L 87.24529 -57.06728  " fill="none"/>
+ <g transform="translate(96.51591,-85.59926)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(96.51591,-85.59926)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <clipPath id="pgfcp1"><path d=" M 99.58743 -84.60129 L 93.4444 -86.59723 L 87.24529 -57.06728 L 99.58743 -84.60129  "/> </clipPath>
+ <g clip-path="url(#pgfcp1)">
+ <g stroke-dasharray="1.0,2.0" stroke-dashoffset="0.0">
+ <g stroke-width="6.45831">
+ <path d=" M 96.51591 -85.59926 L 87.24529 -57.06728  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <g transform="translate(76.44203,-107.8933)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(72.55313,-111.30995)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1138763,
+    text: "O",
+    top: -4288459,
+    type: "text",
+  },
+  {
+    left: -629037,
+    svg: "</g> </g>
+ ",
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    left: -1138763,
+    svg: '</g></g>
+ </g>
+ <path d=" M 97.25949 -86.26881 L 81.6005 -103.65901  " fill="none"/>
+ <path d=" M 95.77234 -84.9297 L 80.11334 -102.3199  " fill="none"/>
+ <g transform="translate(125.86043,-91.83675)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(121.97153,-95.2534)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1138763,
+    text: "O",
+    top: -4288459,
+    type: "text",
+  },
+  {
+    left: -629037,
+    svg: "</g> </g>
+ ",
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    left: -1138763,
+    svg: '</g></g>
+ </g>
+ <g transform="translate(129.74933,-95.2534)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1138763,
+    text: "H",
+    top: -4288459,
+    type: "text",
+  },
+  {
+    left: -647242,
+    svg: "</g> </g>
+ ",
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    left: -1138763,
+    svg: '</g></g>
+ </g>
+ <path d=" M 96.51591 -85.59926 L 120.01505 -90.59438  " fill="none"/>
+ <g transform="translate(104.87881,-32.79662)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(104.87881,-32.79662)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <path d=" M 87.24529 -57.06728 L 104.87881 -32.79662  " fill="none"/>
+ <g transform="translate(122.51234,-8.52596)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(122.51234,-8.52596)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g stroke-linejoin="bevel">
+ <path d=" M 119.8998 -6.62787 L 125.1249 -10.42404 L 104.87881 -32.79662 Z  " />
+ </g>
+ <g transform="translate(122.51234,-57.06728)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(122.51234,-57.06728)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <clipPath id="pgfcp2"><path d=" M 125.1249 -55.16919 L 119.8998 -58.96536 L 104.87881 -32.79662 L 125.1249 -55.16919  "/> </clipPath>
+ <g clip-path="url(#pgfcp2)">
+ <g stroke-dasharray="1.0,2.0" stroke-dashoffset="0.0">
+ <g stroke-width="6.45831">
+ <path d=" M 122.51234 -57.06728 L 104.87881 -32.79662  " fill="none"/>
+ </g>
+ </g>
+ </g>
+ <g transform="translate(87.24529,-8.52596)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(84.4675,-11.94261)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> ',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    font: "cmr10",
+    left: -1138763,
+    text: "S",
+    top: -4288459,
+    type: "text",
+  },
+  {
+    left: -774673,
+    svg: "</g> </g>
+ ",
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    left: -1138763,
+    svg: '</g></g>
+ </g>
+ <path d=" M 104.87881 -32.79662 L 90.90347 -13.56134  " fill="none"/>
+ <g transform="translate(58.7133,-17.79659)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(58.7133,-17.79659)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g stroke-linejoin="bevel">
+ <path d=" M 83.56306 -13.11766 L 81.56712 -6.9749 L 58.7133 -17.79659 Z  " />
+ </g>
+ <g transform="translate(58.7133,-17.7966)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <g transform="translate(58.7133,-17.7966)">
+ <g stroke="#000" fill="#000">
+ <g stroke="none" transform="scale(-1,1) translate({?x},{?y}) scale(-1,-1)"><g fill="#000">
+ <g stroke="none"> </g> </g>
+ </g></g>
+ </g>
+ <path d=" M 58.7133 -42.37984 L 58.7133 -17.7966  " fill="none"/>
+ <path d=" M 58.7133 -17.7966 L 28.71326 -17.7966  " fill="none"/>
+ </g>
+ </g>
+ </g></svg endpicture>',
+    top: -4288459,
+    type: "svg",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
+  },
+  {
+    color: "black",
+    type: "color",
   },
 ]
 `;
