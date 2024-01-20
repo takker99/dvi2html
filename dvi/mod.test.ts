@@ -1,7 +1,7 @@
 import { color, papersize, parse, ps, svg } from "./mod.ts";
 import { assertSnapshot } from "../deps_test.ts";
 
-const test =  (t: Deno.TestContext, filename: string) =>
+const test = (t: Deno.TestContext, filename: string) =>
   t.step(filename, async () => {
     const result: unknown[] = [];
 
