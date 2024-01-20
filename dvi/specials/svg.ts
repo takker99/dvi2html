@@ -17,7 +17,7 @@ export const svg: () => SpecialPlugin<SVG> = () => {
 
     if (next?.type === "special") {
       const nextData = new TextDecoder().decode(next.data);
-      if (nextData.startsWith("dvisvgm:raw ")) return null;
+      if (command.horizontal===next.horizontal&&command.vertical===next.vertical&&nextData.startsWith("dvisvgm:raw ")) return null;
     }
     const svg = svgText.replaceAll("{?nl}", "\n");
     svgText = "";
