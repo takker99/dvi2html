@@ -1,4 +1,13 @@
 import fontlist from "../fontlist.json" with { type: "json" };
+import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts#^";
+
+await new Command()
+  .name("tfm2json")
+  .version("v0.1.1")
+  .description(
+    "Create `fonts.json` from tfm files.\nRequires `kpsewhich` and Makes sure TexLive is installed.",
+  )
+  .parse(Deno.args);
 
 const fonts: Record<string, number[]> = {};
 
