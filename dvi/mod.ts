@@ -100,7 +100,7 @@ export interface ParseInit<
   // deno-lint-ignore no-explicit-any
   Plugins extends SpecialPlugin<any>[],
 > {
-  tfmLoader: (filename: string) => Promise<Uint32Array>;
+  tfmLoader: (filename: string) => Promise<Uint8Array>;
   plugins?: Plugins;
 }
 
@@ -146,7 +146,7 @@ export async function* parse<
 
 async function* middleParser(
   dvi: Uint8Array,
-  tfmLoader: (filename: string) => Promise<Uint32Array>,
+  tfmLoader: (filename: string) => Promise<Uint8Array>,
 ): AsyncGenerator<
   | Text
   | Rule
@@ -307,7 +307,9 @@ async function* middleParser(
         const scaleFactor = command.s;
         const designSize = command.d;
         const checksum = command.c;
-        const font = parseTFM(await tfmLoader(command.n));
+        const font = parseTFM(
+          new Uint32Array((await tfmLoader(`${command.n}.tfm`)).buffer),
+        );
         fonts.set(command.k, {
           name,
           checksum,

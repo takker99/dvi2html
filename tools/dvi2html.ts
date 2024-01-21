@@ -3,7 +3,7 @@ import { convertToHTML } from "../mod.ts";
 import { tokenize } from "../dvi/tokenize.ts";
 import { join } from "https://deno.land/std@0.212.0/path/mod.ts";
 import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts#^";
-import { tfmLoader } from "../tfm/tfmLoader.ts";
+import { fileLoader } from "../fileLoader.ts";
 
 const token = new Command()
   .arguments("<input:string> [output:string]")
@@ -27,7 +27,7 @@ const parser = new Command()
     for await (
       const command of parse(dvi, {
         plugins: [papersize, ps(), svg(), color()],
-        tfmLoader,
+        tfmLoader: fileLoader,
       })
     ) {
       switch (command.type) {
@@ -67,50 +67,24 @@ await new Command()
   .description("Convert DVI into HTML")
   .version("v0.1.1")
   .arguments("<input:string> [output:string]")
-  .action(async (_, input, output) => {
+  .option("--svg", "Get standalone SVG")
+  .action(async ({ svg: standaloneSVG }, input, output) => {
     const dvi = await Deno.readFile(join(Deno.cwd(), input));
 
-    const div = convertToHTML(
+    const xml = await convertToHTML(
       await Array.fromAsync(
-        parse(dvi, { plugins: [papersize, color(), svg()], tfmLoader }),
+        parse(dvi, {
+          plugins: [papersize, color(), svg()],
+          tfmLoader: fileLoader,
+        }),
       ),
+      { svg: standaloneSVG, fileLoader },
     );
-    const html = `<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>dvi2html testing</title>
-     <style>${await Deno.readTextFile(
-      new URL("./TikZJax.css", import.meta.url),
-    )}</style>
-    <style>
-      .page {
-        position: relative;
-        width: 100%;
-        height: 0;
-      }
-      .text {
-        line-height: 0;
-        position: absolute;
-        overflow: visible;
-      }
-      .rect {
-        position: absolute;
-        min-width: 1px;
-        min-height: 1px;
-      }
-      svg {
-        position: absolute;
-        overflow: visible;
-      }
-    </style>
-</head>
-<body>${div}</body></html>`;
 
     if (output) {
-      await Deno.writeTextFile(output, html);
+      await Deno.writeTextFile(output, xml);
     } else {
-      console.log(html);
+      console.log(xml);
     }
   })
   .command("tokenize", token)

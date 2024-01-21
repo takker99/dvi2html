@@ -1,6 +1,6 @@
 import { color, papersize, parse, ps, svg } from "./mod.ts";
 import { assertSnapshot } from "../deps_test.ts";
-import { tfmLoader } from "../tfm/tfmLoader.ts";
+import { fileLoader } from "../fileLoader.ts";
 
 const test = (t: Deno.TestContext, filename: string) =>
   t.step(filename, async () => {
@@ -9,7 +9,7 @@ const test = (t: Deno.TestContext, filename: string) =>
     for await (
       const command of parse(
         await Deno.readFile(new URL(`../test/${filename}`, import.meta.url)),
-        { plugins: [papersize, color(), svg(), ps()], tfmLoader },
+        { plugins: [papersize, color(), svg(), ps()], tfmLoader: fileLoader },
       )
     ) {
       switch (command.type) {
