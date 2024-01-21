@@ -15,8 +15,18 @@ import {
   TexColor,
   Text,
 } from "./dvi/mod.ts";
+import { makeFontCSS } from "./makeFontCSS.ts";
+import { fileLoader } from "./fileLoader.ts";
 
-export const convertToHTML = (
+/** Options for converting to HTML. */
+export interface ConvertToHTMLInit {
+  /** Set to `true` to get standalone SVG.  */
+  svg?: boolean;
+  title?: string;
+  fileLoader: (filename: string) => Promise<Uint8Array>;
+}
+
+export const convertToHTML = async (
   commands: Iterable<
     | Text
     | Rule
@@ -28,11 +38,12 @@ export const convertToHTML = (
     | Papersize
     | Color
   >,
-): string => {
+  init: ConvertToHTMLInit,
+): Promise<string> => {
   let pointsPerDviUnit = 0;
 
   let color: TexColor = "black";
-  let depth = 0;
+  let depth = init.svg ? 1 : 0;
   let matrix: Matrix = [...identifyMatrix];
   let fontName = "";
   let fontSize = 0;
@@ -43,6 +54,8 @@ export const convertToHTML = (
 
   let paperwidth = 0;
   let paperheight = 0;
+
+  const usedFontFilenames = new Set<string>();
 
   for (const command of commands) {
     switch (command.type) {
@@ -92,14 +105,18 @@ export const convertToHTML = (
         fontName = command.font.name;
         fontSize = (command.font.metrics.design_size / 1048576.0) *
           command.font.scaleFactor / command.font.designSize;
+        const textColor = ["#000", "black"].includes(color)
+          ? "CanvasText"
+          : color;
 
+        usedFontFilenames.add(`${fontName}.ttf`);
         if (depth <= 0) {
           const hasSpace = (lastTextV == command.top) &&
             (left > lastTextRight + 2);
 
           html += `<span class="text ${fontName}" style="top:${
             top - height
-          }pt;left:${left}pt;color:${color};font-size:${fontSize}pt;"><span ${
+          }pt;left:${left}pt;color:${textColor};font-size:${fontSize}pt;"><span ${
             hasSpace ? 'class="has-space" ' : ""
           } style="vertical-align:${-height}pt;">${htmlText}</span></span>\n`;
           lastTextV = command.top;
@@ -108,7 +125,7 @@ export const convertToHTML = (
           const bottom = command.top * pointsPerDviUnit;
           // No 'pt' on fontsize since those units are potentially scaled
           html +=
-            `<text alignment-baseline="baseline" y="${bottom}" x="${left}" fill="${color}" font-size="${fontSize}" font-family="${fontName}">${htmlText}</text>\n`;
+            `<text alignment-baseline="baseline" y="${bottom}" x="${left}" fill="${textColor}" font-size="${fontSize}" font-family="${fontName}">${htmlText}</text>\n`;
         }
         break;
       }
@@ -119,12 +136,15 @@ export const convertToHTML = (
         const bottom = command.top * pointsPerDviUnit;
         const top = bottom - height;
 
+        const textColor = ["#000", "black"].includes(color)
+          ? "CanvasText"
+          : color;
         html += depth > 0
-          ? `<rect x="${left}" y="${top}" width="${width}" height="${height}" fill=${color} ${
+          ? `<rect x="${left}" y="${top}" width="${width}" height="${height}" fill="${textColor}" ${
             toSVGTransform(matrix)
           }></rect>\n`
           // https://annualbeta.com/blog/1px-hairline-css-borders-on-hidpi-screens/
-          : `<span class="rect" style="background: ${color}; top: ${top}pt; left: ${left}pt; width: ${width}pt; height: ${height}pt;"></span>\n`;
+          : `<span class="rect" style="background: ${textColor}; top: ${top}pt; left: ${left}pt; width: ${width}pt; height: ${height}pt;"></span>\n`;
         break;
       }
       case "special":
@@ -143,9 +163,7 @@ export const convertToHTML = (
             // In this case we are inside another svg element so drop the svg start tags.
             svg = svg.replace(
               tag,
-              depth > 0
-                ? ""
-                : `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${paperwidth}pt" height="${paperheight}pt" viewBox="-72 -72 ${paperwidth} ${paperheight}">`,
+              depth > 0 ? "" : standaloneSVGBeginTag(paperwidth, paperheight),
             );
           }
 
@@ -184,7 +202,7 @@ export const convertToHTML = (
       case "psfile":
         html += depth > 0
           ? command.toSVG(matrix)
-          : `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${paperwidth}pt" height="${paperheight}pt" viewBox="-72 -72 ${paperwidth} ${paperheight}">${
+          : `${standaloneSVGBeginTag(paperwidth, paperheight)}${
             command.toSVG(matrix)
           }</svg>}`;
         break;
@@ -193,5 +211,23 @@ export const convertToHTML = (
 
   for (let _ = depth; _ > 0; _--) html += "</svg>";
 
-  return `<div class="page">${html}</div>`;
+  const title = `<title>${init.title ?? "input.tex"}</title>`;
+  const style = `<style>${await makeFontCSS(
+    usedFontFilenames,
+    fileLoader,
+  )}:root{color-scheme:light dark;background-color:Canvas;color:CanvasText;}.page{position:relative;width:100%;}.text{line-height:0;position:absolute;overflow:visible;}.rect{position:absolute;min-width:1px;min-height:1px;}</style>`;
+
+  // ported from https://github.com/artisticat1/obsidian-tikzjax/blob/0.5.1/main.ts#L138-L143
+  // Replace the color "black" with CanvasText (the current text color)
+  // so that diagram axes, etc are visible in dark mode
+  // And replace "white" with Canvas
+  html = html.replace(/("#000"|"black")/g, '"CanvasText"')
+    .replace(/("#fff"|"white")/g, '"var(--background-primary, Canvas)"');
+
+  return init.svg
+    ? `${standaloneSVGBeginTag(paperwidth, paperheight)}${title}${style}${html}`
+    : `<!DOCTYPE html><html><head><meta charset="UTF-8">${title}${style}</head><body>${html}</body></html>`;
 };
+
+const standaloneSVGBeginTag = (width: number, height: number) =>
+  `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="${width}pt" height="${height}pt" viewBox="-72 -72 ${width} ${height}">`;
