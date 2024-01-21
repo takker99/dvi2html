@@ -17,4 +17,4 @@ jobs:
       - name: Run type check
         run: deno check ./**/*.ts
       - name: Run test
-        run: deno test --allow-read
+        run: deno test --allow-read --allow-net
