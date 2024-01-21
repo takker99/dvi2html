@@ -16,7 +16,6 @@ import {
   Text,
 } from "./dvi/mod.ts";
 import { makeFontCSS } from "./makeFontCSS.ts";
-import { fileLoader } from "./fileLoader.ts";
 
 /** Options for converting to HTML. */
 export interface ConvertToHTMLInit {
@@ -214,7 +213,7 @@ export const convertToHTML = async (
   const title = `<title>${init.title ?? "input.tex"}</title>`;
   const style = `<style>${await makeFontCSS(
     usedFontFilenames,
-    fileLoader,
+    init.fileLoader,
   )}:root{color-scheme:light dark;background-color:Canvas;color:CanvasText;}.page{position:relative;width:100%;}.text{line-height:0;position:absolute;overflow:visible;}.rect{position:absolute;min-width:1px;min-height:1px;}</style>`;
 
   // ported from https://github.com/artisticat1/obsidian-tikzjax/blob/0.5.1/main.ts#L138-L143
