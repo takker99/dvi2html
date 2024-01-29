@@ -229,4 +229,4 @@ export const convertToHTML = async (
 };
 
 const standaloneSVGBeginTag = (width: number, height: number) =>
-  `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="${width}pt" height="${height}pt" viewBox="-72 -72 ${width} ${height}">`;
+  `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}pt" height="${height}pt" viewBox="-72 -72 ${width} ${height}">`;
