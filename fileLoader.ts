@@ -1,6 +1,6 @@
 import { JSZip } from "https://deno.land/x/jszip@0.11.0/mod.ts";
-import { ensureDir, exists } from "https://deno.land/std@0.213.0/fs/mod.ts";
-import { Spinner } from "https://deno.land/std@0.213.0/cli/mod.ts";
+import { ensureDir, exists } from "https://deno.land/std@0.224.0/fs/mod.ts";
+import { Spinner } from "https://deno.land/std@0.224.0/cli/mod.ts";
 
 const spinner = new Spinner();
 {
