@@ -1,7 +1,7 @@
 import { color, papersize, parse, ps, svg } from "../dvi/mod.ts";
 import { convertToHTML } from "../mod.ts";
 import { tokenize } from "../dvi/tokenize.ts";
-import { join } from "https://deno.land/std@0.213.0/path/mod.ts";
+import { join } from "https://deno.land/std@0.224.0/path/mod.ts";
 import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts#^";
 import { fileLoader } from "../fileLoader.ts";
 
